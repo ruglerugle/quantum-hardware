@@ -76,35 +76,35 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">前の旅（<a href="https://ruglerugle.github.io/quantum-computer/" target="_blank" rel="noopener" style="color:#2f8a8f;text-decoration:underline">量子コンピュータはなぜ速いのか</a>）では、量子計算の中身――矢印の一覧表と、それを書き換える干渉の設計――を見届けたね。途中で一度だけ、チップの上に量子ビットを組み立てる回り道もした。<br>今回の旅は、あのとき駆け足で通った<strong>ハードウェアの世界</strong>を、工場見学のようにじっくり歩く。部品ひとつひとつに「なぜそれが要るのか」を問いながらね。<br>最初の仕事は<strong>設計図</strong>だ。何かを作るとき、職人はまず「作る物が満たすべき条件」を書き出す。そこで質問。量子ビットとして働く「物」には、何が求められると思う？ まずは、量子ビットとは何だったかの復習からでいい。</div>
+          <div class="dialog-bubble">前の旅（<a href="https://ruglerugle.github.io/quantum-computer/" target="_blank" rel="noopener" style="color:#2f8a8f;text-decoration:underline">量子コンピュータはなぜ速いのか</a>）では、量子計算の中身――矢印の一覧表と、それを書き換える干渉の設計――を見届けたね。途中で一度だけ、チップの上に量子ビットを組み立てる回り道もした。<br>今回の旅は、あのとき駆け足で通った<strong>ハードウェアの世界</strong>を、工場見学のようにじっくり歩く。部品ひとつひとつに「なぜそれが要るのか」を問いながらね。<br>最初の仕事は<strong>設計図</strong>だ。何かを作るとき、職人はまず「作る物が満たすべき条件」を書き出す。とはいえ、条件はいきなり全部は見えてこない。ひとつずつ攻めよう。まずは復習から――<strong>量子ビットとは、何だった？</strong></div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
-          <div class="dialog-bubble">整理し直します。量子ビットの状態は<strong>「0の矢印と1の矢印、2本の矢印の一覧表」</strong>でした。|0⟩（「ゼロの状態」と読む記号）と |1⟩ のそれぞれに、長さと向きを持つ矢印が1本ずつ。読み出すと、矢印の長さの2乗の確率でどちらか<strong>1つだけ</strong>が出る。計算は、この表を回したり混ぜたりする書き換えでした。<br>だとすると、まず絶対に必要なのは――<strong>条件①：0と1にあたる、区別できる2つの状態を持つこと</strong>です。表に2つの行がなければ始まりません。</div>
+          <div class="dialog-bubble">整理し直します。量子ビットの状態は<strong>「0の矢印と1の矢印、2本の矢印の一覧表」</strong>でした。|0⟩（「ゼロの状態」と読む記号）と |1⟩ のそれぞれに、長さと向きを持つ矢印が1本ずつ。読み出すと、矢印の長さの2乗の確率でどちらか<strong>1つだけ</strong>が出る。計算は、この表を回したり混ぜたりする書き換えでした。<br>物で作るなら、少なくとも<strong>0と1にあたる、区別できる2つの状態</strong>を持つ物が要る――表に2つの行がなければ始まりませんから、ここまでは分かります。でも正直、その先に何が要るのかは見当がつきません。</div>
         </div>
         <div class="dialog-row">
           <div class="dialog-character">
             <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">いい出発点だ。ただ、条件①だけなら世界は量子ビットの候補であふれている。コインには裏と表がある。スイッチにはONとOFFがある。電気を「ためた・ためてない」で区別するふつうのコンピュータのメモリも、立派な2状態だ。<br>でも、コインを積んだ机が量子コンピュータになったという話は聞かない。①のほかに、何が足りないのかな？</div>
+          <div class="dialog-bubble">それで十分だよ。いまの「区別できる2つの状態を持つこと」を<strong>条件①</strong>として書き留めよう。<br>そして実は、条件①だけなら世界は候補であふれている。コインには裏と表がある。スイッチにはONとOFFがある。電気を「ためた・ためてない」で区別するふつうのコンピュータのメモリも、立派な2状態だ。でも、コインを積んだ机が量子コンピュータになったという話は聞かない。何かが足りない。<br>ヒントをあげよう――きみがデコヒーレンスの旅でさんざん戦った、あの敵を思い出してごらん。コインの「裏でも表でもある状態」を、なぜ誰も見たことがないのかな？</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
-          <div class="dialog-bubble"><strong>重ね合わせ</strong>です。コインは「裏でも表でもある状態」を作れません。……いえ、言い直します。デコヒーレンスの旅で学んだ通り、量子力学の法則自体はコインのような大きい物にも働いているはずでした。重ね合わせが「作れない」のではなく、<strong>一瞬で壊れる</strong>んです。コインには空気の分子や光が絶え間なくぶつかっていて、その一つひとつが「コインは今どっち向きか」という<strong>手がかり</strong>を持ち去る。手がかりが漏れれば道筋に区別がついて、干渉は死ぬ。<br>だから<strong>条件②：重ね合わせを長く保てること。言い換えると、手がかりを環境に漏らさないこと</strong>です。</div>
+          <div class="dialog-bubble"><strong>手がかり</strong>、ですね。思い出しました。デコヒーレンスの旅で学んだ通り、量子力学の法則自体はコインのような大きい物にも働いているはずでした。「裏でも表でもある状態」は作れないのではなく、<strong>一瞬で壊れる</strong>んです。コインには空気の分子や光が絶え間なくぶつかっていて、その一つひとつが「コインは今どっち向きか」という<strong>手がかり</strong>を持ち去る。手がかりが漏れれば道筋に区別がついて、干渉は死ぬ――デコヒーレンスです。<br>つまり足りないのは<strong>重ね合わせ</strong>。重ね合わせを長く保てる物でないと、量子ビットにはなれない、ということですか。</div>
         </div>
         <div class="dialog-row">
           <div class="dialog-character">
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">その通り。そして先に言っておくと、この条件②こそが<strong>ハードウェア作りの最難関</strong>だ。この旅の部品の半分は、実は②のためだけに存在している。<br>さて、①と②で「量子ビットを<strong>保管</strong>する」ことはできる。でも保管庫は計算機ではないね。計算とは表の書き換えだった。つまり<strong>条件③：外から、狙いどおりに矢印を回せること</strong>。ゲートをかける手段だ。<br>――ここで、ひとつ立ち止まってほしい。②と③を並べて眺めると、何か引っかからないかな。</div>
+          <div class="dialog-bubble">その通り。これを<strong>条件②：重ね合わせを長く保てること――言い換えると、手がかりを環境に漏らさないこと</strong>として書き留める。先に言っておくと、この②こそが<strong>ハードウェア作りの最難関</strong>で、この旅に登場する部品の半分は、実は②のためだけに存在している。<br>さて、①と②で「量子ビットを<strong>保管</strong>する」ことはできる。でも保管庫は計算機ではないね。計算とは表の書き換えだった。だから<strong>条件③：外から、狙いどおりに矢印を回せること</strong>。ゲートをかける手段だ。<br>――ここで、ひとつ立ち止まってほしい。いま書き留めた②と③を並べて、見比べてごらん。何か引っかからないかな。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -118,21 +118,21 @@
             <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">見事に核心を突いた。その緊張関係こそ、量子ハードウェア設計の<strong>中心的ジレンマ</strong>なんだ。完全に密閉すれば操作できない。扉を開けっぱなしにすれば重ね合わせが死ぬ。<br>だから作り手が探すのは、「<strong>ふだんは外界にほとんど応答しないのに、こちらが特定の合図を送ったときだけ応答する</strong>」という、都合のいい性質を持った物だ。合図の「鍵」が合わない限り、扉は閉じたまま――そんな鍵穴つきの箱だね。そんな虫のいい話が本当に実現できるのか、どんな鍵を使うのかは、ステージ3と5でチップの上に実物を見る。今日は「これが要求だ」と書き留めておこう。<br>残るはあと1つ。計算が終わったら？</div>
+          <div class="dialog-bubble">見事に核心を突いた。その緊張関係こそ、量子ハードウェア設計の<strong>中心的ジレンマ</strong>なんだ。完全に密閉すれば操作できない。扉を開けっぱなしにすれば重ね合わせが死ぬ。<br>だから作り手が探すのは、「<strong>ふだんは外界にほとんど応答しないのに、こちらが特定の合図を送ったときだけ応答する</strong>」という、都合のいい性質を持った物だ。合図の「鍵」が合わない限り、扉は閉じたまま――そんな鍵穴つきの箱だね。そんな虫のいい話が本当に実現できるのか、どんな鍵を使うのかは、ステージ3と5でチップの上に実物を見る。今日は「これが要求だ」と書き留めておこう。<br>残る条件は私から言おう。<strong>条件④：計算が終わったら、答えの0か1を読み出せること</strong>。――ところで「読み出し」の正体なら、きみは前の旅で一度見ているよ。デコヒーレンスの言葉で言うと、何をすることだった？</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
-          <div class="dialog-bubble"><strong>条件④：読み出せること</strong>ですね。最後には0か1かの答えがほしい。デコヒーレンスの言葉で言えば、読み出しとは<strong>手がかりをわざと外に出す</strong>ことでした。ふだんは全力で密閉して、読みたいときだけ漏れ口を開ける。<br>……そして、読み出しは<strong>正確</strong>でないと困ります。せっかく干渉の設計で正解の矢印を育てても、最後の読み取りで間違えたら台無しです。</div>
+          <div class="dialog-bubble"><strong>手がかりをわざと外に出す</strong>こと、でした。ふだんは全力で密閉しておいて、読みたいときだけ漏れ口を開ける――測定装置は「手がかりの小窓」だと教わりました。<br>すると条件④は、②の密閉と喧嘩しない形で、<strong>小窓を1か所だけ作っておくこと</strong>、と言い換えられそうです。</div>
         </div>
         <div class="dialog-row">
           <div class="dialog-character">
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">そのとおり、「読める」と「正しく読める」は別問題で、後者はステージ6の主役になる。<br>これで4条件がそろった。実はこの整理は、2000年ごろに物理学者<strong>ディヴィンチェンゾ</strong>がまとめた有名なチェックリスト（<strong>ディヴィンチェンゾの基準</strong>）とほぼ重なる。彼の表には、きみの4条件に加えてあと2つ載っている。1つは「<strong>たくさん並べて増やせること</strong>」。量子ビット1個では計算にならないからね。これは最終ステージの主役だ。<br>もう1つ、何だと思う？ ヒントは、計算の「終わり」ではなく「始まり」だ。</div>
+          <div class="dialog-bubble">いい言い換えだ。ひとつ付け加えておくと、「読める」と「正しく読める」は別問題でね。せっかく干渉の設計で正解の矢印を育てても、最後の読み取りで間違えたら台無しだ。読み出しの<strong>正確さ</strong>はステージ6の主役になる。<br>これで4条件がそろった。実はこの整理は、2000年ごろに物理学者<strong>ディヴィンチェンゾ</strong>がまとめた有名なチェックリスト（<strong>ディヴィンチェンゾの基準</strong>）とほぼ重なる。彼の表には、この4条件に加えてあと2つ載っている。1つは「<strong>たくさん並べて増やせること</strong>」。量子ビット1個では計算にならないからね。これは最終ステージの主役だ。<br>もう1つ、何だと思う？ ヒントは、計算の「終わり」ではなく「始まり」だ。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
