@@ -145,6 +145,17 @@
           </div>
           <div class="dialog-bubble">まさに変身――氷と水のような<strong>相転移</strong>が起きている。中で起きていることはこうだ。<br>ある温度より下がると、電子たちが<strong>2個ずつペア</strong>を組み始める（クーパー対と呼ぶ）。そしてここが肝心なのだが、ペアを組んだ電子たちは、全ペアが足並みをそろえて、<strong>金属全体でたった1つの波</strong>として振る舞うようになる。何兆個の粒の群れが、1個の巨大な量子に化けるんだ。<br>1つの波になると、なぜ抵抗が消えるか。全員が手をつないで行進している集団を想像してごらん。1人だけつまずかせることは、もうできない。よろめかせたければ<strong>行進全体をまとめて乱す</strong>しかないが、それには大きなエネルギーが要る。低温の世界にそんなエネルギーの持ち合わせはない。だから原子が多少震えていても、波はいっさい乱されずに流れ続ける。抵抗が「小さい」ではなく「ゼロ」になる理由は、乱すこと自体が<strong>禁止</strong>されるからなんだ。<br>――正直に断っておく。「<strong>なぜ電子はペアを組むのか</strong>」は、この旅では説明しない。マイナス同士の電子が引き合う理由は大学レベルの難問で、発見から理論の完成（1957年）まで46年かかった。今日は「実験で完全に確立した事実」として借りてくる。この旅の借り物はここだけだよ。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg id="sc-svg" class="qh-svg" viewBox="0 0 372 246" width="100%" role="img" aria-label="ふつうの金属と超伝導体の比較アニメーション。左のふつうの金属では、電子が1個ずつばらばらに動き、熱で震える原子にぶつかるたびに進路を乱されて原子が熱で光る。右の超伝導体では、電子が2個ずつペアを組み、全ペアが足並みをそろえて1つの波として、震える原子の間をいっさい乱されずに流れ続ける">
+          <text class="strong" x="186" y="16" text-anchor="middle">なぜ抵抗が「ゼロ」になるのか ― 1人の行進と、全員の行進</text>
+          <g id="sc-body"></g>
+        </svg>
+        <div class="diagram-caption">左：ふつうの金属では、電子が1個ずつばらばらに動き、熱で震える原子にぶつかっては進路を乱される。ぶつかるたびにエネルギーが熱として逃げる（原子が光る瞬間）――これが<strong>抵抗</strong>。右：超伝導体では、電子が2個ずつペア（クーパー対）を組み、全ペアが足並みをそろえて<strong>金属全体でたった1つの波</strong>として流れる。手をつないで行進する集団の<strong>1人だけをつまずかせることはできない</strong>。乱すには行進全体をまとめて乱す大きなエネルギーが要るが、低温の世界にその持ち合わせはない。だから原子が多少震えていても波はいっさい乱されず、抵抗は「小さい」ではなく<strong>本物のゼロ</strong>になる。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
@@ -391,6 +402,133 @@
       entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
     }, {threshold: 0.2});
     io.observe(document.getElementById('lc-svg'));
+  }
+})();
+</script>
+
+<script>
+(function(){
+  // 図2: ふつうの金属 vs 超伝導（1人の行進と全員の行進）
+  var g = document.getElementById('sc-body');
+  if (!g) return;
+  var ns = 'http://www.w3.org/2000/svg';
+  var CA = '#2f8a8f', CB = '#2f5a9e', CR = '#b5504a';
+  function el(name, attrs, parent) {
+    var e = document.createElementNS(ns, name);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    (parent || g).appendChild(e);
+    return e;
+  }
+  function txt(x, y, cls, content, anchor) {
+    var t = el('text', {x: x, y: y, 'class': cls, 'text-anchor': anchor || 'middle'});
+    t.textContent = content;
+    return t;
+  }
+  var PL = {x: 20, y: 40, w: 156, h: 152}, PR = {x: 196, y: 40, w: 156, h: 152};
+  txt(PL.x + PL.w / 2, 34, 'label', 'ふつうの金属');
+  txt(PR.x + PR.w / 2, 34, 'label', '超伝導体（低温）');
+  el('rect', {x: PL.x, y: PL.y, width: PL.w, height: PL.h, rx: 10, fill: 'none', stroke: 'var(--line)'});
+  el('rect', {x: PR.x, y: PR.y, width: PR.w, height: PR.h, rx: 10, fill: 'none', stroke: 'var(--line)'});
+  // 原子の格子（両パネルとも熱で震える）
+  var atoms = [];
+  [PL, PR].forEach(function (P, pi) {
+    for (var r = 0; r < 3; r++) for (var c = 0; c < 3; c++) {
+      var ax = P.x + 30 + c * 48, ay = P.y + 30 + r * 46;
+      var e = el('circle', {cx: ax, cy: ay, r: 6, fill: '#c8cfd8', stroke: 'var(--muted)', 'stroke-width': 1});
+      atoms.push({e: e, x: ax, y: ay, ph: (r * 3 + c) * 1.7 + pi, panel: pi, flash: 0});
+    }
+  });
+  // 左: ばらばらの電子
+  var seeds = [[34, 58], [58, 108], [42, 150], [96, 74], [120, 128], [146, 96]];
+  var eles = seeds.map(function (s, i) {
+    return {x: PL.x + s[0] - 20, y: s[1], a: (i * 1.3) % 2 - 1,
+            e: el('circle', {r: 3.4, fill: CA})};
+  });
+  // 右: ペアの隊列と1つの波
+  var wave = el('path', {fill: 'none', stroke: CB, 'stroke-width': 2, opacity: .65});
+  var pairs = [];
+  var rowsY = [PR.y + 53, PR.y + 99];
+  for (var ry = 0; ry < 2; ry++) for (var i = 0; i < 4; i++) {
+    var grp = {row: ry, off: i * 39 + ry * 19, d1: el('circle', {r: 3.2, fill: CA}), d2: el('circle', {r: 3.2, fill: CA}),
+               ln: el('line', {stroke: CA, 'stroke-width': 1.6, opacity: .8})};
+    pairs.push(grp);
+  }
+  txt(PL.x + PL.w / 2, 210, 'label', '電子が1個ずつ原子にぶつかる');
+  txt(PL.x + PL.w / 2, 226, 'label', '→ エネルギーが熱に ＝ 抵抗');
+  txt(PR.x + PR.w / 2, 210, 'label', 'ペア全員がそろって1つの波として行進');
+  txt(PR.x + PR.w / 2, 226, 'label', '→ 1人だけつまずけない ＝ 抵抗ゼロ');
+
+  var t = 0, base = 0;
+  function drawFrame(animate) {
+    t += 1;
+    // 原子の熱振動と、衝突の光
+    atoms.forEach(function (a) {
+      a.e.setAttribute('cx', a.x + 1.6 * Math.sin(t * 0.11 + a.ph));
+      a.e.setAttribute('cy', a.y + 1.6 * Math.cos(t * 0.13 + a.ph * 1.3));
+      a.flash *= 0.9;
+      a.e.setAttribute('fill', a.flash > 0.15 ? CR : '#c8cfd8');
+      a.e.setAttribute('opacity', 0.75 + Math.min(a.flash, 0.25));
+    });
+    // 左: 電子が原子に散乱される
+    eles.forEach(function (p) {
+      p.x += Math.cos(p.a) * 1.1;
+      p.y += Math.sin(p.a) * 1.1;
+      for (var i = 0; i < atoms.length; i++) {
+        var a = atoms[i];
+        if (a.panel !== 0) continue;
+        var dx = p.x - a.x, dy = p.y - a.y;
+        if (dx * dx + dy * dy < 100) {
+          p.a = (animate ? Math.random() : 0.5) * 2.4 - 1.2 + (dy > 0 ? 0.6 : -0.6);
+          a.flash = 1;
+          p.x += Math.cos(p.a) * 4; p.y += Math.sin(p.a) * 4;
+        }
+      }
+      if (p.y < PL.y + 8) { p.y = PL.y + 8; p.a = -p.a; }
+      if (p.y > PL.y + PL.h - 8) { p.y = PL.y + PL.h - 8; p.a = -p.a; }
+      if (p.x > PL.x + PL.w - 6) p.x = PL.x + 6;
+      if (p.x < PL.x + 6) p.x = PL.x + PL.w - 6;
+      p.e.setAttribute('cx', p.x); p.e.setAttribute('cy', p.y);
+    });
+    // 右: 隊列は乱れず一定速度で進む
+    base += 0.55;
+    pairs.forEach(function (q) {
+      var x = PR.x + 12 + ((q.off + base) % (PR.w - 24));
+      var y = rowsY[q.row];
+      q.d1.setAttribute('cx', x - 4); q.d1.setAttribute('cy', y);
+      q.d2.setAttribute('cx', x + 4); q.d2.setAttribute('cy', y);
+      q.ln.setAttribute('x1', x - 4); q.ln.setAttribute('y1', y);
+      q.ln.setAttribute('x2', x + 4); q.ln.setAttribute('y2', y);
+    });
+    // 1つの波（隊列と同じ速さで滑る）
+    var d = '';
+    for (var wx = 0; wx <= PR.w - 16; wx += 4) {
+      var wy = PR.y + 76 - 11 * Math.sin((wx - base * 2.4) * 0.09);
+      d += (wx === 0 ? 'M ' : 'L ') + (PR.x + 8 + wx).toFixed(1) + ' ' + wy.toFixed(1) + ' ';
+    }
+    wave.setAttribute('d', d);
+  }
+
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf = null, running = false;
+  function tick() {
+    drawFrame(true);
+    if (running) raf = requestAnimationFrame(tick);
+  }
+  function start() {
+    if (running || reduced) return;
+    running = true;
+    raf = requestAnimationFrame(tick);
+  }
+  function stop() {
+    running = false;
+    if (raf) cancelAnimationFrame(raf);
+  }
+  for (var k = 0; k < 3; k++) drawFrame(false);
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+    }, {threshold: 0.2});
+    io.observe(document.getElementById('sc-svg'));
   }
 })();
 </script>
