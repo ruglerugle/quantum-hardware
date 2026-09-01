@@ -81,8 +81,54 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">前回の宿題は「揺れの大きさでリズムが変わる振り子に作り替えること」だった。まず、なぜLC回路のリズムが1種類しかないのかを、部品の性質までさかのぼっておこう。<br>コイルの逆らい方は<strong>まじめな正比例</strong>だ。電流が2倍になれば、逆らう力もきっかり2倍。こういう「押した分だけ押し返す」性質を持つ振り子は、理科で言うと<strong>ばね</strong>の振り子で、ばね振り子は揺れの大小によらずリズムが完全に一定になる。等時性は、正比例の性質から必然的に出てくるんだ。<br>だからリズムを揺れで変えたければ、<strong>正比例からずれた逆らい方をする部品</strong>――電流が大きくなるほど、逆らう力の増え方が鈍っていくような部品――に置き換えればいい。そんな都合のいい部品を、超伝導ならではの現象が用意してくれる。<br>作り方はこうだ。<strong>2枚の超伝導体で、厚さ1〜2ナノメートルの絶縁体の膜を挟む</strong>。ナノメートルは10億分の1メートル。この膜は原子を数個並べたのと同じ厚さしかない。<br>――この薄さが肝心なんだ。量子力学の旅で学んだ、壁のそばでの<strong>波の振る舞い</strong>を思い出してごらん。この膜が何を起こすか、見抜けるはずだよ。</div>
+          <div class="dialog-bubble">前回の宿題は「揺れの大きさでリズムが変わる振り子に作り替えること」だった。まず、なぜLC回路のリズムが1種類しかないのかを、部品の性質までさかのぼっておこう。<br>コイルの逆らい方は<strong>まじめな正比例</strong>だ。電流が2倍になれば、逆らう力もきっかり2倍。こういう「押した分だけ押し返す」性質を持つ振り子は、理科で言うと<strong>ばね</strong>の振り子で、ばね振り子は揺れの大小によらずリズムが完全に一定になる。等時性は、正比例の性質から必然的に出てくるんだ。<br>だからリズムを揺れで変えたければ、<strong>正比例からずれた逆らい方をする部品</strong>――電流が大きくなるほど、逆らう力の増え方が鈍っていくような部品――に置き換えればいい。そんな都合のいい部品を、超伝導ならではの現象が用意してくれる。<br>作り方はこうだ。前のステージのチップから<strong>コイル役の導線を取り外し、その代わり</strong>に、配線の途中のたった1点へ、こういう部品を入れる――<strong>2枚の超伝導体で、厚さ1〜2ナノメートルの絶縁体の膜を挟んだもの</strong>だ。ナノメートルは10億分の1メートル。この膜は原子を数個並べたのと同じ厚さしかない。<br>――この薄さが肝心なんだ。量子力学の旅で学んだ、壁のそばでの<strong>波の振る舞い</strong>を思い出してごらん。この膜が何を起こすか、見抜けるはずだよ。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="qh-svg" viewBox="0 0 372 268" width="100%" role="img" aria-label="接合を入れる場所の図。左は前のステージのチップで、コイル役の折りたたんだ導線に取り外しの印が付いている。右は置き換え後のチップで、コンデンサの2枚の板をつなぐ配線の途中の1点に極小の接合があり、拡大すると下のアルミ膜と上のアルミ膜が少しだけ重なり、間に厚さ1〜2ナノメートルの酸化膜が挟まれたサンドイッチ構造になっている">
+          <text class="strong" x="186" y="16" text-anchor="middle">接合はどこに入るのか ― コイルとの交代</text>
+          <!-- 左: これまでの回路 -->
+          <text class="label" x="95" y="36" text-anchor="middle">これまでの回路</text>
+          <rect x="30" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="110" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <path d="M 55 82 L 55 100 L 75 100 L 75 112 L 95 112 L 95 100 L 115 100 L 115 112 L 135 112 L 135 82" stroke="#8892a1" stroke-width="2.6" fill="none"/>
+          <line x1="72" y1="90" x2="118" y2="122" stroke="#b5504a" stroke-width="2.6"/>
+          <line x1="118" y1="90" x2="72" y2="122" stroke="#b5504a" stroke-width="2.6"/>
+          <text class="label" x="95" y="140" text-anchor="middle">コイル役の導線を</text>
+          <text class="label" x="95" y="156" text-anchor="middle">取り外す</text>
+          <!-- 矢印 -->
+          <path d="M 172 96 L 194 96 M 189 91 L 196 96 L 189 101" stroke="var(--ink)" stroke-width="2" fill="none"/>
+          <!-- 右: 接合入りの回路 -->
+          <text class="label" x="277" y="36" text-anchor="middle">接合を1点だけ入れる</text>
+          <rect x="207" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="297" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <line x1="257" y1="65" x2="271" y2="65" stroke="#8892a1" stroke-width="2.6"/>
+          <line x1="283" y1="65" x2="297" y2="65" stroke="#8892a1" stroke-width="2.6"/>
+          <rect x="271" y="60" width="12" height="10" fill="#b5504a"/>
+          <text class="label" x="277" y="92" text-anchor="middle">ここ（約100nm四方）</text>
+          <!-- 拡大線 -->
+          <line x1="271" y1="70" x2="216" y2="122" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+          <line x1="283" y1="70" x2="342" y2="122" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+          <!-- 拡大断面 -->
+          <rect x="212" y="122" width="134" height="86" rx="8" fill="var(--paper2)" stroke="#2f8a8f" stroke-width="1.6"/>
+          <rect x="220" y="168" width="90" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="248" y="146" width="90" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="248" y="164" width="62" height="4" fill="#c9a227"/>
+          <text class="label" x="279" y="140" text-anchor="middle">上のアルミ膜</text>
+          <text class="label" x="265" y="200" text-anchor="middle">下のアルミ膜</text>
+          <text class="accent" x="344" y="168" text-anchor="end" fill="#8a6a24">←酸化膜</text>
+          <text class="label" x="279" y="224" text-anchor="middle">重なりの間に厚さ1〜2nmの膜</text>
+          <!-- 左下の比較メモ -->
+          <text class="label" x="95" y="192" text-anchor="middle">接合も「導体・絶縁体・導体」＝</text>
+          <text class="label" x="95" y="208" text-anchor="middle">構造はコンデンサと同じ。</text>
+          <text class="label" x="95" y="224" text-anchor="middle">違いは切れ目の厚さだけ</text>
+          <text class="label" x="186" y="252" text-anchor="middle">コンデンサの隙間＝波が渡れない広さ ／ 接合の膜＝原子数個分の薄さ</text>
+        </svg>
+        <div class="diagram-caption">接合の置き場所。前のステージのチップから<strong>コイル役の折りたたんだ導線を取り外し</strong>、コンデンサの2枚の板をつなぐ配線の途中の<strong>たった1点</strong>に、約100ナノメートル四方の極小部品を入れる。拡大すると、<strong>下のアルミ膜と上のアルミ膜が少しだけ重なり、間に厚さ1〜2ナノメートルの酸化膜が挟まれたサンドイッチ</strong>になっている。つまり接合も「導体・絶縁体・導体」――<strong>構造はコンデンサと同じ</strong>で、違いは切れ目の厚さだけだ。コンデンサの隙間は波が渡れない広さの「設計した切れ目」、接合の膜は波がしみ出して渡れる原子数個分の薄さ。この薄さが何を起こすかが、今日の主役になる。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
