@@ -85,6 +85,17 @@
           </div>
           <div class="dialog-bubble">追いかけてみます。たまった電気がコイルを通って流れ出す。空になった瞬間に止まりそうですが――コイルが「流し続けようとする」から、止まらずに流れすぎて、<strong>反対側の板に電気がたまる</strong>。たまったら今度は逆向きに流れ出して、また行きすぎて……<strong>永遠に行ったり来たり</strong>です。<br>理科の振り子と同じ構造ですね。振り子は「位置のエネルギー」と「運動のエネルギー」を交互にやり取りしながら揺れ続けます。この回路は「板にたまった電気のエネルギー」と「コイルの磁気のエネルギー」を交互にやり取りしている。――前の旅で博士が<strong>電気の振り子</strong>と呼んでいたのは、これだったんですね。<br>この振り子、1秒に何回揺れるんですか？</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg id="lc-svg" class="qh-svg" viewBox="0 0 372 260" width="100%" role="img" aria-label="電気の振り子のアニメーション。左は理科の振り子が揺れ、中央のLC回路では電子の群れが輪の中を行ったり来たりして、板の上に電子の粒がたまっては空になる。流れが逆転するのは、満タンになった板の電気が押し返すため。右の棒グラフは電気のエネルギーと磁気のエネルギーが交互に伸び縮みし、合計がいつも一定であることを示す">
+          <text class="strong" x="186" y="16" text-anchor="middle">電気の振り子 ― エネルギーが2つの姿を行き来する</text>
+          <g id="lc-body"></g>
+        </svg>
+        <div class="diagram-caption">左の<strong>理科の振り子</strong>と中央の<strong>電気の振り子（LC回路）</strong>は、同じリズムで動いている。輪の中の●は電子の群れで、輪をぐるぐる回るのではなく<strong>行ったり来たり</strong>する。振り子が端で止まる瞬間＝<strong>板が満タン</strong>（電気のエネルギー最大）で、電子の流れもいったん止まる。そこから<strong>逆流が始まるのは、コイルが何かを切り替えるからではなく、満タンの板にたまった電気どうしが押し返し合うから</strong>。コイルの仕事は、その流れを惰性のように保ち続けることだ（だから板が空になった瞬間にも流れは止まらず、反対側にたまりすぎる）。振り子が真下を最速で通過する瞬間＝<strong>電流が最大</strong>（磁気のエネルギー最大）。右の棒グラフの通り、2つのエネルギーは交互に入れ替わり<strong>合計はいつも一定</strong>――「位置⇄運動」とまったく同じ構造。実機ではこの往復が1秒に約50億回（5GHz）繰り返される。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row">
           <div class="dialog-character">
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
@@ -162,14 +173,6 @@
           </div>
           <div class="dialog-bubble">そのとおり、今日はあえて壁の前で終わろう。等間隔のはしごは、どの段差も同じ切符で乗れてしまう。これを壊すには、「揺れの大きさでリズムが変わる振り子」に作り替える部品が要る。<br>次のステージの主役、この方式の心臓部――<strong>ジョセフソン接合</strong>だ。</div>
         </div>
-      </div>
-
-      <div class="diagram-box">
-        <svg id="lc-svg" class="qh-svg" viewBox="0 0 372 260" width="100%" role="img" aria-label="電気の振り子のアニメーション。左は理科の振り子が揺れ、中央のLC回路では電子の群れが輪の中を行ったり来たりして、コンデンサの板にたまる電気とコイルの磁気が交互に入れ替わる。右のエネルギーの棒グラフは、電気のエネルギーと磁気のエネルギーが交互に伸び縮みし、合計がいつも一定であることを示す">
-          <text class="strong" x="186" y="16" text-anchor="middle">電気の振り子 ― エネルギーが2つの姿を行き来する</text>
-          <g id="lc-body"></g>
-        </svg>
-        <div class="diagram-caption">左の<strong>理科の振り子</strong>と中央の<strong>電気の振り子（LC回路）</strong>は、同じリズムで動いている。振り子が端で止まる瞬間＝<strong>板に電気が満タン</strong>（電気のエネルギーが最大）。振り子が真下を最速で通過する瞬間＝<strong>電流が最大</strong>（コイルの磁気のエネルギーが最大）。輪の中の点は電子の群れで、輪をぐるぐる回るのではなく<strong>行ったり来たり</strong>する。右の棒グラフの通り、2つのエネルギーは交互に入れ替わり、<strong>合計はいつも一定</strong>――理科の振り子の「位置のエネルギー⇄運動のエネルギー」とまったく同じ構造だ。実機ではこの往復が1秒に約50億回（5GHz）繰り返される。</div>
       </div>
 
       <div class="diagram-box">
@@ -298,6 +301,12 @@
   el('line', {x1: L - 22, y1: gapB, x2: L + 22, y2: gapB, stroke: CB, 'stroke-width': 4});
   var signT = txt(L - 32, gapT + 4, 'strong', '＋');
   var signB = txt(L - 32, gapB + 4, 'strong', '−');
+  // 板にたまる電子の粒（たまり具合を粒の数で見せる）
+  var plateT = [], plateB = [];
+  for (var j = 0; j < 5; j++) {
+    plateT.push(el('circle', {cx: L - 16 + j * 8, cy: gapT - 5, r: 3, fill: CA, opacity: 0}));
+    plateB.push(el('circle', {cx: L - 16 + j * 8, cy: gapB + 5, r: 3, fill: CA, opacity: 0}));
+  }
   txt(186, 188, 'label', '左：コンデンサ（電気をためる）');
   txt(186, 204, 'label', '右：コイル（流し続けようとする）');
   txt(186, 222, 'label', '● ＝ 電子の群れ（回らずに、行ったり来たり）');
@@ -339,10 +348,18 @@
     var so = Math.max(0.15, Math.abs(q));
     signT.setAttribute('opacity', so); signB.setAttribute('opacity', so);
     signT.setAttribute('fill', top ? CR : CB); signB.setAttribute('fill', top ? CB : CR);
-    // 電子の群れ（変位 ∝ sinθ）
+    // 電子の群れ。変位 ∝ cosθ：板が満タンの瞬間に流れが止まり、
+    // たまった電気の押し返しで逆流が始まる（速さが最大なのは板が空の瞬間）
     for (var i = 0; i < dots.length; i++) {
-      var p = wirePath.getPointAtLength(dots[i].base + 22 * cur);
+      var p = wirePath.getPointAtLength(dots[i].base + 24 * q);
       dots[i].e.setAttribute('cx', p.x); dots[i].e.setAttribute('cy', p.y);
+    }
+    // 板の上の電子の粒（−側の板に |q| に応じた数だけ現れる）
+    var nT = Math.round(5 * Math.max(0, -q));
+    var nB = Math.round(5 * Math.max(0, q));
+    for (var j = 0; j < 5; j++) {
+      plateT[j].setAttribute('opacity', j < nT ? 1 : 0);
+      plateB[j].setAttribute('opacity', j < nB ? 1 : 0);
     }
     // コイルの磁気の光
     coilGlow.setAttribute('opacity', cur * cur * 0.4);
