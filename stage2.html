@@ -215,38 +215,33 @@
       </div>
 
       <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 260" width="100%" role="img" aria-label="粒はどこにあるのかの図。左は回路の輪で、電子の点が並び、輪全体を包む淡い光の環に「粒1個ぶんの揺れ」と書かれている。粒は特定の場所ではなく回路全体の揺れに1個ぶんとして帰属する。回路がエネルギーをこぼすと、粒だけが配線を伝って右の検出器へ飛び出し、5GHzの光子1個としてカチッと当たる。電子は輪に残る">
+        <svg id="gr-svg" class="qh-svg" viewBox="0 0 372 260" width="100%" role="img" aria-label="粒はどこにあるのかのアニメーション。左の回路の輪で電子の点が行ったり来たり揺れている間、輪全体が淡く光り「粒1個ぶんの揺れ」を表す。回路がエネルギーをこぼすと、光が消えて電子の揺れが静まり、粒だけが波束となって配線を走り、右の検出器に5GHzの光子1個としてカチッと当たる。電子は輪に残ったまま。これを繰り返す">
           <text class="strong" x="186" y="16" text-anchor="middle">粒はどこにあるのか ― 中では「全体に1個」、外では「光子1個」</text>
-          <!-- 回路の輪と粒のハロー -->
-          <circle cx="90" cy="112" r="56" fill="#2f8a8f" opacity="0.10"/>
-          <circle cx="90" cy="112" r="56" fill="none" stroke="#2f8a8f" stroke-width="1.6" stroke-dasharray="6 4"/>
+          <circle id="gr-halo-f" cx="90" cy="112" r="56" fill="#2f8a8f" opacity="0.12"/>
+          <circle id="gr-halo-s" cx="90" cy="112" r="56" fill="none" stroke="#2f8a8f" stroke-width="1.6" stroke-dasharray="6 4"/>
           <circle cx="90" cy="112" r="40" fill="none" stroke="var(--ink)" stroke-width="2.2"/>
-          <g fill="#2f8a8f">
-            <circle cx="90" cy="72" r="3.4"/><circle cx="118" cy="84" r="3.4"/>
-            <circle cx="130" cy="112" r="3.4"/><circle cx="118" cy="140" r="3.4"/>
-            <circle cx="90" cy="152" r="3.4"/><circle cx="62" cy="140" r="3.4"/>
-            <circle cx="50" cy="112" r="3.4"/><circle cx="62" cy="84" r="3.4"/>
-          </g>
-          <text class="accent" x="90" y="44" text-anchor="middle">粒1個ぶんの揺れ</text>
+          <g id="gr-elec"></g>
+          <text id="gr-halo-t" class="accent" x="90" y="44" text-anchor="middle">粒1個ぶんの揺れ</text>
           <text class="label" x="90" y="188" text-anchor="middle">「どこ」とは言えない――</text>
           <text class="label" x="90" y="204" text-anchor="middle">回路全体の揺れに、1個ぶん</text>
-          <!-- 配線と飛び出す粒 -->
           <line x1="146" y1="112" x2="294" y2="112" stroke="var(--ink)" stroke-width="2"/>
-          <path d="M 190 112 q 5 -11 10 0 q 5 11 10 0 q 5 -11 10 0 q 5 11 10 0" stroke="#b5504a" stroke-width="2.4" fill="none"/>
-          <path d="M 238 106 L 248 112 L 238 118" stroke="#b5504a" stroke-width="2.2" fill="none"/>
+          <g id="gr-pkt" opacity="0">
+            <path d="M -22 0 q 5.5 -11 11 0 q 5.5 11 11 0 q 5.5 -11 11 0 q 5.5 11 11 0" stroke="#b5504a" stroke-width="2.4" fill="none"/>
+          </g>
           <text class="label" x="216" y="82" text-anchor="middle">エネルギーをこぼすと、</text>
           <text class="label" x="216" y="98" text-anchor="middle">粒だけが配線を伝って外へ</text>
           <text class="label" x="216" y="136" text-anchor="middle">（電子は輪に残る）</text>
-          <!-- 検出器 -->
-          <rect x="296" y="86" width="52" height="52" rx="8" fill="var(--paper2)" stroke="#6b7480" stroke-width="1.8"/>
+          <rect id="gr-det" x="296" y="86" width="52" height="52" rx="8" fill="var(--paper2)" stroke="#6b7480" stroke-width="1.8"/>
           <text class="label" x="322" y="116" text-anchor="middle">検出器</text>
-          <path d="M 288 100 L 296 106 M 286 112 L 294 112 M 288 124 L 296 118" stroke="#b5504a" stroke-width="1.8"/>
-          <text class="accent" x="322" y="74" text-anchor="middle" fill="#b5504a">カチッ</text>
+          <g id="gr-spark" opacity="0">
+            <path d="M 288 100 L 296 106 M 286 112 L 294 112 M 288 124 L 296 118" stroke="#b5504a" stroke-width="1.8"/>
+          </g>
+          <text id="gr-click" class="accent" x="322" y="74" text-anchor="middle" fill="#b5504a" opacity="0">カチッ</text>
           <text class="label" x="322" y="156" text-anchor="middle">5GHzの光子1個</text>
           <text class="label" x="186" y="228" text-anchor="middle">外に出た瞬間は「5GHzの電波の光子1個」――光の光子と同じ実在</text>
           <text class="label" x="186" y="246" text-anchor="middle">電子＝舞台で揺れる役者たち ／ 粒＝「揺れ」という演目のチケット1枚</text>
         </svg>
-        <div class="diagram-caption">粒の居場所。回路の中では、粒は特定の場所に置いてある物ではなく、電子たち（役者）が作る<strong>回路全体の揺れに「1個ぶん」</strong>として帰属する――淡い環で描いたのがそのイメージだ。ただの概念的な単位ではない証拠に、量子ビットがエネルギーをこぼすと、この1個ぶんは<strong>配線を伝って外へ飛び出し、検出器に「5GHzの電波の光子1個」としてカチッと当たる</strong>。飛び出すのは粒（チケット）だけで、電子（役者）は舞台の輪に残る。</div>
+        <div class="diagram-caption">粒の居場所（アニメーション）。回路が粒1個ぶん揺れている間は、電子たち（●）が行ったり来たりし、<strong>輪全体が淡く光る</strong>――粒は特定の場所に置いてある物ではなく、回路全体の揺れに「1個ぶん」として帰属する。量子ビットがエネルギーをこぼすと、光が消えて電子の揺れが静まり、<strong>粒だけが波束となって配線を走り、検出器に「5GHzの電波の光子1個」としてカチッと当たる</strong>。飛び出すのは粒（チケット）だけで、電子（役者）は舞台の輪に残る。ただの概念的な単位ではない、光の光子と同じ実在だ。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -707,6 +702,97 @@
       entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
     }, {threshold: 0.2});
     io.observe(document.getElementById('sc-svg'));
+  }
+})();
+</script>
+
+<script>
+(function(){
+  // 図: 粒の居場所（揺れ→放出→検出のループ）
+  var svg = document.getElementById('gr-svg');
+  var g = document.getElementById('gr-elec');
+  if (!svg || !g) return;
+  var ns = 'http://www.w3.org/2000/svg';
+  var CX = 90, CY = 112, R = 40;
+  var dots = [];
+  for (var i = 0; i < 8; i++) {
+    var e = document.createElementNS(ns, 'circle');
+    e.setAttribute('r', 3.4);
+    e.setAttribute('fill', '#2f8a8f');
+    g.appendChild(e);
+    dots.push({e: e, base: i * Math.PI / 4});
+  }
+  var haloF = document.getElementById('gr-halo-f');
+  var haloS = document.getElementById('gr-halo-s');
+  var haloT = document.getElementById('gr-halo-t');
+  var pkt = document.getElementById('gr-pkt');
+  var spark = document.getElementById('gr-spark');
+  var click = document.getElementById('gr-click');
+  var det = document.getElementById('gr-det');
+
+  var T = 6.0; // 1周の秒数
+  function draw(time, swing) {
+    var p = (time % T) / T;
+    var osc, halo, pktQ = -1, flash = 0;
+    if (p < 0.38) { osc = 1; halo = 1; }
+    else if (p < 0.72) {
+      var q = (p - 0.38) / 0.34;
+      osc = 1 - q; halo = 1 - q; pktQ = q;
+    }
+    else if (p < 0.86) {
+      osc = 0; halo = 0;
+      flash = 1 - (p - 0.72) / 0.14;
+    }
+    else { var r = (p - 0.86) / 0.14; osc = r; halo = r; }
+    // 電子の往復（輪に沿った角度の揺れ）
+    var a = 0.24 * Math.sin(swing) * osc;
+    for (var i = 0; i < dots.length; i++) {
+      var th = dots[i].base + a;
+      dots[i].e.setAttribute('cx', CX + R * Math.cos(th));
+      dots[i].e.setAttribute('cy', CY + R * Math.sin(th));
+    }
+    // ハロー（粒1個ぶんの揺れの光）
+    haloF.setAttribute('opacity', halo * (0.10 + 0.05 * Math.sin(swing * 0.7)));
+    haloS.setAttribute('opacity', halo);
+    haloT.setAttribute('opacity', 0.25 + 0.75 * halo);
+    // 波束（粒）の走行
+    if (pktQ >= 0) {
+      pkt.setAttribute('opacity', Math.min(1, pktQ * 5, (1 - pktQ) * 5 + 0.4));
+      pkt.setAttribute('transform', 'translate(' + (168 + 124 * pktQ) + ' ' + CY + ')');
+    } else {
+      pkt.setAttribute('opacity', 0);
+    }
+    // 検出のフラッシュ
+    spark.setAttribute('opacity', flash);
+    click.setAttribute('opacity', flash);
+    det.setAttribute('stroke', flash > 0.3 ? '#b5504a' : '#6b7480');
+  }
+
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf = null, running = false, t0 = null, swing = 0;
+  function tick(ts) {
+    if (t0 === null) t0 = ts;
+    swing += 0.11;
+    draw((ts - t0) / 1000, swing);
+    if (running) raf = requestAnimationFrame(tick);
+  }
+  function start() {
+    if (running || reduced) return;
+    running = true;
+    raf = requestAnimationFrame(tick);
+  }
+  function stop() {
+    running = false;
+    if (raf) cancelAnimationFrame(raf);
+  }
+  // 静止時は「放出の途中」を1コマで見せる
+  draw(T * 0.55, 0.9);
+  if (reduced) { spark.setAttribute('opacity', 0.8); click.setAttribute('opacity', 0.8); }
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+    }, {threshold: 0.2});
+    io.observe(svg);
   }
 })();
 </script>
