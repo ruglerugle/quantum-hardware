@@ -114,46 +114,48 @@
       </div>
 
       <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 268" width="100%" role="img" aria-label="接合を入れる場所の図。左は前のステージのチップで、コイル役の折りたたんだ導線に取り外しの印が付いている。右は置き換え後のチップで、コンデンサの2枚の板をつなぐ配線の途中の1点に極小の接合があり、拡大すると下のアルミ膜と上のアルミ膜が少しだけ重なり、間に厚さ1〜2ナノメートルの酸化膜が挟まれたサンドイッチ構造になっている">
-          <text class="strong" x="186" y="16" text-anchor="middle">接合はどこに入るのか ― コイルとの交代</text>
-          <!-- 左: これまでの回路 -->
-          <text class="label" x="95" y="36" text-anchor="middle">これまでの回路</text>
-          <rect x="30" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="110" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <path d="M 55 82 L 55 100 L 75 100 L 75 112 L 95 112 L 95 100 L 115 100 L 115 112 L 135 112 L 135 82" stroke="#8892a1" stroke-width="2.6" fill="none"/>
-          <line x1="72" y1="90" x2="118" y2="122" stroke="#b5504a" stroke-width="2.6"/>
-          <line x1="118" y1="90" x2="72" y2="122" stroke="#b5504a" stroke-width="2.6"/>
-          <text class="label" x="95" y="140" text-anchor="middle">コイル役の導線を</text>
-          <text class="label" x="95" y="156" text-anchor="middle">取り外す</text>
-          <!-- 矢印 -->
-          <path d="M 172 96 L 194 96 M 189 91 L 196 96 L 189 101" stroke="var(--ink)" stroke-width="2" fill="none"/>
-          <!-- 右: 接合入りの回路 -->
-          <text class="label" x="277" y="36" text-anchor="middle">接合を1点だけ入れる</text>
-          <rect x="207" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="297" y="48" width="50" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <line x1="257" y1="65" x2="271" y2="65" stroke="#8892a1" stroke-width="2.6"/>
-          <line x1="283" y1="65" x2="297" y2="65" stroke="#8892a1" stroke-width="2.6"/>
-          <rect x="271" y="60" width="12" height="10" fill="#b5504a"/>
-          <text class="label" x="277" y="92" text-anchor="middle">ここ（約100nm四方）</text>
-          <!-- 拡大線 -->
-          <line x1="271" y1="70" x2="216" y2="122" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
-          <line x1="283" y1="70" x2="342" y2="122" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
-          <!-- 拡大断面 -->
-          <rect x="212" y="122" width="134" height="86" rx="8" fill="var(--paper2)" stroke="#2f8a8f" stroke-width="1.6"/>
-          <rect x="220" y="168" width="90" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="248" y="146" width="90" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="248" y="164" width="62" height="4" fill="#c9a227"/>
-          <text class="label" x="279" y="140" text-anchor="middle">上のアルミ膜</text>
-          <text class="label" x="265" y="200" text-anchor="middle">下のアルミ膜</text>
-          <text class="accent" x="344" y="168" text-anchor="end" fill="#8a6a24">←酸化膜</text>
-          <text class="label" x="279" y="224" text-anchor="middle">重なりの間に厚さ1〜2nmの膜</text>
-          <!-- 左下の比較メモ -->
-          <text class="label" x="95" y="192" text-anchor="middle">接合も「導体・絶縁体・導体」＝</text>
-          <text class="label" x="95" y="208" text-anchor="middle">構造はコンデンサと同じ。</text>
-          <text class="label" x="95" y="224" text-anchor="middle">違いは切れ目の厚さだけ</text>
-          <text class="label" x="186" y="252" text-anchor="middle">コンデンサの隙間＝波が渡れない広さ ／ 接合の膜＝原子数個分の薄さ</text>
+        <svg id="tm-svg" class="qh-svg" viewBox="0 0 372 308" width="100%" role="img" aria-label="トランズモンの動く見取り図。シリコンやサファイアの基板の上に2枚のアルミの板があり、コイル役の導線の代わりに、板をつなぐ首の1点に極小の接合が入っている。アニメーションでは、電子が首の接合を通って行き来し、2枚の板が交互にプラスとマイナスに帯電する。板の間の電場は真空と基板という絶縁体を通り、帯電と同期して明滅する。左下の接合の拡大断面では、電子の波が厚さ1〜2ナノメートルの酸化膜をしみ出して上下に通り抜ける。右下には、厚い切れ目は渡れないのでためる係、極薄の切れ目は通す係、という対比が示されている">
+          <text class="strong" x="186" y="14" text-anchor="middle">接合はどこに入るのか ― トランズモンの動く見取り図</text>
+          <!-- チップ上面 -->
+          <rect x="16" y="26" width="340" height="158" rx="10" fill="#e9eef6" stroke="var(--line)"/>
+          <rect x="40" y="44" width="116" height="96" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
+          <rect x="216" y="44" width="116" height="96" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
+          <text class="label" x="186" y="42" text-anchor="middle">電場</text>
+          <path id="tm-arc1" d="M 156 58 Q 186 46 216 58" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <path id="tm-arc2" d="M 156 74 Q 186 66 216 74" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <path id="tm-arc3" d="M 156 108 Q 186 116 216 108" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <path id="tm-arc4" d="M 156 124 Q 186 134 216 124" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <line x1="156" y1="92" x2="176" y2="92" stroke="#8892a1" stroke-width="3"/>
+          <line x1="196" y1="92" x2="216" y2="92" stroke="#8892a1" stroke-width="3"/>
+          <rect x="176" y="86" width="20" height="12" fill="#b5504a"/>
+          <g id="tm-dyn"></g>
+          <text class="label" x="186" y="152" text-anchor="middle">↑接合（約100nm四方）。コイル役の導線の代わりに、首の1点へ</text>
+          <text class="label" x="186" y="176" text-anchor="middle">シリコン／サファイアの基板（＝絶縁体。電場はここと真空を通る）</text>
+          <!-- 左下: 接合の拡大断面 -->
+          <text class="label" x="107" y="204" text-anchor="middle">接合の拡大（横から見た断面）</text>
+          <rect x="72" y="230" width="110" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="72" y="248" width="70" height="5" fill="#c9a227"/>
+          <rect x="32" y="253" width="110" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <text class="label" x="127" y="226" text-anchor="middle">上のアルミ</text>
+          <text class="label" x="60" y="286" text-anchor="middle">下のアルミ</text>
+          <line x1="150" y1="250" x2="164" y2="250" stroke="#8a6a24" stroke-width="1.2"/>
+          <text class="label" x="167" y="254" text-anchor="start">酸化膜</text>
+          <text class="label" x="107" y="300" text-anchor="middle">●＝波が膜をしみ出して行き来</text>
+          <!-- 右下: 切れ目の対比 -->
+          <text class="label" x="283" y="204" text-anchor="middle">切れ目の厚さで役割が決まる</text>
+          <rect x="214" y="216" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="258" y="216" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <line x1="243" y1="220" x2="255" y2="232" stroke="#b5504a" stroke-width="2"/>
+          <line x1="255" y1="220" x2="243" y2="232" stroke="#b5504a" stroke-width="2"/>
+          <text class="label" x="292" y="230" text-anchor="start">厚い → ためる</text>
+          <rect x="214" y="248" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="244" y="248" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <path d="M 238 258 q 3 -5 6 0 q 3 5 6 0" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <text class="label" x="292" y="262" text-anchor="start">極薄 → 通す</text>
+          <text class="label" x="283" y="290" text-anchor="middle">同じ「導体・絶縁体・導体」でも</text>
+          <text class="label" x="283" y="304" text-anchor="middle">厚さの違いで正反対の係になる</text>
         </svg>
-        <div class="diagram-caption">接合の置き場所。前のステージのチップから<strong>コイル役の折りたたんだ導線を取り外し</strong>、コンデンサの2枚の板をつなぐ配線の途中の<strong>たった1点</strong>に、約100ナノメートル四方の極小部品を入れる。拡大すると、<strong>下のアルミ膜と上のアルミ膜が少しだけ重なり、間に厚さ1〜2ナノメートルの酸化膜が挟まれたサンドイッチ</strong>になっている。つまり接合も「導体・絶縁体・導体」――<strong>構造はコンデンサと同じ</strong>で、違いは切れ目の厚さだけだ。コンデンサの隙間は波が渡れない広さの「設計した切れ目」、接合の膜は波がしみ出して渡れる原子数個分の薄さ。この薄さが何を起こすかが、今日の主役になる。</div>
+        <div class="diagram-caption">トランズモンの動く見取り図。前のステージのチップから<strong>コイル役の折りたたんだ導線を取り外し</strong>、2枚の板をつなぐ首の<strong>たった1点</strong>に約100nm四方の接合を入れる。アニメーションでは、電子の群れ（●）が首の接合を通って行き来し、2枚の板が交互に＋と−に帯電する。<strong>ためる働きは、板の間の電場</strong>（板の間の真空と、絶縁体である基板の中を通る）が担い、帯電と同期して明滅する。左下は接合の拡大断面で、電子の波が厚さ1〜2nmの<strong>酸化膜をしみ出して通り抜ける</strong>行き来。右下の対比の通り、<strong>同じ「導体・絶縁体・導体」でも、切れ目が厚ければためる係（コンデンサ）、極薄なら通す係（接合）</strong>――切れ目の厚さのダイヤルを両極端に振った2つの部品が、1つの回路に同居している。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -465,6 +467,82 @@
       entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
     }, {threshold: 0.2});
     io.observe(document.getElementById('cn-svg'));
+  }
+})();
+</script>
+<script>
+(function(){
+  // 図: トランズモンの動く見取り図（帯電・電場・接合の行き来を同期）
+  var svg = document.getElementById('tm-svg');
+  var g = document.getElementById('tm-dyn');
+  if (!svg || !g) return;
+  var ns = 'http://www.w3.org/2000/svg';
+  var CR = '#b5504a', CB = '#2f5a9e', CA = '#2f8a8f';
+  function el(name, attrs, parent) {
+    var e = document.createElementNS(ns, name);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    (parent || g).appendChild(e);
+    return e;
+  }
+  var glowA = el('rect', {x: 146, y: 44, width: 10, height: 96, opacity: 0});
+  var glowB = el('rect', {x: 216, y: 44, width: 10, height: 96, opacity: 0});
+  var signA = el('text', {x: 98, y: 100, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
+  var signB = el('text', {x: 274, y: 100, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
+  var arcs = ['tm-arc1', 'tm-arc2', 'tm-arc3', 'tm-arc4'].map(function (id) { return document.getElementById(id); });
+  var dots = [];
+  for (var i = 0; i < 3; i++) {
+    dots.push({base: 166 + i * 20, e: el('circle', {cy: 92, r: 3, fill: CA})});
+  }
+  var zdots = [];
+  for (var j = 0; j < 2; j++) {
+    zdots.push({ph: j * 0.6, e: el('circle', {cx: 100 + j * 16, r: 2.8, fill: CA})});
+  }
+  function draw(th) {
+    var q = Math.cos(th);
+    var top = q >= 0;
+    glowA.setAttribute('fill', top ? CR : CB);
+    glowB.setAttribute('fill', top ? CB : CR);
+    glowA.setAttribute('opacity', Math.abs(q) * 0.55);
+    glowB.setAttribute('opacity', Math.abs(q) * 0.55);
+    signA.textContent = top ? '＋' : '−';
+    signB.textContent = top ? '−' : '＋';
+    signA.setAttribute('fill', top ? CR : CB);
+    signB.setAttribute('fill', top ? CB : CR);
+    var so = Math.max(0.2, Math.abs(q));
+    signA.setAttribute('opacity', so);
+    signB.setAttribute('opacity', so);
+    for (var i = 0; i < arcs.length; i++) {
+      arcs[i].setAttribute('opacity', 0.12 + 0.55 * Math.abs(q));
+    }
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].e.setAttribute('cx', dots[i].base + 10 * q);
+    }
+    for (var j = 0; j < zdots.length; j++) {
+      zdots[j].e.setAttribute('cy', 251 + 15 * Math.sin(th - zdots[j].ph));
+    }
+  }
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf = null, running = false, th = 0.7;
+  function tick() {
+    th += 0.028;
+    draw(th);
+    if (running) raf = requestAnimationFrame(tick);
+  }
+  function start() {
+    if (running || reduced) return;
+    running = true;
+    raf = requestAnimationFrame(tick);
+  }
+  function stop() {
+    running = false;
+    if (raf) cancelAnimationFrame(raf);
+  }
+  draw(th);
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+    }, {threshold: 0.2});
+    io.observe(svg);
   }
 })();
 </script>
