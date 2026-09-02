@@ -346,7 +346,7 @@
         <svg id="bw-svg" class="qh-svg" viewBox="0 0 372 268" width="100%" role="img" aria-label="お椀の階段と回路の振動のアニメーション。右は電気の振り子をお椀として描いた図で、横軸は電気のたまり具合、高さはエネルギー。影のボールが段のエネルギーぶんの振幅で往復し、1往復の時間はどの段でも同じ。数秒ごとに段が1つ上がって粒が1個増える。左はそのときの回路の振動そのものの波形で、波長もリズムもどの段でも同じまま、振幅（音量）だけが粒単位で切り替わる">
           <text class="strong" x="186" y="16" text-anchor="middle">お椀の階段と回路の振動 ― 変わるのは振幅（音量）だけ</text>
           <!-- 左: 回路の振動そのもの -->
-          <text class="label" x="83" y="36" text-anchor="middle">回路の振動そのもの</text>
+          <text class="label" x="83" y="36" text-anchor="middle">回路の振動（ボールの往復の記録）</text>
           <rect x="16" y="44" width="134" height="116" rx="8" fill="none" stroke="var(--line)" stroke-width="1.4"/>
           <line x1="22" y1="102" x2="144" y2="102" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 3"/>
           <path id="bw-sig" fill="none" stroke="#2f8a8f" stroke-width="2.2"/>
@@ -366,7 +366,7 @@
           <text class="label" x="252" y="224" text-anchor="middle">横軸＝電気のたまり具合（− ⇄ 空 ⇄ ＋）</text>
           <text class="label" x="186" y="248" text-anchor="middle">段が1つ上がる＝粒が1個増える（段差はどこも hf）</text>
         </svg>
-        <div class="diagram-caption">量子力学で波になるのは「いまどのくらいたまっているか」という量そのもの（本文の通り、その定在波の山の数が粒の個数に対応する）。この図では、波の「形」の代わりに<strong>観測される振動</strong>を描いた。右：お椀のボールは、段が上がるほど大きな振幅で往復するが、<strong>1往復の時間はどの段でも同じ</strong>（等時性）。左：そのときの回路の振動そのもの。<strong>波長もリズムもどの段でも同じで、変わるのは振幅（音量）だけ</strong>――そしてその振幅は、粒単位でしか変わらない。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
+        <div class="diagram-caption">量子力学で波になるのは「いまどのくらいたまっているか」という量そのもの（本文の通り、その定在波の山の数が粒の個数に対応する）。この図では、波の「形」の代わりに<strong>観測される振動</strong>を描いた。右：お椀のボールは、段が上がるほど大きな振幅で往復するが、<strong>1往復の時間はどの段でも同じ</strong>（等時性）。左：<strong>ボールの往復をそのまま時間の記録として描いた波形</strong>（右端の点が、いまのボールの位置と連動）。<strong>波長もリズムもどの段でも同じで、変わるのは振幅（音量）だけ</strong>――段が上がった瞬間の振幅のジャンプが、波形の中を左へ流れていく。その振幅は、粒単位でしか変わらない。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -822,6 +822,7 @@
     labels.push(t);
   }
   var ball = el('circle', {r: 5.5, fill: '#c8cfd8', stroke: 'var(--muted)', 'stroke-width': 1.2, opacity: 0.65});
+  var dot = el('circle', {cx: 144, cy: 102, r: 3.2, fill: '#2f8a8f'});
   var plus = el('text', {x: 0, y: 0, 'class': 'accent', 'text-anchor': 'middle', opacity: 0});
   plus.textContent = '＋1粒';
 
@@ -839,16 +840,21 @@
     var by = 190 - Math.pow((bx - CXB) / 8, 2);
     ball.setAttribute('cx', bx);
     ball.setAttribute('cy', by - 6);
-    // 左: 回路の振動波形（波長・リズム一定、振幅だけ段で切り替え）
-    var A = LV[cur].amp;
+    // 左: ボールの往復をそのまま時間の記録として描く（右端＝いまの変位）
+    var spd = 34 * W / (2 * Math.PI); // 1往復が波長34pxに対応
+    var scale = 26 / (LV[3].w - 4);
     var d = '';
-    for (var k = 0; k <= 40; k++) {
-      var x = 22 + (122 * k / 40);
-      var y = 102 - A * Math.sin(2 * Math.PI * (x - 22) / 34 - time * W);
+    for (var k = 0; k <= 60; k++) {
+      var x = 22 + (122 * k / 60);
+      var tau = time - (144 - x) / spd;
+      var disp = tau < 0 ? 0 : (LV[Math.floor(tau / TL) % 4].w - 4) * Math.sin(tau * W);
+      var y = 102 - disp * scale;
       d += (k === 0 ? 'M ' : 'L ') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
     }
     sig.setAttribute('d', d);
     sig.setAttribute('stroke', COLORS[cur]);
+    dot.setAttribute('cy', 102 - (bx - CXB) * scale);
+    dot.setAttribute('fill', COLORS[cur]);
     // 段が上がった直後の「＋1粒」
     if (cur > 0 && since < 0.9) {
       plus.setAttribute('opacity', 1 - since / 0.9);
