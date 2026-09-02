@@ -343,30 +343,31 @@
       </div>
 
       <div class="diagram-box">
-        <svg id="bw-svg" class="qh-svg" viewBox="0 0 372 268" width="100%" role="img" aria-label="お椀の階段と回路の振動のアニメーション。右は電気の振り子をお椀として描いた図で、横軸は電気のたまり具合、高さはエネルギー。影のボールが段のエネルギーぶんの振幅で往復し、1往復の時間はどの段でも同じ。数秒ごとに段が1つ上がって粒が1個増える。左はそのときの回路の振動そのものの波形で、波長もリズムもどの段でも同じまま、振幅（音量）だけが粒単位で切り替わる">
-          <text class="strong" x="186" y="16" text-anchor="middle">お椀の階段と回路の振動 ― 変わるのは振幅（音量）だけ</text>
-          <!-- 左: 回路の振動そのもの -->
-          <text class="label" x="83" y="36" text-anchor="middle">回路の振動（ボールの往復の記録）</text>
-          <rect x="16" y="44" width="134" height="116" rx="8" fill="none" stroke="var(--line)" stroke-width="1.4"/>
-          <line x1="22" y1="102" x2="144" y2="102" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 3"/>
+        <svg id="bw-svg" class="qh-svg" viewBox="0 0 372 268" width="100%" role="img" aria-label="お椀の階段と高さの記録のアニメーション。左は電気の振り子のお椀で、横軸はたまり具合、高さはエネルギー。影のボールが往復し、ボールが届く高さがいまの段の破線とぴったり一致する。破線の段の線は右の記録パネルまで延びていて、右にはボールの高さの時間記録が波として流れる。波の山の高さは段の線と文字通り一致し、段が上がると波の高さが粒単位でジャンプする。リズムはどの段でも同じ">
+          <text class="strong" x="186" y="16" text-anchor="middle">お椀の階段と、高さの記録 ― 高さ（音量）だけが粒単位で変わる</text>
+          <text class="label" x="120" y="36" text-anchor="middle">お椀（たまり具合の振り子）</text>
+          <text class="label" x="294" y="36" text-anchor="middle">ボールの高さの記録</text>
+          <!-- 段の高さ線（お椀から記録パネルまで共有） -->
+          <line x1="84" y1="170" x2="356" y2="170" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
+          <line x1="63" y1="140" x2="356" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
+          <line x1="48" y1="110" x2="356" y2="110" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
+          <line x1="36" y1="80" x2="356" y2="80" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
+          <!-- お椀 -->
+          <path d="M 29 60 Q 120 320 211 60" stroke="var(--ink)" stroke-width="2.4" fill="none"/>
+          <!-- 記録パネル -->
+          <line x1="232" y1="60" x2="232" y2="190" stroke="var(--line)" stroke-width="1.4"/>
+          <line x1="232" y1="190" x2="356" y2="190" stroke="var(--line)" stroke-width="1.4"/>
           <path id="bw-sig" fill="none" stroke="#2f8a8f" stroke-width="2.2"/>
-          <text class="label" x="83" y="178" text-anchor="middle">波長もリズムも、どの段でも同じ</text>
-          <text class="label" x="83" y="194" text-anchor="middle">変わるのは振幅（音量）だけ</text>
-          <!-- 右: お椀 -->
-          <path d="M 161 60 Q 252 320 343 60" stroke="var(--ink)" stroke-width="2.4" fill="none"/>
-          <line x1="216" y1="170" x2="288" y2="170" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
-          <line x1="195" y1="140" x2="309" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
-          <line x1="180" y1="110" x2="324" y2="110" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
-          <line x1="168" y1="80" x2="336" y2="80" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
+          <!-- hf矢印（左端） -->
+          <line x1="22" y1="142" x2="22" y2="168" stroke="#b5504a" stroke-width="1.6"/>
+          <path d="M 18 147 L 22 141 L 26 147 M 18 163 L 22 169 L 26 163" stroke="#b5504a" stroke-width="1.6" fill="none"/>
+          <text class="accent" x="22" y="134" text-anchor="middle" fill="#b5504a">hf</text>
           <g id="bw-dyn"></g>
-          <line x1="350" y1="142" x2="350" y2="168" stroke="#b5504a" stroke-width="1.6"/>
-          <path d="M 346 147 L 350 141 L 354 147 M 346 163 L 350 169 L 354 163" stroke="#b5504a" stroke-width="1.6" fill="none"/>
-          <text class="accent" x="350" y="134" text-anchor="middle" fill="#b5504a">hf</text>
-          <text class="label" x="240" y="206" text-anchor="middle">影のボール：1往復はどの段でも同じ時間</text>
-          <text class="label" x="252" y="224" text-anchor="middle">横軸＝電気のたまり具合（− ⇄ 空 ⇄ ＋）</text>
-          <text class="label" x="186" y="248" text-anchor="middle">段が1つ上がる＝粒が1個増える（段差はどこも hf）</text>
+          <text class="label" x="186" y="214" text-anchor="middle">ボールが届く高さ＝いまの段。記録の波の山の高さと文字通り一致する</text>
+          <text class="label" x="186" y="232" text-anchor="middle">リズムはどの段でも同じ。変わるのは高さ（音量）だけ</text>
+          <text class="label" x="186" y="250" text-anchor="middle">段が1つ上がる＝粒が1個増える（段差はどこも hf）</text>
         </svg>
-        <div class="diagram-caption">量子力学で波になるのは「いまどのくらいたまっているか」という量そのもの（本文の通り、その定在波の山の数が粒の個数に対応する）。この図では、波の「形」の代わりに<strong>観測される振動</strong>を描いた。右：お椀のボールは、段が上がるほど大きな振幅で往復するが、<strong>1往復の時間はどの段でも同じ</strong>（等時性）。左：<strong>ボールの往復をそのまま時間の記録として描いた波形</strong>（右端の点が、いまのボールの位置と連動）。<strong>波長もリズムもどの段でも同じで、変わるのは振幅（音量）だけ</strong>――段が上がった瞬間の振幅のジャンプが、波形の中を左へ流れていく。その振幅は、粒単位でしか変わらない。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
+        <div class="diagram-caption">左のお椀（横軸＝たまり具合、高さ＝エネルギー）で影のボールが往復し、<strong>ボールが届く高さが、いまの段の破線とぴったり一致する</strong>。段の破線は右の記録パネルまで延びていて、右には<strong>ボールの高さの時間記録</strong>が波として流れる（左端の点がいまのボールの高さ。水平の結び線で連動を示す）。<strong>波の山の高さは段の線と文字通り一致</strong>し、段が上がると波の高さが粒単位でジャンプする。1往復の時間はどの段でも同じ（等時性）なので、記録のリズム（波の間隔）も一定のまま――変わるのは高さ（音量）だけ。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -795,7 +796,7 @@
 
 <script>
 (function(){
-  // 図: お椀の階段と回路の振動（段を昇るループ、波長・リズムは一定）
+  // 図: お椀の階段と高さの記録（縦軸を共有した連動アニメ）
   var svg = document.getElementById('bw-svg');
   var g = document.getElementById('bw-dyn');
   var sig = document.getElementById('bw-sig');
@@ -807,13 +808,13 @@
     (parent || g).appendChild(e);
     return e;
   }
-  var CXB = 252;
+  var CXB = 120;
   var COLORS = ['#2f5a9e', '#2f8a8f', '#8a6a24', '#b5504a'];
   var LV = [
-    {y: 170, w: 35.8, amp: 2.5},
-    {y: 140, w: 56.6, amp: 12},
-    {y: 110, w: 71.6, amp: 19},
-    {y: 80,  w: 83.9, amp: 25}
+    {y: 170, w: 35.8},
+    {y: 140, w: 56.6},
+    {y: 110, w: 71.6},
+    {y: 80,  w: 83.9}
   ];
   var labels = [];
   for (var i = 0; i < 4; i++) {
@@ -821,12 +822,20 @@
     t.textContent = '粒' + i + '個';
     labels.push(t);
   }
-  var ball = el('circle', {r: 5.5, fill: '#c8cfd8', stroke: 'var(--muted)', 'stroke-width': 1.2, opacity: 0.65});
-  var dot = el('circle', {cx: 144, cy: 102, r: 3.2, fill: '#2f8a8f'});
+  var tie = el('line', {stroke: '#2f8a8f', 'stroke-width': 1.2, 'stroke-dasharray': '4 3', opacity: 0.8});
+  var ball = el('circle', {r: 5.5, fill: '#c8cfd8', stroke: 'var(--muted)', 'stroke-width': 1.2, opacity: 0.7});
+  var dot = el('circle', {cx: 232, cy: 190, r: 3.2, fill: '#2f8a8f'});
   var plus = el('text', {x: 0, y: 0, 'class': 'accent', 'text-anchor': 'middle', opacity: 0});
   plus.textContent = '＋1粒';
 
   var TL = 3.0, W = 3.4;
+  var SPD = 26 * W / Math.PI; // 高さの波1つぶんが26pxに対応
+  function heightAt(tau) {
+    if (tau < 0) return 190;
+    var lv = LV[Math.floor(tau / TL) % 4];
+    var disp = lv.w * Math.sin(tau * W);
+    return 190 - Math.pow(disp / 8, 2);
+  }
   function draw(time) {
     var cur = Math.floor(time / TL) % 4;
     var since = time % TL;
@@ -835,26 +844,30 @@
       labels[i].setAttribute('fill', i === cur ? COLORS[i] : '');
       labels[i].setAttribute('font-weight', i === cur ? '900' : '700');
     }
-    // 影のボール: 段の振幅で往復（1往復の時間はどの段でも同じ）
-    var bx = CXB + (LV[cur].w - 4) * Math.sin(time * W);
+    // 影のボール（端で、その段の高さ線にちょうど届く）
+    var bx = CXB + LV[cur].w * Math.sin(time * W);
     var by = 190 - Math.pow((bx - CXB) / 8, 2);
     ball.setAttribute('cx', bx);
     ball.setAttribute('cy', by - 6);
-    // 左: ボールの往復をそのまま時間の記録として描く（右端＝いまの変位）
-    var spd = 34 * W / (2 * Math.PI); // 1往復が波長34pxに対応
-    var scale = 26 / (LV[3].w - 4);
+    // 高さの記録（左端＝いま）
     var d = '';
-    for (var k = 0; k <= 60; k++) {
-      var x = 22 + (122 * k / 60);
-      var tau = time - (144 - x) / spd;
-      var disp = tau < 0 ? 0 : (LV[Math.floor(tau / TL) % 4].w - 4) * Math.sin(tau * W);
-      var y = 102 - disp * scale;
+    for (var k = 0; k <= 62; k++) {
+      var u = k / 62;
+      var x = 232 + 124 * u;
+      var y = heightAt(time - u * (124 / SPD));
       d += (k === 0 ? 'M ' : 'L ') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
     }
     sig.setAttribute('d', d);
     sig.setAttribute('stroke', COLORS[cur]);
-    dot.setAttribute('cy', 102 - (bx - CXB) * scale);
+    var yNow = heightAt(time);
+    dot.setAttribute('cy', yNow);
     dot.setAttribute('fill', COLORS[cur]);
+    // ボールと記録を結ぶ水平線（高さが同じことを示す）
+    tie.setAttribute('x1', bx);
+    tie.setAttribute('y1', yNow);
+    tie.setAttribute('x2', 232);
+    tie.setAttribute('y2', yNow);
+    tie.setAttribute('stroke', COLORS[cur]);
     // 段が上がった直後の「＋1粒」
     if (cur > 0 && since < 0.9) {
       plus.setAttribute('opacity', 1 - since / 0.9);
@@ -881,7 +894,7 @@
     running = false;
     if (raf) cancelAnimationFrame(raf);
   }
-  draw(TL * 1.5);
+  draw(TL * 1.4);
   if (!reduced && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
