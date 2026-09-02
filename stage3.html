@@ -114,48 +114,68 @@
       </div>
 
       <div class="diagram-box">
-        <svg id="tm-svg" class="qh-svg" viewBox="0 0 372 308" width="100%" role="img" aria-label="トランズモンの動く見取り図。シリコンやサファイアの基板の上に2枚のアルミの板があり、コイル役の導線の代わりに、板をつなぐ首の1点に極小の接合が入っている。アニメーションでは、電子が首の接合を通って行き来し、2枚の板が交互にプラスとマイナスに帯電する。板の間の電場は真空と基板という絶縁体を通り、帯電と同期して明滅する。左下の接合の拡大断面では、電子の波が厚さ1〜2ナノメートルの酸化膜をしみ出して上下に通り抜ける。右下には、厚い切れ目は渡れないのでためる係、極薄の切れ目は通す係、という対比が示されている">
-          <text class="strong" x="186" y="14" text-anchor="middle">接合はどこに入るのか ― トランズモンの動く見取り図</text>
-          <!-- チップ上面 -->
-          <rect x="16" y="26" width="340" height="158" rx="10" fill="#e9eef6" stroke="var(--line)"/>
-          <rect x="40" y="44" width="116" height="96" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
-          <rect x="216" y="44" width="116" height="96" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
-          <text class="label" x="186" y="42" text-anchor="middle">電場</text>
-          <path id="tm-arc1" d="M 156 58 Q 186 46 216 58" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
-          <path id="tm-arc2" d="M 156 74 Q 186 66 216 74" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
-          <path id="tm-arc3" d="M 156 108 Q 186 116 216 108" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
-          <path id="tm-arc4" d="M 156 124 Q 186 134 216 124" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
-          <line x1="156" y1="92" x2="176" y2="92" stroke="#8892a1" stroke-width="3"/>
-          <line x1="196" y1="92" x2="216" y2="92" stroke="#8892a1" stroke-width="3"/>
-          <rect x="176" y="86" width="20" height="12" fill="#b5504a"/>
+        <svg id="tm-svg" class="qh-svg" viewBox="0 0 372 310" width="100%" role="img" aria-label="トランズモンを斜め上から見た立体図のアニメーション。シリコンやサファイアの基板の上に、紙のように薄くて面積の大きい2枚のアルミの箔（パッド）が載っている。2枚をつなぐ細い帯の途中で、下の帯と上の帯が少しだけ重なり、そこが接合になっている。電子が帯を通って行き来し、2枚のパッドが交互にプラスとマイナスに帯電し、パッドの間の電場が真空と基板の中を通って明滅する。左下は接合の分解図で、上のアルミ、厚さ1〜2ナノメートルの酸化膜、下のアルミの3層を離して描き、電子の波が酸化膜を上下に通り抜ける。右下には切れ目の厚さの対比がある">
+          <text class="strong" x="186" y="14" text-anchor="middle">トランズモンの立体見取り図 ― 箔と、帯の重なり</text>
+          <!-- パッド注記 -->
+          <text class="label" x="96" y="34" text-anchor="middle">アルミの板＝ぺらぺらの箔</text>
+          <text class="label" x="96" y="48" text-anchor="middle">（厚さ約100nm・幅は数百μm）</text>
+          <line x1="100" y1="52" x2="110" y2="112" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+          <g transform="translate(0,-42)">
+          <text class="label" x="193" y="134" text-anchor="middle">電場</text>
+          <!-- 基板（立体） -->
+          <polygon points="28,170 328,170 354,156 54,156" fill="#e9eef6" stroke="var(--line)" stroke-width="1"/>
+          <polygon points="28,170 328,170 328,180 28,180" fill="#d3dbe8" stroke="var(--line)" stroke-width="1"/>
+          <polygon points="328,170 354,156 354,166 328,180" fill="#c4cedd" stroke="var(--line)" stroke-width="1"/>
+          <!-- パッド2枚（極薄の箔） -->
+          <polygon points="54,166 166,166 182,157 70,157" fill="#dfe3e9" stroke="#6b7480" stroke-width="1"/>
+          <polygon points="54,166 166,166 166,168.5 54,168.5" fill="#bcc5d2" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="166,166 182,157 182,159.5 166,168.5" fill="#aab4c4" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="206,166 318,166 334,157 222,157" fill="#dfe3e9" stroke="#6b7480" stroke-width="1"/>
+          <polygon points="206,166 318,166 318,168.5 206,168.5" fill="#bcc5d2" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="318,166 334,157 334,159.5 318,168.5" fill="#aab4c4" stroke="#6b7480" stroke-width="0.8"/>
+          <!-- 首の帯2本（下の帯と、重なって乗る上の帯） -->
+          <polygon points="166,163 188,163 194,159.5 172,159.5" fill="#cfd6df" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="166,163 188,163 188,164.6 166,164.6" fill="#aab4c4" stroke="#6b7480" stroke-width="0.6"/>
+          <polygon points="184,160 206,160 212,156.5 190,156.5" fill="#dfe3e9" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="184,160 206,160 206,161.6 184,161.6" fill="#bcc5d2" stroke="#6b7480" stroke-width="0.6"/>
+          <rect x="184" y="161.8" width="4.5" height="1.6" fill="#c9a227"/>
+          <circle cx="187" cy="160" r="10" fill="none" stroke="#b5504a" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <line x1="184" y1="170" x2="140" y2="264" stroke="#b5504a" stroke-width="1" stroke-dasharray="4 3"/>
+          <!-- 電場の弧（真空と基板） -->
+          <path id="tm-arc1" d="M 178 150 Q 193 136 208 150" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <path id="tm-arc2" d="M 172 156 Q 193 144 214 156" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <path id="tm-arc3" d="M 178 172 Q 193 188 208 172" stroke="#2f8a8f" stroke-width="1.6" fill="none" stroke-dasharray="4 3"/>
           <g id="tm-dyn"></g>
-          <text class="label" x="186" y="152" text-anchor="middle">↑接合（約100nm四方）。コイル役の導線の代わりに、首の1点へ</text>
-          <text class="label" x="186" y="176" text-anchor="middle">シリコン／サファイアの基板（＝絶縁体。電場はここと真空を通る）</text>
-          <!-- 左下: 接合の拡大断面 -->
-          <text class="label" x="107" y="204" text-anchor="middle">接合の拡大（横から見た断面）</text>
-          <rect x="72" y="230" width="110" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="72" y="248" width="70" height="5" fill="#c9a227"/>
-          <rect x="32" y="253" width="110" height="18" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <text class="label" x="127" y="226" text-anchor="middle">上のアルミ</text>
-          <text class="label" x="60" y="286" text-anchor="middle">下のアルミ</text>
-          <line x1="150" y1="250" x2="164" y2="250" stroke="#8a6a24" stroke-width="1.2"/>
-          <text class="label" x="167" y="254" text-anchor="start">酸化膜</text>
-          <text class="label" x="107" y="300" text-anchor="middle">●＝波が膜をしみ出して行き来</text>
+          <text class="label" x="186" y="200" text-anchor="middle">シリコン／サファイア基板（＝絶縁体。点線の電場は基板の中を通る）</text>
+          </g>
+          <g id="tm-zdyn"></g>
+          <!-- 左下: 接合の分解図 -->
+          <text class="label" x="118" y="216" text-anchor="middle">接合の拡大（3層を離した分解図）</text>
+          <polygon points="96,238 166,238 186,227 116,227" fill="#dfe3e9" stroke="#6b7480" stroke-width="1"/>
+          <polygon points="96,238 166,238 166,246 96,246" fill="#bcc5d2" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="166,238 186,227 186,235 166,246" fill="#aab4c4" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="102,258 172,258 186,250 116,250" fill="#e8cf7a" stroke="#8a6a24" stroke-width="0.8"/>
+          <polygon points="102,258 172,258 172,260 102,260" fill="#c9a227" stroke="#8a6a24" stroke-width="0.6"/>
+          <polygon points="96,272 166,272 186,261 116,261" fill="#dfe3e9" stroke="#6b7480" stroke-width="1"/>
+          <polygon points="96,272 166,272 166,280 96,280" fill="#bcc5d2" stroke="#6b7480" stroke-width="0.8"/>
+          <polygon points="166,272 186,261 186,269 166,280" fill="#aab4c4" stroke="#6b7480" stroke-width="0.8"/>
+          <text class="label" x="88" y="238" text-anchor="end">上のアルミ</text>
+          <text class="label" x="88" y="258" text-anchor="end">酸化膜1〜2nm</text>
+          <text class="label" x="88" y="278" text-anchor="end">下のアルミ</text>
+          <text class="label" x="118" y="298" text-anchor="middle">※厚さの縮尺は誇張してある</text>
           <!-- 右下: 切れ目の対比 -->
-          <text class="label" x="283" y="204" text-anchor="middle">切れ目の厚さで役割が決まる</text>
-          <rect x="214" y="216" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="258" y="216" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <line x1="243" y1="220" x2="255" y2="232" stroke="#b5504a" stroke-width="2"/>
-          <line x1="255" y1="220" x2="243" y2="232" stroke="#b5504a" stroke-width="2"/>
-          <text class="label" x="292" y="230" text-anchor="start">厚い → ためる</text>
-          <rect x="214" y="248" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="244" y="248" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <path d="M 238 258 q 3 -5 6 0 q 3 5 6 0" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
-          <text class="label" x="292" y="262" text-anchor="start">極薄 → 通す</text>
-          <text class="label" x="283" y="290" text-anchor="middle">同じ「導体・絶縁体・導体」でも</text>
-          <text class="label" x="283" y="304" text-anchor="middle">厚さの違いで正反対の係になる</text>
+          <text class="label" x="294" y="216" text-anchor="middle">切れ目の厚さで役割が決まる</text>
+          <rect x="232" y="224" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="276" y="224" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <line x1="261" y1="228" x2="273" y2="240" stroke="#b5504a" stroke-width="2"/>
+          <line x1="273" y1="228" x2="261" y2="240" stroke="#b5504a" stroke-width="2"/>
+          <text class="label" x="267" y="258" text-anchor="middle">厚い → ためる</text>
+          <rect x="232" y="266" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="262" y="266" width="26" height="20" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <path d="M 256 276 q 3 -5 6 0 q 3 5 6 0" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <text class="label" x="267" y="298" text-anchor="middle">極薄 → 通す</text>
         </svg>
-        <div class="diagram-caption">トランズモンの動く見取り図。前のステージのチップから<strong>コイル役の折りたたんだ導線を取り外し</strong>、2枚の板をつなぐ首の<strong>たった1点</strong>に約100nm四方の接合を入れる。アニメーションでは、電子の群れ（●）が首の接合を通って行き来し、2枚の板が交互に＋と−に帯電する。<strong>ためる働きは、板の間の電場</strong>（板の間の真空と、絶縁体である基板の中を通る）が担い、帯電と同期して明滅する。左下は接合の拡大断面で、電子の波が厚さ1〜2nmの<strong>酸化膜をしみ出して通り抜ける</strong>行き来。右下の対比の通り、<strong>同じ「導体・絶縁体・導体」でも、切れ目が厚ければためる係（コンデンサ）、極薄なら通す係（接合）</strong>――切れ目の厚さのダイヤルを両極端に振った2つの部品が、1つの回路に同居している。</div>
+        <div class="diagram-caption">トランズモンを斜め上から見た立体図。<strong>2枚のアルミの板は、面積が数百μmと巨大なのに厚さは約100nmしかない、紙のような箔</strong>だ。2枚をつなぐ細い帯の途中で、下から伸びる帯の上に、上から伸びる帯が<strong>少しだけ乗り上げて重なり</strong>、その重なり（約100nm四方）が接合になる。アニメーションでは、電子の群れ（●）が帯を通って行き来し、2枚の板が交互に＋と−へ帯電。<strong>ためる働きは板の間の電場</strong>（実線＝真空、点線＝絶縁体である基板の中）が担う。左下は接合を3層に分けた分解図で、間に挟まる酸化膜は<strong>厚さ1〜2nm</strong>――膜のほうがアルミより数十倍薄い（図の厚さの縮尺は誇張）。なお、ためる量を決めるのは「向かい合う面積÷距離」で、<strong>電極自体の厚みはほぼ効かない</strong>。右下: 同じ「導体・絶縁体・導体」でも、切れ目が厚ければためる係、極薄なら通す係になる。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -528,10 +548,11 @@
 </script>
 <script>
 (function(){
-  // 図: トランズモンの動く見取り図（帯電・電場・接合の行き来を同期）
+  // 図: トランズモンの立体見取り図（帯電・電場・接合の行き来を同期）
   var svg = document.getElementById('tm-svg');
   var g = document.getElementById('tm-dyn');
-  if (!svg || !g) return;
+  var zg = document.getElementById('tm-zdyn');
+  if (!svg || !g || !zg) return;
   var ns = 'http://www.w3.org/2000/svg';
   var CR = '#b5504a', CB = '#2f5a9e', CA = '#2f8a8f';
   function el(name, attrs, parent) {
@@ -540,26 +561,26 @@
     (parent || g).appendChild(e);
     return e;
   }
-  var glowA = el('rect', {x: 146, y: 44, width: 10, height: 96, opacity: 0});
-  var glowB = el('rect', {x: 216, y: 44, width: 10, height: 96, opacity: 0});
-  var signA = el('text', {x: 98, y: 100, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
-  var signB = el('text', {x: 274, y: 100, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
-  var arcs = ['tm-arc1', 'tm-arc2', 'tm-arc3', 'tm-arc4'].map(function (id) { return document.getElementById(id); });
+  var glowA = el('polygon', {points: '152,166 166,166 182,157 168,157', opacity: 0});
+  var glowB = el('polygon', {points: '206,166 220,166 236,157 222,157', opacity: 0});
+  var signA = el('text', {x: 110, y: 164, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 15});
+  var signB = el('text', {x: 262, y: 164, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 15});
+  var arcs = ['tm-arc1', 'tm-arc2', 'tm-arc3'].map(function (id) { return document.getElementById(id); });
   var dots = [];
   for (var i = 0; i < 3; i++) {
-    dots.push({base: 166 + i * 20, e: el('circle', {cy: 92, r: 3, fill: CA})});
+    dots.push({base: 172 + i * 14, e: el('circle', {cy: 161.5, r: 2.6, fill: CA})});
   }
   var zdots = [];
   for (var j = 0; j < 2; j++) {
-    zdots.push({ph: j * 0.6, e: el('circle', {cx: 100 + j * 16, r: 2.8, fill: CA})});
+    zdots.push({ph: j * 0.6, e: el('circle', {cx: 124 + j * 16, r: 2.6, fill: CA}, zg)});
   }
   function draw(th) {
     var q = Math.cos(th);
     var top = q >= 0;
     glowA.setAttribute('fill', top ? CR : CB);
     glowB.setAttribute('fill', top ? CB : CR);
-    glowA.setAttribute('opacity', Math.abs(q) * 0.55);
-    glowB.setAttribute('opacity', Math.abs(q) * 0.55);
+    glowA.setAttribute('opacity', Math.abs(q) * 0.6);
+    glowB.setAttribute('opacity', Math.abs(q) * 0.6);
     signA.textContent = top ? '＋' : '−';
     signB.textContent = top ? '−' : '＋';
     signA.setAttribute('fill', top ? CR : CB);
@@ -571,10 +592,10 @@
       arcs[i].setAttribute('opacity', 0.12 + 0.55 * Math.abs(q));
     }
     for (var i = 0; i < dots.length; i++) {
-      dots[i].e.setAttribute('cx', dots[i].base + 10 * q);
+      dots[i].e.setAttribute('cx', dots[i].base + 9 * q);
     }
     for (var j = 0; j < zdots.length; j++) {
-      zdots[j].e.setAttribute('cy', 251 + 15 * Math.sin(th - zdots[j].ph));
+      zdots[j].e.setAttribute('cy', 254 + 20 * Math.sin(th - zdots[j].ph));
     }
   }
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
