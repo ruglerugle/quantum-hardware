@@ -343,17 +343,16 @@
       </div>
 
       <div class="diagram-box">
-        <svg id="bw-svg" class="qh-svg" viewBox="0 0 372 272" width="100%" role="img" aria-label="お椀の中の定在波のアニメーション。左は前の旅の井戸で、横軸が場所、壁の間に波が立つ。右は電気の振り子をお椀として描いた図で、横軸は電気のたまり具合、高さはエネルギー。影のボールがその段のエネルギーぶんの振幅でお椀を往復し、揺れの大小によらず1往復の時間は同じで、振動数はどの段でも変わらない。定在波の形は静止しており、数秒ごとに段が1つ上がって山が1つ増え、粒が1個増える。山の数は波の形の違いであって音の高さの違いではない。段差はどこも同じhf">
-          <text class="strong" x="186" y="16" text-anchor="middle">波はどこに立っているのか ― お椀の中の定在波</text>
-          <!-- 左: 井戸（前の旅） -->
-          <text class="label" x="66" y="36" text-anchor="middle">井戸（前の旅）</text>
-          <line x1="28" y1="48" x2="28" y2="150" stroke="var(--ink)" stroke-width="2.2"/>
-          <line x1="104" y1="48" x2="104" y2="150" stroke="var(--ink)" stroke-width="2.2"/>
-          <path d="M 28 88 q 38 -26 76 0" stroke="#2f5a9e" stroke-width="2" fill="none"/>
-          <path d="M 28 134 q 19 -18 38 0 q 19 18 38 0" stroke="#2f8a8f" stroke-width="2" fill="none"/>
-          <text class="label" x="66" y="168" text-anchor="middle">横軸＝「場所」</text>
-          <text class="label" x="66" y="184" text-anchor="middle">壁の間に波が立つ</text>
-          <!-- 右: お椀（たまり具合の波） -->
+        <svg id="bw-svg" class="qh-svg" viewBox="0 0 372 268" width="100%" role="img" aria-label="お椀の階段と回路の振動のアニメーション。右は電気の振り子をお椀として描いた図で、横軸は電気のたまり具合、高さはエネルギー。影のボールが段のエネルギーぶんの振幅で往復し、1往復の時間はどの段でも同じ。数秒ごとに段が1つ上がって粒が1個増える。左はそのときの回路の振動そのものの波形で、波長もリズムもどの段でも同じまま、振幅（音量）だけが粒単位で切り替わる">
+          <text class="strong" x="186" y="16" text-anchor="middle">お椀の階段と回路の振動 ― 変わるのは振幅（音量）だけ</text>
+          <!-- 左: 回路の振動そのもの -->
+          <text class="label" x="83" y="36" text-anchor="middle">回路の振動そのもの</text>
+          <rect x="16" y="44" width="134" height="116" rx="8" fill="none" stroke="var(--line)" stroke-width="1.4"/>
+          <line x1="22" y1="102" x2="144" y2="102" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 3"/>
+          <path id="bw-sig" fill="none" stroke="#2f8a8f" stroke-width="2.2"/>
+          <text class="label" x="83" y="178" text-anchor="middle">波長もリズムも、どの段でも同じ</text>
+          <text class="label" x="83" y="194" text-anchor="middle">変わるのは振幅（音量）だけ</text>
+          <!-- 右: お椀 -->
           <path d="M 161 60 Q 252 320 343 60" stroke="var(--ink)" stroke-width="2.4" fill="none"/>
           <line x1="216" y1="170" x2="288" y2="170" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
           <line x1="195" y1="140" x2="309" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="4 3"/>
@@ -363,12 +362,11 @@
           <line x1="350" y1="142" x2="350" y2="168" stroke="#b5504a" stroke-width="1.6"/>
           <path d="M 346 147 L 350 141 L 354 147 M 346 163 L 350 169 L 354 163" stroke="#b5504a" stroke-width="1.6" fill="none"/>
           <text class="accent" x="350" y="134" text-anchor="middle" fill="#b5504a">hf</text>
-          <text class="label" x="186" y="204" text-anchor="middle">影のボール：どの段でも1往復は同じ時間（振動数は不変）</text>
-          <text class="label" x="186" y="222" text-anchor="middle">横軸＝電気のたまり具合（− ⇄ 空 ⇄ ＋）</text>
-          <text class="label" x="186" y="242" text-anchor="middle">山の数＝波の「形」の違いで、音の高さの違いではない</text>
-          <text class="label" x="186" y="260" text-anchor="middle">山が1つ増える＝粒が1個増える（段差はどこも hf）</text>
+          <text class="label" x="240" y="206" text-anchor="middle">影のボール：1往復はどの段でも同じ時間</text>
+          <text class="label" x="252" y="224" text-anchor="middle">横軸＝電気のたまり具合（− ⇄ 空 ⇄ ＋）</text>
+          <text class="label" x="186" y="248" text-anchor="middle">段が1つ上がる＝粒が1個増える（段差はどこも hf）</text>
         </svg>
-        <div class="diagram-caption">量子力学で波になるのは、輪の空間の中の何かではなく、<strong>「いまどのくらいたまっているか」という量そのもの</strong>。電気の振り子は<strong>お椀の中のボール</strong>と同じ（横の位置＝たまり具合、高さ＝エネルギー）で、影のボールはその段のエネルギーぶんの振幅で往復する――<strong>揺れが大きくても小さくても1往復の時間が同じ</strong>（等時性）ことにも注目。量子力学ではこのボールの位置が波になり、お椀に閉じ込められた波には井戸と同じ<strong>定在波の選別</strong>が働く。アニメーションでは、数秒ごとに段が1つ上がって<strong>山が1つ・粒が1個</strong>増える。注意してほしいのは、<strong>山の数は「たまり具合の目盛りの上での形」の違いであって、音の高さ（振動数）の違いではない</strong>こと。回路の振動数はどの段でも同じで、それは影のボールの1往復が、どの段でも同じ時間であることに表れている。段ごとに変わるのは、形と音量だけ。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
+        <div class="diagram-caption">量子力学で波になるのは「いまどのくらいたまっているか」という量そのもの（本文の通り、その定在波の山の数が粒の個数に対応する）。この図では、波の「形」の代わりに<strong>観測される振動</strong>を描いた。右：お椀のボールは、段が上がるほど大きな振幅で往復するが、<strong>1往復の時間はどの段でも同じ</strong>（等時性）。左：そのときの回路の振動そのもの。<strong>波長もリズムもどの段でも同じで、変わるのは振幅（音量）だけ</strong>――そしてその振幅は、粒単位でしか変わらない。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -797,10 +795,11 @@
 
 <script>
 (function(){
-  // 図: お椀の中の定在波（段を昇るループ）
+  // 図: お椀の階段と回路の振動（段を昇るループ、波長・リズムは一定）
   var svg = document.getElementById('bw-svg');
   var g = document.getElementById('bw-dyn');
-  if (!svg || !g) return;
+  var sig = document.getElementById('bw-sig');
+  if (!svg || !g || !sig) return;
   var ns = 'http://www.w3.org/2000/svg';
   function el(name, attrs, parent) {
     var e = document.createElementNS(ns, name);
@@ -811,49 +810,45 @@
   var CXB = 252;
   var COLORS = ['#2f5a9e', '#2f8a8f', '#8a6a24', '#b5504a'];
   var LV = [
-    {y: 170, w: 35.8, m: 1, amp: 13},
-    {y: 140, w: 56.6, m: 2, amp: 12},
-    {y: 110, w: 71.6, m: 3, amp: 11},
-    {y: 80,  w: 83.9, m: 4, amp: 10}
+    {y: 170, w: 35.8, amp: 2.5},
+    {y: 140, w: 56.6, amp: 12},
+    {y: 110, w: 71.6, amp: 19},
+    {y: 80,  w: 83.9, amp: 25}
   ];
-  var waves = [], labels = [];
+  var labels = [];
   for (var i = 0; i < 4; i++) {
-    waves.push(el('path', {fill: 'none', stroke: COLORS[i], 'stroke-width': 2.2}));
     var t = el('text', {x: CXB - LV[i].w - 6, y: LV[i].y + 4, 'class': 'label', 'text-anchor': 'end'});
     t.textContent = '粒' + i + '個';
     labels.push(t);
   }
-  var ball = el('circle', {r: 5.5, fill: '#c8cfd8', stroke: 'var(--muted)', 'stroke-width': 1.2, opacity: 0.6});
+  var ball = el('circle', {r: 5.5, fill: '#c8cfd8', stroke: 'var(--muted)', 'stroke-width': 1.2, opacity: 0.65});
   var plus = el('text', {x: 0, y: 0, 'class': 'accent', 'text-anchor': 'middle', opacity: 0});
   plus.textContent = '＋1粒';
 
   var TL = 3.0, W = 3.4;
-  function wavePath(i, breath) {
-    var L = LV[i], d = '';
-    for (var k = 0; k <= 28; k++) {
-      var u = k / 28;
-      var x = CXB - L.w + 3 + (2 * L.w - 6) * u;
-      var y = L.y - L.amp * Math.sin(L.m * Math.PI * u) * breath;
-      d += (k === 0 ? 'M ' : 'L ') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
-    }
-    return d;
-  }
   function draw(time) {
     var cur = Math.floor(time / TL) % 4;
     var since = time % TL;
     for (var i = 0; i < 4; i++) {
-      var active = (i === cur);
-      waves[i].setAttribute('d', wavePath(i, active ? 1.0 : 0.72));
-      waves[i].setAttribute('opacity', active ? 1 : 0.25);
-      labels[i].setAttribute('opacity', active ? 1 : 0.45);
-      labels[i].setAttribute('fill', active ? COLORS[i] : '');
-      labels[i].setAttribute('font-weight', active ? '900' : '700');
+      labels[i].setAttribute('opacity', i === cur ? 1 : 0.45);
+      labels[i].setAttribute('fill', i === cur ? COLORS[i] : '');
+      labels[i].setAttribute('font-weight', i === cur ? '900' : '700');
     }
-    // 影のボール: その段の振幅で往復（周期はどの段でも同じ＝等時性）
+    // 影のボール: 段の振幅で往復（1往復の時間はどの段でも同じ）
     var bx = CXB + (LV[cur].w - 4) * Math.sin(time * W);
     var by = 190 - Math.pow((bx - CXB) / 8, 2);
     ball.setAttribute('cx', bx);
     ball.setAttribute('cy', by - 6);
+    // 左: 回路の振動波形（波長・リズム一定、振幅だけ段で切り替え）
+    var A = LV[cur].amp;
+    var d = '';
+    for (var k = 0; k <= 40; k++) {
+      var x = 22 + (122 * k / 40);
+      var y = 102 - A * Math.sin(2 * Math.PI * (x - 22) / 34 - time * W);
+      d += (k === 0 ? 'M ' : 'L ') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
+    }
+    sig.setAttribute('d', d);
+    sig.setAttribute('stroke', COLORS[cur]);
     // 段が上がった直後の「＋1粒」
     if (cur > 0 && since < 0.9) {
       plus.setAttribute('opacity', 1 - since / 0.9);
@@ -880,21 +875,12 @@
     running = false;
     if (raf) cancelAnimationFrame(raf);
   }
-  if (reduced) {
-    for (var j = 0; j < 4; j++) {
-      waves[j].setAttribute('d', wavePath(j, 0.9));
-      waves[j].setAttribute('opacity', 0.9);
-    }
-    ball.setAttribute('cx', CXB);
-    ball.setAttribute('cy', 184);
-  } else {
-    draw(0.4);
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
-      }, {threshold: 0.2});
-      io.observe(svg);
-    }
+  draw(TL * 1.5);
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+    }, {threshold: 0.2});
+    io.observe(svg);
   }
 })();
 </script>
