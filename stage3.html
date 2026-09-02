@@ -378,7 +378,7 @@
           <text class="label" x="186" y="304" text-anchor="middle">※接合は誇張して大きい（実際は約100nm四方）</text>
           <g id="j3-dyn"></g>
         </svg>
-        <div class="diagram-caption">接合が併せ持つ三つの性質を、1枚の絵で同時に動かして見る（中央の接合は誇張して大きく描いてある）。<strong>電子の数は増えも減りもせず、導体の中を行き来するだけ</strong>だ。電子が混み合って寄った側の板が−、薄くなった側が＋になり、電気の大部分はこの左右の<strong>板</strong>にたまる（ためる係・主役）。①接合の上下のアルミも同じことをする。−になった側では<strong>奥から膜ぎわへ電子が寄り集まり</strong>、＋になった側では<strong>膜ぎわが薄くなる</strong>――膜をはさんで反対符号が向かい合う、これが接合の<strong>コンデンサ成分</strong>だ（面積が小さいので、たまる量は板の100分の1以下で邪魔にならない）。②電子は膜をしみ出して通り抜け、<strong>電流が流れる</strong>（通す係）。流れている間は、配線のまわりに<strong>磁場</strong>の輪ができては消える――本物のコイルは、この磁場に貯金して変化に逆らうのだった。では接合の貯金はどこか。③膜の両側のアルミの中では、超伝導の「たった1つの波」が揺れている（2本の波線はその山の位置）。流れている間だけ上下の<strong>山の位置がずれる＝足並みがずれる</strong>。このずれにエネルギーが貯金され、流れを変えようとすると押し返す――コイルと同じ応答で、これが<strong>コイル成分</strong>の正体だ。板が満タンの瞬間は流れが止まり、足並みもそろっている。</div>
+        <div class="diagram-caption">接合が併せ持つ三つの性質を、1枚の絵で同時に動かして見る（中央の接合は誇張して大きく描いてある）。<strong>電子の数は増えも減りもせず、導体の中を行き来するだけ</strong>だ。電子が混み合って寄った側の板が−、薄くなった側が＋になり、電気の大部分はこの左右の<strong>板</strong>にたまる（ためる係・主役）。①接合の上下のアルミも同じことをする。−になった側では、<strong>膜を渡り終えて先へ進んだ電子の一部が引き戻され、膜ぎわに寄り集まる</strong>。＋になった側では逆に、膜ぎわの電子が奥へ引いて<strong>薄くなる</strong>――膜をはさんで反対符号が向かい合う、これが接合の<strong>コンデンサ成分</strong>だ（面積が小さいので、たまる量は板の100分の1以下で邪魔にならない）。②電子は膜をしみ出して通り抜け、<strong>電流が流れる</strong>（通す係）。流れている間は、配線のまわりに<strong>磁場</strong>の輪ができては消える――本物のコイルは、この磁場に貯金して変化に逆らうのだった。では接合の貯金はどこか。③膜の両側のアルミの中では、超伝導の「たった1つの波」が揺れている（2本の波線はその山の位置）。流れている間だけ上下の<strong>山の位置がずれる＝足並みがずれる</strong>。このずれにエネルギーが貯金され、流れを変えようとすると押し返す――コイルと同じ応答で、これが<strong>コイル成分</strong>の正体だ。板が満タンの瞬間は流れが止まり、足並みもそろっている。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -685,6 +685,8 @@
   var signA = el('text', {x: 51, y: 46, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
   var signB = el('text', {x: 321, y: 46, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
   var arcs = [document.getElementById('j3-a1'), document.getElementById('j3-a2')];
+  var bandTop = el('rect', {x: 146, y: 100, width: 80, height: 6, opacity: 0});
+  var bandBot = el('rect', {x: 146, y: 114, width: 80, height: 6, opacity: 0});
   // 接合の面の符号
   var faceTop = [], faceBot = [];
   for (var i = 0; i < 1; i++) {
@@ -746,6 +748,10 @@
     for (var i = 0; i < arcs.length; i++) {
       arcs[i].setAttribute('opacity', 0.12 + 0.55 * aq);
     }
+    bandTop.setAttribute('fill', top ? CB : CR);
+    bandBot.setAttribute('fill', top ? CR : CB);
+    bandTop.setAttribute('opacity', aq * 0.5);
+    bandBot.setAttribute('opacity', aq * 0.5);
     for (var i = 0; i < faceTop.length; i++) {
       faceTop[i].textContent = top ? '−' : '＋';
       faceBot[i].textContent = top ? '＋' : '−';
@@ -758,8 +764,12 @@
     // さらに−になった面へは寄り集まり、＋になった面からは離れる
     for (var i = 0; i < chain.length; i++) {
       var p = chain[i].s + AMP * q;
-      p += PULL * Math.tanh((cBot - p) / PW) * (-q);
-      p += PULL * Math.tanh((cTop - p) / PW) * (q);
+      // 膜ぎわへの寄り集まりは、それぞれの電極の「外側」から来る
+      // （上の面へは、渡り終えて右へ進んだ電子の一部が引き戻される＝逆流）
+      var uT = (p - cTop) / PW;
+      if (uT > 0) p -= PULL * Math.tanh(uT) * q;
+      var uB = (cBot - p) / PW;
+      if (uB > 0) p += PULL * Math.tanh(uB) * (-q);
       var pt = track.getPointAtLength(p);
       chain[i].e.setAttribute('cx', pt.x.toFixed(2));
       chain[i].e.setAttribute('cy', pt.y.toFixed(2));
