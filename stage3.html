@@ -343,7 +343,7 @@
       </div>
 
       <div class="diagram-box">
-        <svg id="j3-svg" class="qh-svg" viewBox="0 0 372 322" width="100%" role="img" aria-label="接合が併せ持つ三つの性質を1枚で見るアニメーション。左右の大きな板が交互にプラスとマイナスに帯電し、電気の大部分は板にたまる。中央には接合が誇張して大きく描かれ、下のアルミから酸化膜を通って上のアルミへ電子が行き来する。板の電圧に同期して接合の膜の両面にもごく少量の電荷がたまる。膜の両側のアルミの中には電子の波が描かれ、電流が流れている間だけ上下の波の足並みが横にずれ、板が満タンの瞬間はそろう。板の間の電場の弧は接合をよけて上下の空間を回り込む">
+        <svg id="j3-svg" class="qh-svg" viewBox="0 0 372 322" width="100%" role="img" aria-label="接合が併せ持つ三つの性質を1枚で見るアニメーション。左右の大きな板が交互にプラスとマイナスに帯電し、電気の大部分は板にたまる。中央には接合が誇張して大きく描かれ、下のアルミから酸化膜を通って上のアルミへ電子が行き来する。板の電圧に同期して接合の膜の両面にもごく少量の電荷がたまる。膜の両側のアルミの中には電子の波が描かれ、電流が流れている間だけ上下の波の足並みが横にずれ、板が満タンの瞬間はそろう。電流が流れている間だけ、配線のまわりに磁場の輪が現れては消える。板の間の電場の弧は接合をよけて上下の空間を回り込む">
           <text class="strong" x="186" y="14" text-anchor="middle">接合の三つの性質 ― ためる（少し）・通す・逆らう</text>
           <!-- 板の間の電場（接合をよけて回り込む） -->
           <path id="j3-a1" d="M 86 70 Q 186 32 286 70" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
@@ -362,6 +362,7 @@
           <text class="label" x="240" y="118" text-anchor="start">酸化膜</text>
           <!-- 電子の通り道（非表示） -->
           <path id="j3-path" d="M 96 135 H 178 Q 186 135 186 127 V 101 Q 186 93 194 93 H 276" fill="none" stroke="none"/>
+          <line x1="190.5" y1="78" x2="190.5" y2="150" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 3"/>
           <!-- 番号マーカー -->
           <text class="strong" x="138" y="117" text-anchor="end" font-size="12">①</text>
           <text class="strong" x="110" y="130" text-anchor="middle" font-size="12">②</text>
@@ -376,7 +377,7 @@
           <text class="label" x="186" y="304" text-anchor="middle">※接合は誇張して大きい（実際は約100nm四方）</text>
           <g id="j3-dyn"></g>
         </svg>
-        <div class="diagram-caption">接合が併せ持つ三つの性質を、1枚の絵で同時に動かして見る（中央の接合は誇張して大きく描いてある）。電気の大部分は左右の<strong>板</strong>にたまり（ためる係・主役）、板の間の電場の弧は接合をよけて空間と基板を回り込む。①板の電圧は、接合の膜の<strong>両面にもごく少量の電荷をためる</strong>（コンデンサ成分。板の100分の1以下で、邪魔にならない）。②電子の波は膜をしみ出して行き来し、<strong>電流が流れる</strong>（通す係）。③流れている間だけ、膜の両側で<strong>波の足並みが横にずれる</strong>。このずれにエネルギーが貯金され、流れを変えようとすると貯金が押し返す――本物のコイルが磁界に貯金して変化に逆らうのと同じ応答で、これが<strong>コイル成分</strong>の正体だ。板が満タンの瞬間は流れが止まり、足並みもそろっている。「電気が板にたまる」↔「流れて足並みがずれる」の行き来こそ、この回路の振り子運動そのものだ。</div>
+        <div class="diagram-caption">接合が併せ持つ三つの性質を、1枚の絵で同時に動かして見る（中央の接合は誇張して大きく描いてある）。電気の大部分は左右の<strong>板</strong>にたまり（ためる係・主役）、板の間の電場の弧は接合をよけて空間と基板を回り込む。①板の電圧は、接合の膜の<strong>両面にもごく少量の電荷をためる</strong>（コンデンサ成分。板の100分の1以下で、邪魔にならない）。②電子の波は膜をしみ出して行き来し、<strong>電流が流れる</strong>（通す係）。流れている間は、配線のまわりに<strong>磁場</strong>の輪ができては消える――本物のコイルは、この磁場に貯金して変化に逆らうのだった。では接合の貯金はどこか。③流れている間だけ、膜の両側で<strong>波の足並みが横にずれる</strong>。このずれにエネルギーが貯金され、流れを変えようとすると貯金が押し返す――本物のコイルが磁界に貯金して変化に逆らうのと同じ応答で、これが<strong>コイル成分</strong>の正体だ。板が満タンの瞬間は流れが止まり、足並みもそろっている。「電気が板にたまる」↔「流れて足並みがずれる」の行き来こそ、この回路の振り子運動そのものだ。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -703,6 +704,16 @@
     }
     return d;
   }
+  // 磁場の輪（電流が流れている間だけ現れる）
+  var CM = '#7a5aa0';
+  var rings = [];
+  [[116, 135], [256, 93]].forEach(function (c) {
+    for (var k = 0; k < 3; k++) {
+      rings.push({k: k, e: el('ellipse', {cx: c[0], cy: c[1], rx: 4 + k * 3, ry: 8 + k * 5.5, stroke: CM, 'stroke-width': 1.4, fill: 'none', opacity: 0})});
+    }
+  });
+  var magLabel = el('text', {x: 92, y: 170, 'class': 'label', 'text-anchor': 'start', fill: CM, opacity: 0});
+  magLabel.textContent = '磁場（流れている間だけ）';
   var wu = el('g', {});
   el('path', {d: wavePath(150, 88, 72, 4, 18), stroke: CA, 'stroke-width': 1.6, fill: 'none'}, wu);
   el('path', {d: wavePath(150, 142, 72, 4, 18), stroke: CA, 'stroke-width': 1.6, fill: 'none'});
@@ -742,7 +753,13 @@
       dots[i].e.setAttribute('cy', pt.y);
     }
     // 足並みのずれ: 流れている間だけ上の波が横にずれる
-    wu.setAttribute('transform', 'translate(' + (7 * cur).toFixed(2) + ',0)');
+    wu.setAttribute('transform', 'translate(' + (10 * cur).toFixed(2) + ',0)');
+    // 磁場: 電流に比例して現れては消える
+    var ac = Math.abs(cur);
+    for (var i = 0; i < rings.length; i++) {
+      rings[i].e.setAttribute('opacity', ac * (0.65 - rings[i].k * 0.16));
+    }
+    magLabel.setAttribute('opacity', 0.25 + 0.65 * ac);
   }
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var raf = null, running = false, th = 0.7;
