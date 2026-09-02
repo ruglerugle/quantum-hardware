@@ -343,7 +343,7 @@
       </div>
 
       <div class="diagram-box">
-        <svg id="bw-svg" class="qh-svg" viewBox="0 0 372 252" width="100%" role="img" aria-label="お椀の中の定在波のアニメーション。左は前の旅の井戸で、横軸が場所、壁の間に波が立つ。右は電気の振り子をお椀として描いた図で、横軸は電気のたまり具合、高さはエネルギー。影のボールがその段のエネルギーぶんの振幅でお椀を往復し、揺れの大小によらず1往復の時間は同じ。同じ段では定在波が呼吸するように振動し、数秒ごとに段が1つ上がって山が1つ増え、粒が1個増える。段差はどこも同じhf">
+        <svg id="bw-svg" class="qh-svg" viewBox="0 0 372 272" width="100%" role="img" aria-label="お椀の中の定在波のアニメーション。左は前の旅の井戸で、横軸が場所、壁の間に波が立つ。右は電気の振り子をお椀として描いた図で、横軸は電気のたまり具合、高さはエネルギー。影のボールがその段のエネルギーぶんの振幅でお椀を往復し、揺れの大小によらず1往復の時間は同じで、振動数はどの段でも変わらない。定在波の形は静止しており、数秒ごとに段が1つ上がって山が1つ増え、粒が1個増える。山の数は波の形の違いであって音の高さの違いではない。段差はどこも同じhf">
           <text class="strong" x="186" y="16" text-anchor="middle">波はどこに立っているのか ― お椀の中の定在波</text>
           <!-- 左: 井戸（前の旅） -->
           <text class="label" x="66" y="36" text-anchor="middle">井戸（前の旅）</text>
@@ -363,11 +363,12 @@
           <line x1="350" y1="142" x2="350" y2="168" stroke="#b5504a" stroke-width="1.6"/>
           <path d="M 346 147 L 350 141 L 354 147 M 346 163 L 350 169 L 354 163" stroke="#b5504a" stroke-width="1.6" fill="none"/>
           <text class="accent" x="350" y="134" text-anchor="middle" fill="#b5504a">hf</text>
-          <text class="label" x="186" y="204" text-anchor="middle">影のボール＝昔の見方。揺れが大小でも1往復は同じ時間</text>
+          <text class="label" x="186" y="204" text-anchor="middle">影のボール：どの段でも1往復は同じ時間（振動数は不変）</text>
           <text class="label" x="186" y="222" text-anchor="middle">横軸＝電気のたまり具合（− ⇄ 空 ⇄ ＋）</text>
-          <text class="label" x="186" y="244" text-anchor="middle">山が1つ増える＝粒が1個増える（段差はどこも hf）</text>
+          <text class="label" x="186" y="242" text-anchor="middle">山の数＝波の「形」の違いで、音の高さの違いではない</text>
+          <text class="label" x="186" y="260" text-anchor="middle">山が1つ増える＝粒が1個増える（段差はどこも hf）</text>
         </svg>
-        <div class="diagram-caption">量子力学で波になるのは、輪の空間の中の何かではなく、<strong>「いまどのくらいたまっているか」という量そのもの</strong>。電気の振り子は<strong>お椀の中のボール</strong>と同じ（横の位置＝たまり具合、高さ＝エネルギー）で、影のボールはその段のエネルギーぶんの振幅で往復する――<strong>揺れが大きくても小さくても1往復の時間が同じ</strong>（等時性）ことにも注目。量子力学ではこのボールの位置が波になり、お椀に閉じ込められた波には井戸と同じ<strong>定在波の選別</strong>が働く。アニメーションでは、その段の定在波が呼吸するように振動し、数秒ごとに段が1つ上がって<strong>山が1つ・粒が1個</strong>増える。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
+        <div class="diagram-caption">量子力学で波になるのは、輪の空間の中の何かではなく、<strong>「いまどのくらいたまっているか」という量そのもの</strong>。電気の振り子は<strong>お椀の中のボール</strong>と同じ（横の位置＝たまり具合、高さ＝エネルギー）で、影のボールはその段のエネルギーぶんの振幅で往復する――<strong>揺れが大きくても小さくても1往復の時間が同じ</strong>（等時性）ことにも注目。量子力学ではこのボールの位置が波になり、お椀に閉じ込められた波には井戸と同じ<strong>定在波の選別</strong>が働く。アニメーションでは、数秒ごとに段が1つ上がって<strong>山が1つ・粒が1個</strong>増える。注意してほしいのは、<strong>山の数は「たまり具合の目盛りの上での形」の違いであって、音の高さ（振動数）の違いではない</strong>こと。回路の振動数はどの段でも同じで、それは影のボールの1往復が、どの段でも同じ時間であることに表れている。段ごとに変わるのは、形と音量だけ。お椀がきれいな放物線（等時性の別の顔）なので、段差はどこも同じ hf になる。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -842,7 +843,7 @@
     var since = time % TL;
     for (var i = 0; i < 4; i++) {
       var active = (i === cur);
-      waves[i].setAttribute('d', wavePath(i, active ? Math.cos(time * W) : 0.75));
+      waves[i].setAttribute('d', wavePath(i, active ? 1.0 : 0.72));
       waves[i].setAttribute('opacity', active ? 1 : 0.25);
       labels[i].setAttribute('opacity', active ? 1 : 0.45);
       labels[i].setAttribute('fill', active ? COLORS[i] : '');
