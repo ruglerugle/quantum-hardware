@@ -828,7 +828,8 @@
   var plus = el('text', {x: 0, y: 0, 'class': 'accent', 'text-anchor': 'middle', opacity: 0});
   plus.textContent = '＋1粒';
 
-  var TL = 3.0, W = 3.4;
+  var W = 3.4;
+  var TL = 3 * Math.PI / W; // 段の切り替えは、ボールが中心を通る瞬間（変位ゼロ）に揃える
   var SPD = 26 * W / Math.PI; // 高さの波1つぶんが26pxに対応
   function heightAt(tau) {
     if (tau < 0) return 190;
