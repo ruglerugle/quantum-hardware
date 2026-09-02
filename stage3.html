@@ -343,43 +343,40 @@
       </div>
 
       <div class="diagram-box">
-        <svg id="j3-svg" class="qh-svg" viewBox="0 0 372 368" width="100%" role="img" aria-label="接合が併せ持つ三つの性質のアニメーション。上段は回路全体で、2枚の板が交互にプラスとマイナスに帯電し、電気の大部分は板にたまる。左下は接合の拡大断面で、板の電圧に同期して膜の両面にごく少量の電荷がたまり（コンデンサ成分）、同時に電子の波が膜を通り抜ける（通す係）。右下はエネルギーの置き場所の棒グラフで、板と接合の面のたくわえ、そして流れている間に膜の両側で生じる波の足並みのずれのたくわえ（コイル成分）が、1往復ごとに行き来する">
+        <svg id="j3-svg" class="qh-svg" viewBox="0 0 372 322" width="100%" role="img" aria-label="接合が併せ持つ三つの性質を1枚で見るアニメーション。左右の大きな板が交互にプラスとマイナスに帯電し、電気の大部分は板にたまる。中央には接合が誇張して大きく描かれ、下のアルミから酸化膜を通って上のアルミへ電子が行き来する。板の電圧に同期して接合の膜の両面にもごく少量の電荷がたまる。膜の両側のアルミの中には電子の波が描かれ、電流が流れている間だけ上下の波の足並みが横にずれ、板が満タンの瞬間はそろう。板の間の電場の弧は接合をよけて上下の空間を回り込む">
           <text class="strong" x="186" y="14" text-anchor="middle">接合の三つの性質 ― ためる（少し）・通す・逆らう</text>
-          <!-- 上段: 回路全体 -->
-          <rect x="20" y="44" width="118" height="62" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
-          <rect x="234" y="44" width="118" height="62" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
-          <line x1="138" y1="75" x2="168" y2="75" stroke="#8892a1" stroke-width="3"/>
-          <line x1="204" y1="75" x2="234" y2="75" stroke="#8892a1" stroke-width="3"/>
-          <rect x="168" y="69" width="36" height="12" fill="#b5504a"/>
-          <path id="j3-a1" d="M 138 54 Q 186 42 234 54" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
-          <path id="j3-a2" d="M 138 96 Q 186 108 234 96" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
-          <text class="label" x="186" y="124" text-anchor="middle">板のコンデンサ＝ためる係（主役）。電気の大部分はここにたまる</text>
-          <text class="label" x="186" y="138" text-anchor="middle">中央の赤が接合 ― その中身を下で拡大</text>
-          <!-- 左下: 接合の拡大 -->
-          <text class="label" x="98" y="164" text-anchor="middle">接合の拡大 ― 中身は三役</text>
-          <rect x="36" y="176" width="124" height="30" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <rect x="36" y="206" width="124" height="10" fill="#c9a227"/>
-          <rect x="36" y="216" width="124" height="30" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
-          <line x1="162" y1="211" x2="172" y2="211" stroke="#8a6a24" stroke-width="1.2"/>
-          <text class="label" x="174" y="215" text-anchor="start">酸化膜</text>
-          <text class="label" x="98" y="262" text-anchor="middle">①面に微量たまる（コンデンサ成分）</text>
-          <text class="label" x="98" y="276" text-anchor="middle">②波が膜を通り抜ける（通す係）</text>
-          <text class="label" x="98" y="290" text-anchor="middle">③流れは「足並みのずれ」に貯金され、</text>
-          <text class="label" x="98" y="304" text-anchor="middle">　変化に逆らう（コイル成分）</text>
-          <!-- 右下: エネルギーの置き場所 -->
-          <text class="label" x="277" y="164" text-anchor="middle">エネルギーの置き場所</text>
-          <line x1="198" y1="300" x2="358" y2="300" stroke="var(--line)" stroke-width="1.2"/>
-          <g id="j3-bars"></g>
-          <text class="label" x="224" y="314" text-anchor="middle">板</text>
-          <text class="label" x="278" y="314" text-anchor="middle">接合の面</text>
-          <text class="label" x="332" y="314" text-anchor="middle">ずれ</text>
-          <text class="label" x="224" y="327" text-anchor="middle">（ためる）</text>
-          <text class="label" x="278" y="327" text-anchor="middle">（微量※）</text>
-          <text class="label" x="332" y="327" text-anchor="middle">（コイル成分）</text>
-          <text class="label" x="277" y="348" text-anchor="middle">※接合の面のたくわえは誇張して描いてある。実際は板の100分の1以下</text>
+          <!-- 板の間の電場（接合をよけて回り込む） -->
+          <path id="j3-a1" d="M 86 70 Q 186 32 286 70" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <path id="j3-a2" d="M 86 184 Q 186 222 286 184" stroke="#2f8a8f" stroke-width="1.6" fill="none"/>
+          <!-- 左右の板 -->
+          <rect x="16" y="56" width="70" height="142" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
+          <rect x="286" y="56" width="70" height="142" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.4"/>
+          <!-- 配線: 左の板→下のアルミ、上のアルミ→右の板 -->
+          <line x1="86" y1="135" x2="146" y2="135" stroke="#8892a1" stroke-width="3"/>
+          <line x1="226" y1="93" x2="286" y2="93" stroke="#8892a1" stroke-width="3"/>
+          <!-- 接合（誇張拡大） -->
+          <rect x="146" y="76" width="80" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <rect x="146" y="110" width="80" height="8" fill="#c9a227"/>
+          <rect x="146" y="118" width="80" height="34" fill="#dfe3e9" stroke="#6b7480" stroke-width="1.2"/>
+          <line x1="226" y1="114" x2="238" y2="114" stroke="#8a6a24" stroke-width="1.2"/>
+          <text class="label" x="240" y="118" text-anchor="start">酸化膜</text>
+          <!-- 電子の通り道（非表示） -->
+          <path id="j3-path" d="M 96 135 H 178 Q 186 135 186 127 V 101 Q 186 93 194 93 H 276" fill="none" stroke="none"/>
+          <!-- 番号マーカー -->
+          <text class="strong" x="138" y="117" text-anchor="end" font-size="12">①</text>
+          <text class="strong" x="110" y="130" text-anchor="middle" font-size="12">②</text>
+          <text class="strong" x="232" y="88" text-anchor="start" font-size="12">③</text>
+          <!-- ラベル -->
+          <text class="label" x="51" y="214" text-anchor="middle">板＝ためる係</text>
+          <text class="label" x="321" y="214" text-anchor="middle">板＝ためる係</text>
+          <text class="label" x="186" y="240" text-anchor="middle">①面に微量たまる＝コンデンサ成分（板の100分の1以下）</text>
+          <text class="label" x="186" y="254" text-anchor="middle">②波が膜を通り抜けて、電流が流れる（通す係）</text>
+          <text class="label" x="186" y="268" text-anchor="middle">③膜の両側の波の「足並み」は、流れている間だけずれる</text>
+          <text class="label" x="186" y="282" text-anchor="middle">＝ずれに貯金して、流れの変化に逆らう（コイル成分）</text>
+          <text class="label" x="186" y="304" text-anchor="middle">※接合は誇張して大きい（実際は約100nm四方）</text>
           <g id="j3-dyn"></g>
         </svg>
-        <div class="diagram-caption">接合が併せ持つ三つの性質を、同時に動かして見る。①板の電圧は、接合の膜の<strong>両面にもごく少量の電荷をためる</strong>（コンデンサ成分。面積が小さいので板の100分の1以下しかたまらず、邪魔にならない）。②同時に、電子の波は膜をしみ出して行き来する（<strong>通す係</strong>）。③流れている間は、膜の両側で<strong>波の足並みがずれ、そこにエネルギーが貯金される</strong>。流れを変えようとするとこの貯金が押し返す――本物のコイルが磁界に貯金して変化に逆らうのと同じ応答で、これが<strong>コイル成分</strong>の正体だ。右のグラフの通り、エネルギーは「板（と接合の面）のたくわえ」と「足並みのずれのたくわえ」を1往復ごとに行き来する。振り子の「位置のエネルギー」と「勢いのエネルギー」の関係と同じで、だからこの回路は振り子として振動できる。</div>
+        <div class="diagram-caption">接合が併せ持つ三つの性質を、1枚の絵で同時に動かして見る（中央の接合は誇張して大きく描いてある）。電気の大部分は左右の<strong>板</strong>にたまり（ためる係・主役）、板の間の電場の弧は接合をよけて空間と基板を回り込む。①板の電圧は、接合の膜の<strong>両面にもごく少量の電荷をためる</strong>（コンデンサ成分。板の100分の1以下で、邪魔にならない）。②電子の波は膜をしみ出して行き来し、<strong>電流が流れる</strong>（通す係）。③流れている間だけ、膜の両側で<strong>波の足並みが横にずれる</strong>。このずれにエネルギーが貯金され、流れを変えようとすると貯金が押し返す――本物のコイルが磁界に貯金して変化に逆らうのと同じ応答で、これが<strong>コイル成分</strong>の正体だ。板が満タンの瞬間は流れが止まり、足並みもそろっている。「電気が板にたまる」↔「流れて足並みがずれる」の行き来こそ、この回路の振り子運動そのものだ。</div>
       </div>
 
       <div class="dialogue-scene">
@@ -668,11 +665,11 @@
 </script>
 <script>
 (function(){
-  // 図: 接合の三つの性質（板の帯電・接合面の微量帯電・通り抜け・エネルギーの行き来を同期）
+  // 図: 接合の三つの性質（1枚の統合図。板の帯電・接合面の微量帯電・通り抜け・足並みのずれを同期）
   var svg = document.getElementById('j3-svg');
   var g = document.getElementById('j3-dyn');
-  var bg = document.getElementById('j3-bars');
-  if (!svg || !g || !bg) return;
+  var track = document.getElementById('j3-path');
+  if (!svg || !g || !track) return;
   var ns = 'http://www.w3.org/2000/svg';
   var CR = '#b5504a', CB = '#2f5a9e', CA = '#2f8a8f';
   function el(name, attrs, parent) {
@@ -681,37 +678,37 @@
     (parent || g).appendChild(e);
     return e;
   }
-  var glowA = el('rect', {x: 128, y: 44, width: 10, height: 62, opacity: 0});
-  var glowB = el('rect', {x: 234, y: 44, width: 10, height: 62, opacity: 0});
-  var signA = el('text', {x: 79, y: 82, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
-  var signB = el('text', {x: 293, y: 82, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 20});
+  var glowA = el('rect', {x: 76, y: 56, width: 10, height: 142, opacity: 0});
+  var glowB = el('rect', {x: 286, y: 56, width: 10, height: 142, opacity: 0});
+  var signA = el('text', {x: 46, y: 136, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 22});
+  var signB = el('text', {x: 326, y: 136, 'class': 'strong', 'text-anchor': 'middle', 'font-size': 22});
   var arcs = [document.getElementById('j3-a1'), document.getElementById('j3-a2')];
-  var neck = [];
-  for (var i = 0; i < 3; i++) {
-    neck.push({base: 150 + i * 36, e: el('circle', {cy: 75, r: 3, fill: CA})});
-  }
-  // 接合面の微量電荷（上面3個・下面3個）
+  // 接合の面の微量電荷
   var faceTop = [], faceBot = [];
   for (var i = 0; i < 3; i++) {
-    faceTop.push(el('text', {x: 60 + i * 38, y: 203, 'font-size': 11, 'text-anchor': 'middle', 'font-weight': 'bold'}));
-    faceBot.push(el('text', {x: 60 + i * 38, y: 229, 'font-size': 11, 'text-anchor': 'middle', 'font-weight': 'bold'}));
+    faceTop.push(el('text', {x: 158 + i * 28, y: 107, 'font-size': 10, 'text-anchor': 'middle', 'font-weight': 'bold'}));
+    faceBot.push(el('text', {x: 158 + i * 28, y: 129, 'font-size': 10, 'text-anchor': 'middle', 'font-weight': 'bold'}));
   }
-  // 膜を通り抜ける波（電子）
-  var tun = [];
-  for (var i = 0; i < 2; i++) {
-    tun.push(el('circle', {cx: 84 + i * 30, r: 2.8, fill: CA}));
+  // 通り道を行き来する電子
+  var L = track.getTotalLength();
+  var dots = [];
+  for (var i = 0; i < 4; i++) {
+    dots.push({base: L * (0.14 + 0.24 * i), e: el('circle', {r: 3, fill: CA})});
   }
-  // エネルギーの棒
-  var bar1 = el('rect', {x: 206, width: 36, fill: CA}, bg);
-  var bar2 = el('rect', {x: 260, width: 36, fill: '#7fb6ba'}, bg);
-  var bar3 = el('rect', {x: 314, width: 36, fill: CR}, bg);
-  function setBar(bar, h) {
-    if (h < 0.5) h = 0.5;
-    bar.setAttribute('y', 300 - h);
-    bar.setAttribute('height', h);
+  // 膜の両側の波（足並み）: 下は固定、上が電流に応じて横ずれ
+  function wavePath(x0, y0, len, amp, period) {
+    var d = 'M ' + x0 + ' ' + y0;
+    for (var x = 2; x <= len; x += 2) {
+      d += ' L ' + (x0 + x) + ' ' + (y0 - amp * Math.sin(2 * Math.PI * x / period)).toFixed(2);
+    }
+    return d;
   }
+  var wu = el('g', {});
+  el('path', {d: wavePath(150, 88, 72, 4, 18), stroke: CA, 'stroke-width': 1.6, fill: 'none'}, wu);
+  el('path', {d: wavePath(150, 142, 72, 4, 18), stroke: CA, 'stroke-width': 1.6, fill: 'none'});
   function draw(th) {
     var q = Math.cos(th);
+    var cur = -Math.sin(th);
     var top = q >= 0;
     var aq = Math.abs(q);
     glowA.setAttribute('fill', top ? CR : CB);
@@ -727,26 +724,25 @@
     for (var i = 0; i < arcs.length; i++) {
       arcs[i].setAttribute('opacity', 0.12 + 0.55 * aq);
     }
-    for (var i = 0; i < neck.length; i++) {
-      neck[i].e.setAttribute('cx', neck[i].base + 9 * q);
-    }
-    // 接合面: 板と同じリズムで微量に帯電（上面は左板と同符号）
     for (var i = 0; i < 3; i++) {
-      faceTop[i].textContent = top ? '＋' : '−';
-      faceBot[i].textContent = top ? '−' : '＋';
-      faceTop[i].setAttribute('fill', top ? CR : CB);
-      faceBot[i].setAttribute('fill', top ? CB : CR);
+      faceTop[i].textContent = top ? '−' : '＋';
+      faceBot[i].textContent = top ? '＋' : '−';
+      faceTop[i].setAttribute('fill', top ? CB : CR);
+      faceBot[i].setAttribute('fill', top ? CR : CB);
       faceTop[i].setAttribute('opacity', aq * 0.9);
       faceBot[i].setAttribute('opacity', aq * 0.9);
     }
-    // 通り抜け: 変位はqに比例（板が満タンの瞬間に流れが止まる）
-    for (var i = 0; i < tun.length; i++) {
-      tun[i].setAttribute('cy', 211 - 16 * q);
+    // 電子: 変位はqに比例（板が満タンの瞬間に流れが止まる）
+    for (var i = 0; i < dots.length; i++) {
+      var p = dots[i].base + 24 * q;
+      if (p < 2) p = 2;
+      if (p > L - 2) p = L - 2;
+      var pt = track.getPointAtLength(p);
+      dots[i].e.setAttribute('cx', pt.x);
+      dots[i].e.setAttribute('cy', pt.y);
     }
-    // エネルギー: 板・接合面はq²、ずれ（流れ）はsin²
-    setBar(bar1, 118 * q * q);
-    setBar(bar2, 118 * q * q / 8);
-    setBar(bar3, 118 * (1 - q * q));
+    // 足並みのずれ: 流れている間だけ上の波が横にずれる
+    wu.setAttribute('transform', 'translate(' + (7 * cur).toFixed(2) + ',0)');
   }
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var raf = null, running = false, th = 0.7;
