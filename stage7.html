@@ -99,6 +99,40 @@
           </div>
           <div class="dialog-bubble">合っているよ。実機の橋は、まさにその小さなコンデンサだ。そして心配のほうも的中している。設計図を1枚も無駄にしない読みだね。<br>橋を架けっぱなしにすると、隣の量子ビットが |0⟩ か |1⟩ かで自分のリズムが少しずれる。切れない迷惑電話のようなもので、ゲートをかけていない間じゅう矢印の向きが狂い続ける。<br>実機の解決は2つの流儀がある。<br><strong>蛇口方式</strong>：2つの量子ビットの間に<strong>第3の回路（結合器）</strong>を挟む。この回路の設定を外から電流で変えると、橋の「通り具合」が開いたり閉じたりする。ふだんは蛇口を締め切り、ゲートの瞬間だけ開く。グーグルなどの流儀だ。<br><strong>鍵方式</strong>：橋は細いまま常時つないでおく。そのかわり、片方の量子ビットに<strong>相手の周波数のマイクロ波</strong>を当てたときだけ、橋越しに相手が共鳴して揺さぶられる仕掛けを使う。合図（鍵）がなければ実質的に閉じているのと同じ。IBMなどの流儀だ。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="qh-svg" viewBox="0 0 372 220" width="100%" role="img" aria-label="量子ビットをつなぐ橋の図。2つのトランズモンの間に結合器（蛇口）を挟み、ふだんは閉じておいてゲートの瞬間だけ開く。開いたときだけ片方の揺れが相手へ伝わる">
+          <text class="strong" x="186" y="18" text-anchor="middle">量子ビットの橋 ― ふだんは閉じ、合図で開く</text>
+          <!-- qubit1 -->
+          <rect x="36" y="70" width="90" height="60" rx="9" fill="#e8f1f1" stroke="#2f8a8f" stroke-width="2"/>
+          <text class="label" x="81" y="96" text-anchor="middle">量子ビット1</text>
+          <text class="label" x="81" y="112" text-anchor="middle">（トランズモン）</text>
+          <!-- coupler -->
+          <rect x="146" y="76" width="80" height="48" rx="9" fill="#f7f3e2" stroke="#8a6a24" stroke-width="2"/>
+          <text class="label" x="186" y="96" text-anchor="middle">結合器</text>
+          <text class="label" x="186" y="112" text-anchor="middle">（蛇口）</text>
+          <!-- qubit2 -->
+          <rect x="246" y="70" width="90" height="60" rx="9" fill="#e8f1f1" stroke="#2f8a8f" stroke-width="2"/>
+          <text class="label" x="291" y="96" text-anchor="middle">量子ビット2</text>
+          <text class="label" x="291" y="112" text-anchor="middle">（トランズモン）</text>
+          <!-- connections -->
+          <line x1="126" y1="100" x2="146" y2="100" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="226" y1="100" x2="246" y2="100" stroke="var(--ink)" stroke-width="2"/>
+          <!-- control -->
+          <path d="M 186 40 L 186 76" stroke="#b5504a" stroke-width="2.2" fill="none"/>
+          <path d="M 181 68 L 186 76 L 191 68" stroke="#b5504a" stroke-width="2.2" fill="none"/>
+          <text class="label" x="186" y="34" text-anchor="middle">外からの電流で開閉</text>
+          <!-- states -->
+          <text class="accent" x="100" y="164" text-anchor="middle">閉：互いに影響しない</text>
+          <text class="accent" x="272" y="164" text-anchor="middle" fill="#b5504a">開：揺れが伝わる＝ゲート</text>
+          <text class="label" x="186" y="190" text-anchor="middle">常時開通の橋は「切れない迷惑電話」――隣の状態で自分のリズムが狂い続ける。</text>
+          <text class="label" x="186" y="206" text-anchor="middle">「ふだんは閉じ、合図で開く」は、この旅の中心的ジレンマの解と同じ形。</text>
+        </svg>
+        <div class="diagram-caption">2量子ビットゲートの橋（蛇口方式）。2つのトランズモンを小さなコンデンサでつなぐだけだと橋が常時開通になり、計算していない間も互いのリズムを揺さぶり続けてしまう。そこで間に<strong>結合器（第3の回路）</strong>を挟み、外からの電流で橋の通り具合を開閉する。ゲートの瞬間だけ開けば、片方の揺れが相手に伝わってCNOTの材料になる。橋を細く常時つないだまま「相手の周波数のマイクロ波を当てたときだけ効く」共鳴を使う<strong>鍵方式</strong>もある。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
@@ -183,37 +217,6 @@
           </div>
           <div class="dialog-bubble">それこそが最終ステージの問いだ。答えを先取りすると、敵は2つ――<strong>1000回に数回の誤り</strong>と、<strong>配線の洪水</strong>。この2つが、数百量子ビットと「役に立つ100万量子ビット」の間に、途方もない谷を作っている。次で最後の旅だ。</div>
         </div>
-      </div>
-
-      <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 220" width="100%" role="img" aria-label="量子ビットをつなぐ橋の図。2つのトランズモンの間に結合器（蛇口）を挟み、ふだんは閉じておいてゲートの瞬間だけ開く。開いたときだけ片方の揺れが相手へ伝わる">
-          <text class="strong" x="186" y="18" text-anchor="middle">量子ビットの橋 ― ふだんは閉じ、合図で開く</text>
-          <!-- qubit1 -->
-          <rect x="36" y="70" width="90" height="60" rx="9" fill="#e8f1f1" stroke="#2f8a8f" stroke-width="2"/>
-          <text class="label" x="81" y="96" text-anchor="middle">量子ビット1</text>
-          <text class="label" x="81" y="112" text-anchor="middle">（トランズモン）</text>
-          <!-- coupler -->
-          <rect x="146" y="76" width="80" height="48" rx="9" fill="#f7f3e2" stroke="#8a6a24" stroke-width="2"/>
-          <text class="label" x="186" y="96" text-anchor="middle">結合器</text>
-          <text class="label" x="186" y="112" text-anchor="middle">（蛇口）</text>
-          <!-- qubit2 -->
-          <rect x="246" y="70" width="90" height="60" rx="9" fill="#e8f1f1" stroke="#2f8a8f" stroke-width="2"/>
-          <text class="label" x="291" y="96" text-anchor="middle">量子ビット2</text>
-          <text class="label" x="291" y="112" text-anchor="middle">（トランズモン）</text>
-          <!-- connections -->
-          <line x1="126" y1="100" x2="146" y2="100" stroke="var(--ink)" stroke-width="2"/>
-          <line x1="226" y1="100" x2="246" y2="100" stroke="var(--ink)" stroke-width="2"/>
-          <!-- control -->
-          <path d="M 186 40 L 186 76" stroke="#b5504a" stroke-width="2.2" fill="none"/>
-          <path d="M 181 68 L 186 76 L 191 68" stroke="#b5504a" stroke-width="2.2" fill="none"/>
-          <text class="label" x="186" y="34" text-anchor="middle">外からの電流で開閉</text>
-          <!-- states -->
-          <text class="accent" x="100" y="164" text-anchor="middle">閉：互いに影響しない</text>
-          <text class="accent" x="272" y="164" text-anchor="middle" fill="#b5504a">開：揺れが伝わる＝ゲート</text>
-          <text class="label" x="186" y="190" text-anchor="middle">常時開通の橋は「切れない迷惑電話」――隣の状態で自分のリズムが狂い続ける。</text>
-          <text class="label" x="186" y="206" text-anchor="middle">「ふだんは閉じ、合図で開く」は、この旅の中心的ジレンマの解と同じ形。</text>
-        </svg>
-        <div class="diagram-caption">2量子ビットゲートの橋（蛇口方式）。2つのトランズモンを小さなコンデンサでつなぐだけだと橋が常時開通になり、計算していない間も互いのリズムを揺さぶり続けてしまう。そこで間に<strong>結合器（第3の回路）</strong>を挟み、外からの電流で橋の通り具合を開閉する。ゲートの瞬間だけ開けば、片方の揺れが相手に伝わってCNOTの材料になる。橋を細く常時つないだまま「相手の周波数のマイクロ波を当てたときだけ効く」共鳴を使う<strong>鍵方式</strong>もある。</div>
       </div>
 
       <div class="cmp-wrap">

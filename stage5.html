@@ -106,6 +106,40 @@
           </div>
           <div class="dialog-bubble">起きるんだ、まさに同じことが。<strong>時間を短く絞った波は、周波数がひとつに定まらず幅を持って広がる</strong>――きみの言う「場所と波長」の関係の、時間と周波数版だね。<br>そして、きみの心配した通りのことが起きる。それは<strong>リーク（漏れ）</strong>と呼ばれる、実機の大敵だ。第3の段に漏れた成分は |0⟩|1⟩ の世界の外だから、ゲートの計算がその分だけ壊れる。<br>だからゲートの速さには下限ならぬ「上限」がある。トランズモンの段差の不揃いは5%ほどしかないから、パルスの周波数の広がりをそれより十分狭く保つ必要があって、実機の1量子ビットゲートは<strong>20〜50ナノ秒</strong>に落ち着いている。さらに、パルスの角を滑らかに丸めた形（釣り鐘型）にする――角ばった波形ほど余計な周波数を多く含むからね。任意波形発生器の「形を自由に設計できる」力は、まさにここで効いている。<br>もうひとつ、回転の<strong>軸</strong>の話も足しておこう。同じ5GHzでも、波の<strong>位相</strong>――押し始めのタイミング――をずらすと、矢印の回転軸が変わる。X回転とY回転は、パルスの位相の違いで作り分けているんだ。<br>こうして磨き上げた結果、1量子ビットゲートの成功率は<strong>99.9%以上</strong>に達している。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="パルスの長さと周波数の広がりの関係。長いパルスは周波数の幅が狭く、5GHzの段差だけに効く。短いパルスは周波数の幅が広がり、200〜300MHz隣の第2の段差にも引っかかって漏れが起きる">
+          <text class="strong" x="186" y="18" text-anchor="middle">短いパルスは「周波数の幅」が広がり、隣の段差に漏れる</text>
+          <!-- 左: 長いパルス -->
+          <text class="strong" x="96" y="44" text-anchor="middle">長めのパルス（20〜50ナノ秒）</text>
+          <path d="M 30 80 q 6 -2 10 -8 q 5 -8 8 -14 q 4 -8 8 -8 q 4 0 8 8 q 3 6 8 14 q 4 6 10 8" stroke="#2f8a8f" stroke-width="2.2" fill="none" transform="translate(15,0) scale(1.4,1)"/>
+          <line x1="40" y1="82" x2="160" y2="82" stroke="var(--line)" stroke-width="1.4"/>
+          <!-- スペクトル -->
+          <path d="M 56 170 L 76 170 Q 88 170 92 148 Q 96 120 96 118 Q 96 120 100 148 Q 104 170 116 170 L 136 170" stroke="#2f5a9e" stroke-width="2.4" fill="none"/>
+          <line x1="56" y1="172" x2="160" y2="172" stroke="var(--ink)" stroke-width="1.6"/>
+          <line x1="96" y1="118" x2="96" y2="172" stroke="#2f5a9e" stroke-width="1" stroke-dasharray="3 3"/>
+          <line x1="132" y1="130" x2="132" y2="172" stroke="#b5504a" stroke-width="2"/>
+          <text class="label" x="96" y="188" text-anchor="middle">5GHz（使う段差）</text>
+          <text class="label" x="140" y="204" text-anchor="middle">|1⟩→|2⟩の段差</text>
+          <text class="accent" x="96" y="110" text-anchor="middle">幅が狭い＝隣に届かない ○</text>
+          <!-- 右: 短いパルス -->
+          <text class="strong" x="278" y="44" text-anchor="middle">短すぎるパルス</text>
+          <path d="M 258 80 q 4 -2 6 -10 q 3 -12 6 -12 q 3 0 6 12 q 2 8 6 10" stroke="#b5504a" stroke-width="2.2" fill="none"/>
+          <line x1="222" y1="82" x2="342" y2="82" stroke="var(--line)" stroke-width="1.4"/>
+          <path d="M 226 170 Q 250 168 258 156 Q 270 138 278 136 Q 286 138 298 156 Q 306 168 330 170" stroke="#b5504a" stroke-width="2.4" fill="none"/>
+          <line x1="222" y1="172" x2="342" y2="172" stroke="var(--ink)" stroke-width="1.6"/>
+          <line x1="278" y1="136" x2="278" y2="172" stroke="#2f5a9e" stroke-width="1" stroke-dasharray="3 3"/>
+          <line x1="314" y1="130" x2="314" y2="172" stroke="#b5504a" stroke-width="2"/>
+          <text class="label" x="278" y="188" text-anchor="middle">5GHz</text>
+          <text class="label" x="320" y="204" text-anchor="middle">|1⟩→|2⟩に引っかかる＝リーク ×</text>
+          <text class="accent" x="278" y="110" text-anchor="middle" fill="#b5504a">幅が広い＝漏れる ×</text>
+          <text class="label" x="186" y="228" text-anchor="middle">上段＝パルスの形（時間）／下段＝含まれる周波数の広がり</text>
+        </svg>
+        <div class="diagram-caption">回転角はパルスの面積（強さ×時間）で決まるので、強く短くすればゲートは速くできる――が、時間の短い波は<strong>周波数の幅</strong>が広がる（不確定性原理）。トランズモンの |1⟩→|2⟩ の段差は使う段差からわずか200〜300MHz（約5%）しか離れていないため、短すぎるパルスは第3の段への<strong>リーク（漏れ）</strong>を起こす。これが実機のゲートが20〜50ナノ秒より速くできない理由で、パルスの角を釣り鐘型に丸めるのも余計な周波数を減らすためだ。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
@@ -148,51 +182,6 @@
           </div>
           <div class="dialog-bubble">ところが、それでいいんだ。騒音と合図には、決定的な違いが1つある。<br><strong>騒音は、熱の震えから勝手に湧いてくるもの</strong>。だから強さは発生源の温度で決まっていて、こちらの都合では変えられない。ところが<strong>合図は、こちらが狙って作るもの</strong>。室温側でなら、いくらでも強くできる。<br>そこで、最初から<strong>100万倍強い合図</strong>を送り出しておく。道中で合図も騒音も同じ割合で弱まっていくと、10mKに届くころには「ちょうどいい強さの合図」と「10mK並みに静かな騒音」が残る勘定になる。合図と騒音を選り分けるのではなく、<strong>スタート地点の強さの差で勝負を決めておく</strong>――これが低温マイクロ波工学の設計思想の心臓部だ。<br>付け加えると、減衰器が食い止めたエネルギーは熱になるが、これも計算ずくだよ。減衰の大部分は<strong>冷やす力に余裕のある上の段</strong>で済ませて、10mKプレートの負担は最小限にしてある。<br>これで条件③の全体像が描けた。<strong>室温の任意波形発生器が、形と面積と位相を設計した5GHzパルスを作る → 熱を伝えにくいケーブルで、各プレートに熱を途中下車させながら降りる → 減衰器の階段が騒音もろとも100万分の1に薄める → 10mKに「ちょうどいい合図と冷たい静けさ」だけが届き、量子ビットの矢印を狙いどおりに回す</strong>。<br>1本のケーブルは、熱の橋にも騒音の導管にもなる。それを材料選びと熱係留と減衰の階段で飼いならしているわけだ。</div>
         </div>
-        <div class="dialog-row right">
-          <div class="dialog-character">
-            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
-            <div class="dialog-name student">うさ美</div>
-          </div>
-          <div class="dialog-bubble">なるほど……強くできない騒音は、スタートの時点で負けが決まっているんですね。条件③、達成です。ただ、気になることが残ります。行きはこれでいい。でも<strong>帰り道</strong>――条件④の読み出しは、量子ビットの側から信号を外へ持ち出す旅です。あちらは減衰器で薄めるわけにいきません。今日の論理だと、10mKの世界にあるのは弱々しい信号だけのはずですから、薄めたら消えてしまいます。</div>
-        </div>
-        <div class="dialog-row">
-          <div class="dialog-character">
-            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
-            <div class="dialog-name mentor">ねこ博士</div>
-          </div>
-          <div class="dialog-bubble">そのとおりで、帰り道は行きよりずっと難しい。下りの旅の武器が「減衰」なら、上りの旅の武器は「増幅」――ただし、<strong>雑音をほとんど足さずに増幅する</strong>という、物理の限界に挑む仕事になる。次のステージで、量子ビットを壊さずに読み、その小声を拾い上げる仕掛けを見に行こう。</div>
-        </div>
-      </div>
-
-      <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="パルスの長さと周波数の広がりの関係。長いパルスは周波数の幅が狭く、5GHzの段差だけに効く。短いパルスは周波数の幅が広がり、200〜300MHz隣の第2の段差にも引っかかって漏れが起きる">
-          <text class="strong" x="186" y="18" text-anchor="middle">短いパルスは「周波数の幅」が広がり、隣の段差に漏れる</text>
-          <!-- 左: 長いパルス -->
-          <text class="strong" x="96" y="44" text-anchor="middle">長めのパルス（20〜50ナノ秒）</text>
-          <path d="M 30 80 q 6 -2 10 -8 q 5 -8 8 -14 q 4 -8 8 -8 q 4 0 8 8 q 3 6 8 14 q 4 6 10 8" stroke="#2f8a8f" stroke-width="2.2" fill="none" transform="translate(15,0) scale(1.4,1)"/>
-          <line x1="40" y1="82" x2="160" y2="82" stroke="var(--line)" stroke-width="1.4"/>
-          <!-- スペクトル -->
-          <path d="M 56 170 L 76 170 Q 88 170 92 148 Q 96 120 96 118 Q 96 120 100 148 Q 104 170 116 170 L 136 170" stroke="#2f5a9e" stroke-width="2.4" fill="none"/>
-          <line x1="56" y1="172" x2="160" y2="172" stroke="var(--ink)" stroke-width="1.6"/>
-          <line x1="96" y1="118" x2="96" y2="172" stroke="#2f5a9e" stroke-width="1" stroke-dasharray="3 3"/>
-          <line x1="132" y1="130" x2="132" y2="172" stroke="#b5504a" stroke-width="2"/>
-          <text class="label" x="96" y="188" text-anchor="middle">5GHz（使う段差）</text>
-          <text class="label" x="140" y="204" text-anchor="middle">|1⟩→|2⟩の段差</text>
-          <text class="accent" x="96" y="110" text-anchor="middle">幅が狭い＝隣に届かない ○</text>
-          <!-- 右: 短いパルス -->
-          <text class="strong" x="278" y="44" text-anchor="middle">短すぎるパルス</text>
-          <path d="M 258 80 q 4 -2 6 -10 q 3 -12 6 -12 q 3 0 6 12 q 2 8 6 10" stroke="#b5504a" stroke-width="2.2" fill="none"/>
-          <line x1="222" y1="82" x2="342" y2="82" stroke="var(--line)" stroke-width="1.4"/>
-          <path d="M 226 170 Q 250 168 258 156 Q 270 138 278 136 Q 286 138 298 156 Q 306 168 330 170" stroke="#b5504a" stroke-width="2.4" fill="none"/>
-          <line x1="222" y1="172" x2="342" y2="172" stroke="var(--ink)" stroke-width="1.6"/>
-          <line x1="278" y1="136" x2="278" y2="172" stroke="#2f5a9e" stroke-width="1" stroke-dasharray="3 3"/>
-          <line x1="314" y1="130" x2="314" y2="172" stroke="#b5504a" stroke-width="2"/>
-          <text class="label" x="278" y="188" text-anchor="middle">5GHz</text>
-          <text class="label" x="320" y="204" text-anchor="middle">|1⟩→|2⟩に引っかかる＝リーク ×</text>
-          <text class="accent" x="278" y="110" text-anchor="middle" fill="#b5504a">幅が広い＝漏れる ×</text>
-          <text class="label" x="186" y="228" text-anchor="middle">上段＝パルスの形（時間）／下段＝含まれる周波数の広がり</text>
-        </svg>
-        <div class="diagram-caption">回転角はパルスの面積（強さ×時間）で決まるので、強く短くすればゲートは速くできる――が、時間の短い波は<strong>周波数の幅</strong>が広がる（不確定性原理）。トランズモンの |1⟩→|2⟩ の段差は使う段差からわずか200〜300MHz（約5%）しか離れていないため、短すぎるパルスは第3の段への<strong>リーク（漏れ）</strong>を起こす。これが実機のゲートが20〜50ナノ秒より速くできない理由で、パルスの角を釣り鐘型に丸めるのも余計な周波数を減らすためだ。</div>
       </div>
 
       <div class="diagram-box">
@@ -229,6 +218,23 @@
           <text class="label" x="268" y="98" text-anchor="middle">↓ 通るたびに両方が同じ割合で弱まる（計100万分の1）</text>
         </svg>
         <div class="diagram-caption">緑のバーが合図（マイクロ波パルス）、赤のバーが300K由来の騒音。減衰器はどちらも同じ割合で弱めるが、<strong>騒音の強さは発生源の温度で決まっていて増やせない</strong>のに対し、<strong>合図はこちらが最初から100万倍強く送り出せる</strong>。合計マイナス60デシベル（100万分の1）の減衰を経ると、10mKには「ちょうどいい強さの合図」と「10mKの静けさと同水準の騒音」だけが届く。減衰器が食い止めたエネルギーは熱になるため、大部分は冷やす力に余裕のある上の段で捨てる。</div>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">なるほど……強くできない騒音は、スタートの時点で負けが決まっているんですね。条件③、達成です。ただ、気になることが残ります。行きはこれでいい。でも<strong>帰り道</strong>――条件④の読み出しは、量子ビットの側から信号を外へ持ち出す旅です。あちらは減衰器で薄めるわけにいきません。今日の論理だと、10mKの世界にあるのは弱々しい信号だけのはずですから、薄めたら消えてしまいます。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">そのとおりで、帰り道は行きよりずっと難しい。下りの旅の武器が「減衰」なら、上りの旅の武器は「増幅」――ただし、<strong>雑音をほとんど足さずに増幅する</strong>という、物理の限界に挑む仕事になる。次のステージで、量子ビットを壊さずに読み、その小声を拾い上げる仕掛けを見に行こう。</div>
+        </div>
       </div>
 
       <div class="formula-box">

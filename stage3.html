@@ -207,6 +207,31 @@
           </div>
           <div class="dialog-bubble">その通り。波のしみ出しで壁を通り抜ける現象を<strong>トンネル効果</strong>と呼ぶ。そして「超伝導の波がしみ出しでつながり、電池もないのに電流が流れる」ことを理論で予言したのが、1962年、当時22歳の大学院生<strong>ジョセフソン</strong>だ。あまりに意外な予言で大物理学者が公然と反対したが、翌年実験で確認され、彼はノーベル賞を受けた。この部品を<strong>ジョセフソン接合</strong>と呼ぶ。<br>これで、さっきのきみの疑問に答えられる。超伝導では、両側の「たった1つの波」がしみ出しで1本につながり、<strong>電池がなくても流れる超伝導の電流が、膜を渡る</strong>。そして実験で確かめると、この通り道は「電流の変化に逆らい、受け取ったエネルギーを貯金して、あとで全額返す」――さっき整理した、<strong>コイルの本体そのもの</strong>の応答を示すんだ。貯金の置き場所だけが違う。コイルは磁界に、接合は「膜の両側で波の足並みがどれだけずれているか」という形で蓄える（ここはこの旅では深入りせず、実験事実として使おう）。<br><strong>構造は、係を決めない。応答が、係を決める</strong>。形はコンデンサの親戚でも、応答はコイルの親戚。正確に言えば、接合は「コイル役」と「小さなコンデンサ成分」を<strong>併せ持つ部品</strong>で、振り子の相方は、ちゃんといるというわけだ。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="qh-svg" viewBox="0 0 372 234" width="100%" role="img" aria-label="ジョセフソン接合の断面図。2枚のアルミニウム超伝導体が厚さ1〜2ナノメートルの酸化アルミニウム絶縁膜を挟んでいる。左右の超伝導体の波が膜の中へしみ出し、膜の中で重なってつながることで電流が通り抜ける">
+          <text class="strong" x="186" y="18" text-anchor="middle">ジョセフソン接合 ― 波のしみ出しで通る「か細い吊り橋」</text>
+          <!-- 超伝導体2枚 -->
+          <rect x="40" y="52" width="128" height="90" rx="6" fill="#e9eff8" stroke="#2f5a9e" stroke-width="2"/>
+          <rect x="204" y="52" width="128" height="90" rx="6" fill="#e9eff8" stroke="#2f5a9e" stroke-width="2"/>
+          <rect x="168" y="52" width="36" height="90" fill="#f7f3e2" stroke="#8a6a24" stroke-width="1.6"/>
+          <text class="label" x="104" y="44" text-anchor="middle">超伝導体（アルミ）</text>
+          <text class="label" x="268" y="44" text-anchor="middle">超伝導体（アルミ）</text>
+          <text class="label" x="186" y="160" text-anchor="middle">絶縁膜（酸化アルミ、1〜2nm＝原子数個分）</text>
+          <!-- 波 -->
+          <path d="M 48 100 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0" stroke="#2f8a8f" stroke-width="2.4" fill="none"/>
+          <path d="M 168 100 q 9 -7 18 -1 q 9 5 18 1" stroke="#2f8a8f" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+          <path d="M 204 100 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0" stroke="#2f8a8f" stroke-width="2.4" fill="none"/>
+          <text class="accent" x="186" y="80" text-anchor="middle">しみ出しが重なる</text>
+          <text class="label" x="186" y="186" text-anchor="middle">膜の厚さは、アルミの自然酸化が「勝手に止まる」性質で毎回同じにできる</text>
+          <text class="label" x="186" y="204" text-anchor="middle">接合の大きさは約100nm四方 ― チップは目に見えるのに心臓部はウイルスより小さい</text>
+          <text class="label" x="186" y="222" text-anchor="middle">通れる電流に上限 → 逆らう力が頭打ち → 「正比例」が壊れる</text>
+        </svg>
+        <div class="diagram-caption">ジョセフソン接合の断面。2枚の超伝導アルミニウムが、厚さ1〜2ナノメートル（原子数個分）の酸化アルミニウム絶縁膜を挟む。左右の「たった1つの波」は膜の中へ指数的に弱まりながらしみ出し、膜が十分薄いため<strong>膜の中で重なってつながる</strong>（トンネル効果）。このか細い通り道は流せる電流に上限があり、電流が大きいほど逆らう力の増え方が鈍る――コイルの「正比例」を壊し、振り子をブランコに変える部品になる。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
@@ -319,6 +344,25 @@
           </div>
           <div class="dialog-bubble">攻め方を逆にしたんだ。掃除できないなら、<strong>量子ビットの側を、電荷に鈍感にする</strong>。2007年にイェール大学のチームが出した答えは、拍子抜けするほど単純――ジョセフソン接合に<strong>大きなコンデンサを並列につなぐ</strong>。<br>効く理由は水槽で考えると分かる。コップ1杯の水は、小さな水槽に注げば水位をはっきり変えるが、大きな水槽ではほとんど何も変えない。コンデンサを大きくするのは水槽を大きくすることで、迷子電荷1個ぶんの変化は<strong>大水槽の1しずく</strong>になり、リズムがほとんど動かなくなる。この改良版が<strong>トランズモン</strong>――現在、グーグルもIBMも採用している主流の量子ビットだ。<br>タダではないよ。コンデンサを大きくすると、段差の不揃い（さっきの5%）も一緒に薄まってしまう。でも、ぎりぎり2段を選べるだけの不揃いを残しつつ、電荷への鈍感さを桁違いに稼ぐ<strong>ちょうどいい落としどころ</strong>が存在した。それがトランズモンの発明の本体だ。<br>成果は数字が語る。重ね合わせの寿命は1ナノ秒から改良を重ねて、いまや<strong>100マイクロ秒級</strong>――10万倍だ。ゲート1回が数十ナノ秒だから、寿命の中に<strong>数千回のゲート</strong>を詰め込める。ようやく計算機の名に値する部品になった。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg id="cn-svg" class="qh-svg" viewBox="0 0 372 224" width="100%" role="img" aria-label="電荷雑音とコンデンサの大きさの関係を示すシミュレータ。コンデンサが小さいと迷子の電荷が動くたびに量子ビットのリズムが大きくふらつき、コンデンサを大きくするとふらつきが小さくなって重ね合わせの寿命が延びる">
+          <text class="strong" x="186" y="16" text-anchor="middle">コンデンサを大きくすると、リズムのふらつきが消える</text>
+          <g id="cn-body"></g>
+        </svg>
+        <div class="readout">
+          <span>リズムのふらつき <b id="cn-jit">±100</b>（相対値）</span>
+          <span>向きが読めなくなるまで <b id="cn-life">約1ナノ秒</b></span>
+        </div>
+        <div class="anim-ctrl">
+          <span class="ctrl-label">コンデンサの大きさ</span>
+          <input type="range" id="cn-slider" min="0" max="100" step="1" value="0" aria-label="コンデンサの大きさを変える">
+        </div>
+        <div class="diagram-caption">チップ表面の<strong>迷子の電荷</strong>（黄色の点）はときどき居場所を変え、量子ビットのリズム（緑の線＝段差の値）を揺さぶる。スライダーでコンデンサを大きくすると、迷子電荷1個ぶんの影響が「大水槽の1しずく」になってふらつきが小さくなり、矢印の向きが読めなくなるまでの時間（＝重ね合わせの寿命の目安）が延びる。左端が初代クーパー対箱（寿命約1ナノ秒）、右端がトランズモン（10万倍長生き）に対応する。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
@@ -361,44 +405,6 @@
           </div>
           <div class="dialog-bubble">よくまとまったね。ただし条件②の敵には、まだ最大の大物が残っている。<strong>熱</strong>だ。前のステージの宿題を覚えているかな――段差はたった3×10⁻²⁴ジュール。実は、部屋の温かさが持つエネルギーは、この段差の<strong>1000倍以上</strong>ある。つまり常温では、環境が量子ビットを勝手に階段の上へ蹴り上げ放題なんだ。<br>次のステージでは、この機械が<strong>宇宙のどこよりも冷たい場所</strong>で動いている理由と、そこまで冷やす冷蔵庫のからくりを見に行こう。</div>
         </div>
-      </div>
-
-      <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 234" width="100%" role="img" aria-label="ジョセフソン接合の断面図。2枚のアルミニウム超伝導体が厚さ1〜2ナノメートルの酸化アルミニウム絶縁膜を挟んでいる。左右の超伝導体の波が膜の中へしみ出し、膜の中で重なってつながることで電流が通り抜ける">
-          <text class="strong" x="186" y="18" text-anchor="middle">ジョセフソン接合 ― 波のしみ出しで通る「か細い吊り橋」</text>
-          <!-- 超伝導体2枚 -->
-          <rect x="40" y="52" width="128" height="90" rx="6" fill="#e9eff8" stroke="#2f5a9e" stroke-width="2"/>
-          <rect x="204" y="52" width="128" height="90" rx="6" fill="#e9eff8" stroke="#2f5a9e" stroke-width="2"/>
-          <rect x="168" y="52" width="36" height="90" fill="#f7f3e2" stroke="#8a6a24" stroke-width="1.6"/>
-          <text class="label" x="104" y="44" text-anchor="middle">超伝導体（アルミ）</text>
-          <text class="label" x="268" y="44" text-anchor="middle">超伝導体（アルミ）</text>
-          <text class="label" x="186" y="160" text-anchor="middle">絶縁膜（酸化アルミ、1〜2nm＝原子数個分）</text>
-          <!-- 波 -->
-          <path d="M 48 100 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0" stroke="#2f8a8f" stroke-width="2.4" fill="none"/>
-          <path d="M 168 100 q 9 -7 18 -1 q 9 5 18 1" stroke="#2f8a8f" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
-          <path d="M 204 100 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0 q 10 18 20 0" stroke="#2f8a8f" stroke-width="2.4" fill="none"/>
-          <text class="accent" x="186" y="80" text-anchor="middle">しみ出しが重なる</text>
-          <text class="label" x="186" y="186" text-anchor="middle">膜の厚さは、アルミの自然酸化が「勝手に止まる」性質で毎回同じにできる</text>
-          <text class="label" x="186" y="204" text-anchor="middle">接合の大きさは約100nm四方 ― チップは目に見えるのに心臓部はウイルスより小さい</text>
-          <text class="label" x="186" y="222" text-anchor="middle">通れる電流に上限 → 逆らう力が頭打ち → 「正比例」が壊れる</text>
-        </svg>
-        <div class="diagram-caption">ジョセフソン接合の断面。2枚の超伝導アルミニウムが、厚さ1〜2ナノメートル（原子数個分）の酸化アルミニウム絶縁膜を挟む。左右の「たった1つの波」は膜の中へ指数的に弱まりながらしみ出し、膜が十分薄いため<strong>膜の中で重なってつながる</strong>（トンネル効果）。このか細い通り道は流せる電流に上限があり、電流が大きいほど逆らう力の増え方が鈍る――コイルの「正比例」を壊し、振り子をブランコに変える部品になる。</div>
-      </div>
-
-      <div class="diagram-box">
-        <svg id="cn-svg" class="qh-svg" viewBox="0 0 372 224" width="100%" role="img" aria-label="電荷雑音とコンデンサの大きさの関係を示すシミュレータ。コンデンサが小さいと迷子の電荷が動くたびに量子ビットのリズムが大きくふらつき、コンデンサを大きくするとふらつきが小さくなって重ね合わせの寿命が延びる">
-          <text class="strong" x="186" y="16" text-anchor="middle">コンデンサを大きくすると、リズムのふらつきが消える</text>
-          <g id="cn-body"></g>
-        </svg>
-        <div class="readout">
-          <span>リズムのふらつき <b id="cn-jit">±100</b>（相対値）</span>
-          <span>向きが読めなくなるまで <b id="cn-life">約1ナノ秒</b></span>
-        </div>
-        <div class="anim-ctrl">
-          <span class="ctrl-label">コンデンサの大きさ</span>
-          <input type="range" id="cn-slider" min="0" max="100" step="1" value="0" aria-label="コンデンサの大きさを変える">
-        </div>
-        <div class="diagram-caption">チップ表面の<strong>迷子の電荷</strong>（黄色の点）はときどき居場所を変え、量子ビットのリズム（緑の線＝段差の値）を揺さぶる。スライダーでコンデンサを大きくすると、迷子電荷1個ぶんの影響が「大水槽の1しずく」になってふらつきが小さくなり、矢印の向きが読めなくなるまでの時間（＝重ね合わせの寿命の目安）が延びる。左端が初代クーパー対箱（寿命約1ナノ秒）、右端がトランズモン（10万倍長生き）に対応する。</div>
       </div>
 
       <div class="formula-box">

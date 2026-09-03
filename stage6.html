@@ -92,6 +92,41 @@
           </div>
           <div class="dialog-bubble">直接聞くとは、つまり量子ビットとエネルギーをやり取りすることだ。たとえば |1⟩ が持つエネルギーの粒を検出器で吸い取れば、確かに「|1⟩ だった」と分かる。だが吸い取った瞬間、状態は跡形もない。しかも読み取りに失敗したら（検出器は完璧ではない）、やり直しがきかない。<strong>一発勝負の破壊検査</strong>になってしまう。<br>笛方式の賢さはここにある。笛の音程は、量子ビットと笛の<strong>波の押し合い</strong>で決まる。押し合いはエネルギーの受け渡しではない――現に、量子ビットの周波数は約5GHz、笛は約7GHzと、わざと<strong>2GHzもずらして</strong>作ってある。リズムの合わない相手とは乗り移り（エネルギー交換）が起きないことは、共鳴の勉強で見たとおりだ。<br>エネルギーを渡さず、<strong>「隣にいる」ことによる音程の押し合いだけ</strong>を読む。だから読んでも量子ビットのエネルギーは壊れず、疑わしければ<strong>すぐもう一度読み直せる</strong>。この性質を<strong>量子非破壊測定</strong>と呼ぶ。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="分散読み出しの図。量子ビット（5GHz）と共振器（7GHz）が隣り合い、弱い電波を共振器に当てると、量子ビットが|0⟩か|1⟩かで返ってくる波の位相がわずかに違う。この違いが手がかりになる">
+          <text class="strong" x="186" y="18" text-anchor="middle">分散読み出し ― 返ってきた波の「ずれ」に手がかりが乗る</text>
+          <!-- 量子ビットと笛 -->
+          <rect x="36" y="52" width="88" height="56" rx="8" fill="#e8f1f1" stroke="#2f8a8f" stroke-width="2"/>
+          <text class="label" x="80" y="76" text-anchor="middle">量子ビット</text>
+          <text class="label" x="80" y="92" text-anchor="middle">約5GHz</text>
+          <rect x="152" y="52" width="88" height="56" rx="8" fill="#f7f3e2" stroke="#8a6a24" stroke-width="2"/>
+          <text class="label" x="196" y="76" text-anchor="middle">共振器（笛）</text>
+          <text class="label" x="196" y="92" text-anchor="middle">約7GHz</text>
+          <path d="M 126 74 q 6 -6 12 0 q 6 6 12 0" stroke="var(--muted)" stroke-width="2" fill="none"/>
+          <text class="label" x="138" y="118" text-anchor="middle">押し合い（エネルギー交換なし）</text>
+          <!-- プローブ -->
+          <path d="M 262 66 L 340 66" stroke="#2f5a9e" stroke-width="2" fill="none"/>
+          <path d="M 268 61 L 260 66 L 268 71" stroke="#2f5a9e" stroke-width="2" fill="none"/>
+          <text class="label" x="300" y="56" text-anchor="middle">弱い電波（光子数個）</text>
+          <path d="M 262 94 L 340 94" stroke="#b5504a" stroke-width="2" fill="none"/>
+          <path d="M 332 89 L 341 94 L 332 99" stroke="#b5504a" stroke-width="2" fill="none"/>
+          <text class="label" x="300" y="112" text-anchor="middle">返り波に手がかり</text>
+          <!-- 波形比較 -->
+          <text class="strong" x="110" y="152" text-anchor="middle" fill="#2f5a9e">|0⟩のときの返り波</text>
+          <path d="M 40 176 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 11 16 22 0" stroke="#2f5a9e" stroke-width="2.2" fill="none"/>
+          <text class="strong" x="110" y="206" text-anchor="middle" fill="#b5504a">|1⟩のときの返り波</text>
+          <path d="M 51 228 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 5.5 8 11 8" stroke="#b5504a" stroke-width="2.2" fill="none"/>
+          <line x1="62" y1="164" x2="62" y2="234" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+          <text class="accent" x="286" y="178" text-anchor="middle">量子ビットの状態で</text>
+          <text class="accent" x="286" y="194" text-anchor="middle">波の山の位置（位相）が</text>
+          <text class="accent" x="286" y="210" text-anchor="middle">わずかにずれる</text>
+        </svg>
+        <div class="diagram-caption">量子ビット（約5GHz）と共振器（約7GHz）はわざと2GHzずらして作ってあり、リズムが合わないためエネルギーの乗り移りは起きない。起きるのは<strong>押し合いによる音程のずれ</strong>だけ。光子数個ぶんの弱い電波を笛に当てると、量子ビットが |0⟩ か |1⟩ かで返り波の<strong>山の位置（位相）</strong>がわずかに違う。エネルギーを奪わないので状態は壊れず（量子非破壊測定）、疑わしければ読み直せる。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
@@ -148,52 +183,6 @@
           </div>
           <div class="dialog-bubble">そうだ。鎖の全体像を並べよう。<strong>10mK：パラメトリック増幅器で約100倍</strong>（ここで声と騒音の比が確定）→ <strong>4K：半導体増幅器で1000倍以上</strong>（もう声が大きいので数Kの騒音は誤差）→ <strong>室温：さらに増幅して数字化</strong>。<br>それから、地味だが欠かせない部品がある。増幅器は自分の出す騒音を<strong>入口側にも</strong>まき散らす。それが配線を逆流して量子ビットに届いたら台無しだから、間に<strong>一方通行の弁</strong>（サーキュレータという、電波を一方向にしか通さない部品）を挟んで逆流を封じる。<br>数字も添えておこう。読み出し1回にかかる時間は数百ナノ秒、正しく読める確率は<strong>99%程度</strong>。1量子ビットゲートの99.9%より一桁悪い。<strong>読み出しは、いまも実機のいちばんの誤り所</strong>なんだ。</div>
         </div>
-        <div class="dialog-row right">
-          <div class="dialog-character">
-            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
-            <div class="dialog-name student">うさ美</div>
-          </div>
-          <div class="dialog-bubble">全体をまとめます。<br>読み出しの旅は――光子数個の弱い電波を笛に通す（<strong>蹴飛ばさない弱さ</strong>）→ 量子ビットとの押し合いで音程がずれ、<strong>返ってきた波に手がかりが刻まれる</strong> → 一方通行の弁を通り → 10mKの<strong>量子限界増幅器</strong>で声と騒音の比を確定させ → 4K、室温と増幅されて数字になる。<br>デコヒーレンスの旅の言葉で言えば、手がかりが増幅されて記録に変わった時点で、状態は読めた方に確定。測定装置とは「手がかりの小窓」を、<strong>壊さず・騒がせず・聞き取れるように</strong>作り込んだ工学だったんですね。<br>これで①区別できる2状態、②重ね合わせの維持、③操作、④読み出し――<strong>4条件すべて、部品として実現できました</strong>。</div>
-        </div>
-        <div class="dialog-row">
-          <div class="dialog-character">
-            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
-            <div class="dialog-name mentor">ねこ博士</div>
-          </div>
-          <div class="dialog-bubble">おめでとう、量子ビット<strong>1個</strong>の完全体だ。<br>だが計算機には、量子ビットどうしの会話――CNOTのような2量子ビットゲート――が要る。1個の完成と2個の連携は、まったく別の難しさだよ。次のステージでは量子ビットをつなぎ、あわせて「超伝導以外の作り方」たち――イオン・原子・光・シリコン――と設計図くらべをしよう。</div>
-        </div>
-      </div>
-
-      <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="分散読み出しの図。量子ビット（5GHz）と共振器（7GHz）が隣り合い、弱い電波を共振器に当てると、量子ビットが|0⟩か|1⟩かで返ってくる波の位相がわずかに違う。この違いが手がかりになる">
-          <text class="strong" x="186" y="18" text-anchor="middle">分散読み出し ― 返ってきた波の「ずれ」に手がかりが乗る</text>
-          <!-- 量子ビットと笛 -->
-          <rect x="36" y="52" width="88" height="56" rx="8" fill="#e8f1f1" stroke="#2f8a8f" stroke-width="2"/>
-          <text class="label" x="80" y="76" text-anchor="middle">量子ビット</text>
-          <text class="label" x="80" y="92" text-anchor="middle">約5GHz</text>
-          <rect x="152" y="52" width="88" height="56" rx="8" fill="#f7f3e2" stroke="#8a6a24" stroke-width="2"/>
-          <text class="label" x="196" y="76" text-anchor="middle">共振器（笛）</text>
-          <text class="label" x="196" y="92" text-anchor="middle">約7GHz</text>
-          <path d="M 126 74 q 6 -6 12 0 q 6 6 12 0" stroke="var(--muted)" stroke-width="2" fill="none"/>
-          <text class="label" x="138" y="118" text-anchor="middle">押し合い（エネルギー交換なし）</text>
-          <!-- プローブ -->
-          <path d="M 262 66 L 340 66" stroke="#2f5a9e" stroke-width="2" fill="none"/>
-          <path d="M 268 61 L 260 66 L 268 71" stroke="#2f5a9e" stroke-width="2" fill="none"/>
-          <text class="label" x="300" y="56" text-anchor="middle">弱い電波（光子数個）</text>
-          <path d="M 262 94 L 340 94" stroke="#b5504a" stroke-width="2" fill="none"/>
-          <path d="M 332 89 L 341 94 L 332 99" stroke="#b5504a" stroke-width="2" fill="none"/>
-          <text class="label" x="300" y="112" text-anchor="middle">返り波に手がかり</text>
-          <!-- 波形比較 -->
-          <text class="strong" x="110" y="152" text-anchor="middle" fill="#2f5a9e">|0⟩のときの返り波</text>
-          <path d="M 40 176 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 11 16 22 0" stroke="#2f5a9e" stroke-width="2.2" fill="none"/>
-          <text class="strong" x="110" y="206" text-anchor="middle" fill="#b5504a">|1⟩のときの返り波</text>
-          <path d="M 51 228 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 11 16 22 0 q 11 -16 22 0 q 5.5 8 11 8" stroke="#b5504a" stroke-width="2.2" fill="none"/>
-          <line x1="62" y1="164" x2="62" y2="234" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
-          <text class="accent" x="286" y="178" text-anchor="middle">量子ビットの状態で</text>
-          <text class="accent" x="286" y="194" text-anchor="middle">波の山の位置（位相）が</text>
-          <text class="accent" x="286" y="210" text-anchor="middle">わずかにずれる</text>
-        </svg>
-        <div class="diagram-caption">量子ビット（約5GHz）と共振器（約7GHz）はわざと2GHzずらして作ってあり、リズムが合わないためエネルギーの乗り移りは起きない。起きるのは<strong>押し合いによる音程のずれ</strong>だけ。光子数個ぶんの弱い電波を笛に当てると、量子ビットが |0⟩ か |1⟩ かで返り波の<strong>山の位置（位相）</strong>がわずかに違う。エネルギーを奪わないので状態は壊れず（量子非破壊測定）、疑わしければ読み直せる。</div>
       </div>
 
       <div class="diagram-box">
@@ -225,6 +214,23 @@
           <text class="label" x="186" y="232" text-anchor="middle">1段目の騒音だけは小声に直接かぶさり、以後ずっと信号と一緒に増幅される。</text>
         </svg>
         <div class="diagram-caption">読み出し信号の帰り道。<strong>10mKの量子限界増幅器</strong>（ジョセフソン接合の非線形を使った「立ちこぎ」式。足す雑音は量子力学が命じる下限すれすれ）→ <strong>4Kの半導体増幅器</strong> → <strong>室温</strong>で数字化。1段目の騒音は小声のままの信号にかぶさって永遠についてくるため、声と騒音の比は1段目で確定する。増幅器自身の騒音が量子ビットへ逆流しないよう、<strong>一方通行の弁</strong>（サーキュレータ）を挟む。読み出し1回は数百ナノ秒・成功率99%程度で、ゲート（99.9%）より誤りやすい。</div>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">全体をまとめます。<br>読み出しの旅は――光子数個の弱い電波を笛に通す（<strong>蹴飛ばさない弱さ</strong>）→ 量子ビットとの押し合いで音程がずれ、<strong>返ってきた波に手がかりが刻まれる</strong> → 一方通行の弁を通り → 10mKの<strong>量子限界増幅器</strong>で声と騒音の比を確定させ → 4K、室温と増幅されて数字になる。<br>デコヒーレンスの旅の言葉で言えば、手がかりが増幅されて記録に変わった時点で、状態は読めた方に確定。測定装置とは「手がかりの小窓」を、<strong>壊さず・騒がせず・聞き取れるように</strong>作り込んだ工学だったんですね。<br>これで①区別できる2状態、②重ね合わせの維持、③操作、④読み出し――<strong>4条件すべて、部品として実現できました</strong>。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">おめでとう、量子ビット<strong>1個</strong>の完全体だ。<br>だが計算機には、量子ビットどうしの会話――CNOTのような2量子ビットゲート――が要る。1個の完成と2個の連携は、まったく別の難しさだよ。次のステージでは量子ビットをつなぎ、あわせて「超伝導以外の作り方」たち――イオン・原子・光・シリコン――と設計図くらべをしよう。</div>
+        </div>
       </div>
 
       <div class="formula-box">

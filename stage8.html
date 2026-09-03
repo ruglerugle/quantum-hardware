@@ -92,6 +92,38 @@
           </div>
           <div class="dialog-bubble">その見積もりで合っている。きっちり掛け算すると、無傷で走り切れる確率は<strong>約5%</strong>まで落ちる。<br>そして請求書は重いよ。いまの誤り率0.1〜1%の物理量子ビットだと、誤りを十分抑えた論理量子ビット1個を維持するのに、物理量子ビットが<strong>およそ1000個</strong>要る。<br>ショアで実用サイズの暗号を破るには論理量子ビットが数千個規模だから、掛け算して物理<strong>数百万個</strong>。<br>そして現在の実機は、最大級のもので物理<strong>数百〜1000個程度</strong>だ。つまり、いまの機械と「役に立つ機械」の間には、<strong>数千倍</strong>の谷が横たわっている。これが「まだ役に立たない」の第一の答えだ。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="現在地と必要規模の谷を示す図。対数目盛の棒グラフで、現在の実機は物理量子ビット数百〜1000個、実用アルゴリズムには論理数千個＝物理数百万個が必要で、数千倍の開きがある">
+          <text class="strong" x="186" y="18" text-anchor="middle">数千倍の谷 ― 現在地と「役に立つ規模」</text>
+          <!-- 軸 -->
+          <line x1="60" y1="200" x2="340" y2="200" stroke="var(--ink)" stroke-width="1.8"/>
+          <line x1="60" y1="200" x2="60" y2="40" stroke="var(--ink)" stroke-width="1.8"/>
+          <text class="label" x="34" y="124" text-anchor="middle" transform="rotate(-90 34 124)">物理量子ビット数（対数）</text>
+          <!-- 目盛 -->
+          <text class="label" x="54" y="196" text-anchor="end">100</text>
+          <text class="label" x="54" y="152" text-anchor="end">1000</text>
+          <text class="label" x="54" y="108" text-anchor="end">10万</text>
+          <text class="label" x="54" y="64" text-anchor="end">1000万</text>
+          <!-- 現在 -->
+          <rect x="92" y="160" width="60" height="40" fill="#2f8a8f" opacity=".85"/>
+          <text class="strong" x="122" y="152" text-anchor="middle" fill="#2f8a8f">現在の実機</text>
+          <text class="label" x="122" y="216" text-anchor="middle">数百〜1000個</text>
+          <!-- 必要 -->
+          <rect x="232" y="56" width="60" height="144" fill="#b5504a" opacity=".8"/>
+          <text class="strong" x="262" y="48" text-anchor="middle" fill="#b5504a">実用規模</text>
+          <text class="label" x="262" y="216" text-anchor="middle">数百万個</text>
+          <!-- 矢印 -->
+          <path d="M 158 168 Q 192 120 226 76" stroke="var(--muted)" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+          <path d="M 218 74 L 228 74 L 224 84" stroke="var(--muted)" stroke-width="2" fill="none"/>
+          <text class="label" x="186" y="140" text-anchor="middle">×数千</text>
+          <text class="label" x="192" y="160" text-anchor="middle">誤り訂正：1論理＝物理約1000個</text>
+        </svg>
+        <div class="diagram-caption">対数目盛での現在地。実用アルゴリズム（例：実用サイズの暗号を破るショア）には誤りを抑えた<strong>論理量子ビット</strong>が数千個必要で、誤り率0.1〜1%の物理量子ビットで論理1個を守るには<strong>約1000個</strong>かかるため、必要な物理量子ビットは<strong>数百万個</strong>。現在の実機（数百〜1000個）との間には数千倍の谷がある。2024年には「守りの陣地を広げるほど論理誤りが減る」ことが105量子ビットの実機で実証され、谷を渡る道具立て自体は動き始めた。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
@@ -120,6 +152,41 @@
           </div>
           <div class="dialog-bubble">数えれば見えてくる。量子ビット1個を働かせるのに要る線を数えよう。矢印を回すパルスの線が1本。蛇口方式なら結合器の開閉線が加わる。読み出しは工夫して10個で1本を共有できる。ならして1個あたり<strong>2〜3本</strong>としよう。<br>1000個なら2000〜3000本の同軸ケーブルが、あの直径50センチほどの真空の缶の中を、室温から10mKまで這い降りることになる。ステージ5でやったとおり、<strong>1本1本が熱の橋で、1本1本に減衰器の階段が要る</strong>。そして10mKの冷やす力は数マイクロワットしかない。<br>では100万個なら？ <strong>200万〜300万本</strong>。物理的に缶に入らないし、熱収支は天文学的に破綻する。誤り訂正の谷を「数を増やして」渡ろうとした瞬間、こちらの壁が立ちはだかる。これが第二の答えだ。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="配線の洪水と突破口の図。左は現在方式で、量子ビット1個あたり2〜3本のケーブルが室温から10mKまで降りるため、100万個では数百万本となり破綻する。右は突破口で、読み出しの多重化、4Kに置く極低温制御チップ、冷蔵庫同士を光ファイバーでつなぐモジュール化を示す">
+          <text class="strong" x="186" y="18" text-anchor="middle">配線の洪水と3つの突破口</text>
+          <!-- 左: 現在 -->
+          <text class="strong" x="96" y="44" text-anchor="middle">力ずくで増やすと…</text>
+          <rect x="40" y="56" width="112" height="130" rx="10" fill="none" stroke="var(--line)" stroke-width="1.6"/>
+          <g stroke="#b5504a" stroke-width="1.6">
+            <line x1="56" y1="56" x2="66" y2="150"/><line x1="68" y1="56" x2="76" y2="150"/>
+            <line x1="80" y1="56" x2="86" y2="150"/><line x1="92" y1="56" x2="96" y2="150"/>
+            <line x1="104" y1="56" x2="106" y2="150"/><line x1="116" y1="56" x2="116" y2="150"/>
+            <line x1="128" y1="56" x2="126" y2="150"/><line x1="140" y1="56" x2="136" y2="150"/>
+          </g>
+          <rect x="72" y="150" width="56" height="16" rx="4" fill="#2f8a8f"/>
+          <text class="label" x="100" y="180" text-anchor="middle">チップ（10mK）</text>
+          <text class="label" x="96" y="204" text-anchor="middle">1個あたり2〜3本 ×100万個</text>
+          <text class="label" x="96" y="220" text-anchor="middle">＝数百万本 → 缶に入らず熱も破綻</text>
+          <!-- 右: 突破口 -->
+          <text class="strong" x="272" y="44" text-anchor="middle">突破口</text>
+          <rect x="200" y="56" width="144" height="40" rx="8" fill="var(--paper2)" stroke="#2f8a8f" stroke-width="1.8"/>
+          <text class="label" x="272" y="72" text-anchor="middle">① 多重化：1本の線を</text>
+          <text class="label" x="272" y="88" text-anchor="middle">多数の量子ビットで共有</text>
+          <rect x="200" y="106" width="144" height="40" rx="8" fill="var(--paper2)" stroke="#8a6a24" stroke-width="1.8"/>
+          <text class="label" x="272" y="122" text-anchor="middle">② 極低温CMOS：制御チップを</text>
+          <text class="label" x="272" y="138" text-anchor="middle">冷やす力に余裕のある4Kへ</text>
+          <rect x="200" y="156" width="144" height="40" rx="8" fill="var(--paper2)" stroke="#2f7a6b" stroke-width="1.8"/>
+          <text class="label" x="272" y="172" text-anchor="middle">③ モジュール化：冷蔵庫同士を</text>
+          <text class="label" x="272" y="188" text-anchor="middle">光ファイバーで量子的に接続</text>
+          <text class="label" x="272" y="220" text-anchor="middle">＋ 100万個の個体差を自動調整する仕組み</text>
+        </svg>
+        <div class="diagram-caption">「量子ビットを増やす」は実際には「ケーブルを増やす」であり、1本1本が熱の橋（ステージ5）なので、力ずくでは<strong>チップより先に冷蔵庫が破綻する</strong>。突破口は、①1本の線を多数で共有する<strong>多重化</strong>、②合図を作る回路自体を冷やす力に余裕のある4Kに引っ越させる<strong>極低温CMOS</strong>、③マイクロ波と光の変換器を鍵に冷蔵庫同士をつなぐ<strong>モジュール化</strong>。加えて、人工原子の個体差を機械学習で全自動調整する研究が進む。</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
@@ -176,67 +243,6 @@
           </div>
           <div class="dialog-bubble">よくまとまったね。<br>最後にひとつだけ、旅の景色を言葉にしておこう。いまこの瞬間も、世界のどこかの金色のシャンデリアの底で、宇宙より冷たい闇の中、<strong>何兆個の電子がたった1つの波として、人間が設計した合図に合わせて踊っている</strong>。それがきみの学んだ機械の正体だ。<br>全8ステージ、おつかれさま。クリア画面で旅を振り返ろう。</div>
         </div>
-      </div>
-
-      <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="現在地と必要規模の谷を示す図。対数目盛の棒グラフで、現在の実機は物理量子ビット数百〜1000個、実用アルゴリズムには論理数千個＝物理数百万個が必要で、数千倍の開きがある">
-          <text class="strong" x="186" y="18" text-anchor="middle">数千倍の谷 ― 現在地と「役に立つ規模」</text>
-          <!-- 軸 -->
-          <line x1="60" y1="200" x2="340" y2="200" stroke="var(--ink)" stroke-width="1.8"/>
-          <line x1="60" y1="200" x2="60" y2="40" stroke="var(--ink)" stroke-width="1.8"/>
-          <text class="label" x="34" y="124" text-anchor="middle" transform="rotate(-90 34 124)">物理量子ビット数（対数）</text>
-          <!-- 目盛 -->
-          <text class="label" x="54" y="196" text-anchor="end">100</text>
-          <text class="label" x="54" y="152" text-anchor="end">1000</text>
-          <text class="label" x="54" y="108" text-anchor="end">10万</text>
-          <text class="label" x="54" y="64" text-anchor="end">1000万</text>
-          <!-- 現在 -->
-          <rect x="92" y="160" width="60" height="40" fill="#2f8a8f" opacity=".85"/>
-          <text class="strong" x="122" y="152" text-anchor="middle" fill="#2f8a8f">現在の実機</text>
-          <text class="label" x="122" y="216" text-anchor="middle">数百〜1000個</text>
-          <!-- 必要 -->
-          <rect x="232" y="56" width="60" height="144" fill="#b5504a" opacity=".8"/>
-          <text class="strong" x="262" y="48" text-anchor="middle" fill="#b5504a">実用規模</text>
-          <text class="label" x="262" y="216" text-anchor="middle">数百万個</text>
-          <!-- 矢印 -->
-          <path d="M 158 168 Q 192 120 226 76" stroke="var(--muted)" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
-          <path d="M 218 74 L 228 74 L 224 84" stroke="var(--muted)" stroke-width="2" fill="none"/>
-          <text class="label" x="186" y="140" text-anchor="middle">×数千</text>
-          <text class="label" x="192" y="160" text-anchor="middle">誤り訂正：1論理＝物理約1000個</text>
-        </svg>
-        <div class="diagram-caption">対数目盛での現在地。実用アルゴリズム（例：実用サイズの暗号を破るショア）には誤りを抑えた<strong>論理量子ビット</strong>が数千個必要で、誤り率0.1〜1%の物理量子ビットで論理1個を守るには<strong>約1000個</strong>かかるため、必要な物理量子ビットは<strong>数百万個</strong>。現在の実機（数百〜1000個）との間には数千倍の谷がある。2024年には「守りの陣地を広げるほど論理誤りが減る」ことが105量子ビットの実機で実証され、谷を渡る道具立て自体は動き始めた。</div>
-      </div>
-
-      <div class="diagram-box">
-        <svg class="qh-svg" viewBox="0 0 372 240" width="100%" role="img" aria-label="配線の洪水と突破口の図。左は現在方式で、量子ビット1個あたり2〜3本のケーブルが室温から10mKまで降りるため、100万個では数百万本となり破綻する。右は突破口で、読み出しの多重化、4Kに置く極低温制御チップ、冷蔵庫同士を光ファイバーでつなぐモジュール化を示す">
-          <text class="strong" x="186" y="18" text-anchor="middle">配線の洪水と3つの突破口</text>
-          <!-- 左: 現在 -->
-          <text class="strong" x="96" y="44" text-anchor="middle">力ずくで増やすと…</text>
-          <rect x="40" y="56" width="112" height="130" rx="10" fill="none" stroke="var(--line)" stroke-width="1.6"/>
-          <g stroke="#b5504a" stroke-width="1.6">
-            <line x1="56" y1="56" x2="66" y2="150"/><line x1="68" y1="56" x2="76" y2="150"/>
-            <line x1="80" y1="56" x2="86" y2="150"/><line x1="92" y1="56" x2="96" y2="150"/>
-            <line x1="104" y1="56" x2="106" y2="150"/><line x1="116" y1="56" x2="116" y2="150"/>
-            <line x1="128" y1="56" x2="126" y2="150"/><line x1="140" y1="56" x2="136" y2="150"/>
-          </g>
-          <rect x="72" y="150" width="56" height="16" rx="4" fill="#2f8a8f"/>
-          <text class="label" x="100" y="180" text-anchor="middle">チップ（10mK）</text>
-          <text class="label" x="96" y="204" text-anchor="middle">1個あたり2〜3本 ×100万個</text>
-          <text class="label" x="96" y="220" text-anchor="middle">＝数百万本 → 缶に入らず熱も破綻</text>
-          <!-- 右: 突破口 -->
-          <text class="strong" x="272" y="44" text-anchor="middle">突破口</text>
-          <rect x="200" y="56" width="144" height="40" rx="8" fill="var(--paper2)" stroke="#2f8a8f" stroke-width="1.8"/>
-          <text class="label" x="272" y="72" text-anchor="middle">① 多重化：1本の線を</text>
-          <text class="label" x="272" y="88" text-anchor="middle">多数の量子ビットで共有</text>
-          <rect x="200" y="106" width="144" height="40" rx="8" fill="var(--paper2)" stroke="#8a6a24" stroke-width="1.8"/>
-          <text class="label" x="272" y="122" text-anchor="middle">② 極低温CMOS：制御チップを</text>
-          <text class="label" x="272" y="138" text-anchor="middle">冷やす力に余裕のある4Kへ</text>
-          <rect x="200" y="156" width="144" height="40" rx="8" fill="var(--paper2)" stroke="#2f7a6b" stroke-width="1.8"/>
-          <text class="label" x="272" y="172" text-anchor="middle">③ モジュール化：冷蔵庫同士を</text>
-          <text class="label" x="272" y="188" text-anchor="middle">光ファイバーで量子的に接続</text>
-          <text class="label" x="272" y="220" text-anchor="middle">＋ 100万個の個体差を自動調整する仕組み</text>
-        </svg>
-        <div class="diagram-caption">「量子ビットを増やす」は実際には「ケーブルを増やす」であり、1本1本が熱の橋（ステージ5）なので、力ずくでは<strong>チップより先に冷蔵庫が破綻する</strong>。突破口は、①1本の線を多数で共有する<strong>多重化</strong>、②合図を作る回路自体を冷やす力に余裕のある4Kに引っ越させる<strong>極低温CMOS</strong>、③マイクロ波と光の変換器を鍵に冷蔵庫同士をつなぐ<strong>モジュール化</strong>。加えて、人工原子の個体差を機械学習で全自動調整する研究が進む。</div>
       </div>
 
       <div class="formula-box">
