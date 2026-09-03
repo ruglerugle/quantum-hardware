@@ -201,6 +201,9 @@ a.btn{text-decoration:none;display:inline-flex;align-items:center}
 .diagram-box{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:14px;margin:16px 0;text-align:center}
 .diagram-box svg{max-width:min(100%,460px);height:auto}
 .diagram-caption{font-size:12.5px;color:var(--muted);margin-top:8px;font-weight:700;line-height:1.6}
+.photo-box img{max-width:min(100%,360px);height:auto;border-radius:8px;border:1px solid var(--line)}
+.photo-credit{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5}
+.photo-credit a{color:inherit}
 .formula-box{background:#edf6f2;border:1px solid #b1d2c6;border-radius:10px;padding:14px 16px;margin:12px 0;font-size:14px;line-height:1.85;color:#1a332c;font-weight:700;overflow-x:auto}
 /* 各ステップは折り返しても頭が分かるよう、ぶら下げインデント＋行間で区切る */
 .formula-box .step{display:block;margin-bottom:11px;padding-left:1.3em;text-indent:-1.3em;word-break:keep-all;overflow-wrap:break-word}
