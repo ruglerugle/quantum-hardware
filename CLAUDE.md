@@ -60,7 +60,7 @@ quantum-computer（ https://ruglerugle.github.io/quantum-computer/ ソフトウ�
   - quantum-computer（ https://ruglerugle.github.io/quantum-computer/ ）: 矢印の一覧表・ゲート＝ユニタリな書き換え・H/X/CNOT・もつれの作成・干渉の設計が速さの源・
     超伝導量子ビットの骨組み（振り子回路・冷却の理由・ジョセフソン接合・共鳴パルス・笛の音程の読み出し）・誤り訂正の考え方（シンドローム測定・閾値定理）
   - cpu_game（ https://informatics.habatakijuku.com/cpu-logic-game/ ）: 論理回路（AND/OR/NOT）、ゲートを組み合わせて計算を作ること
-  - algo-quest（アルゴリズムの旅 https://informatics.habatakijuku.com/algo-quest/ ）: 線形探索（全件探索）・二分探索・バブルソート・クイックソート・ダイクストラ法・動的計画法・計算量
+  - algo-quest（アルゴリズムの旅 https://informatics.habatakijuku.com/algo-quest/ ）: 線形探索・二分探索・バブルソート・クイックソート・ダイクストラ法・動的計画法・計算量
 - 本サイトは quantum-computer STAGE3 の内容を「骨組みの復習」として引き継ぎ、各部品を工学の中身まで掘り下げる。同じ説明の繰り返しにしない
 
 **ねこ博士**
