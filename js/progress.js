@@ -28,11 +28,11 @@
   var STAGES = [
     { n: 1, file: "stage1.html", title: "量子ビットの設計図", sub: "満たすべき4つの条件" },
     { n: 2, file: "stage2.html", title: "超伝導と電気の振り子", sub: "エネルギーの階段を作る" },
-    { n: 3, file: "stage3.html", title: "ジョセフソン接合", sub: "心臓部とトランズモン" },
+    { n: 3, file: "stage3.html", title: "ジョセフソン接合とトランズモン", sub: "心臓部とトランズモン" },
     { n: 4, file: "stage4.html", title: "宇宙より冷たい冷蔵庫", sub: "希釈冷凍機のしくみ" },
     { n: 5, file: "stage5.html", title: "矢印を回す配線", sub: "マイクロ波制御の実際" },
     { n: 6, file: "stage6.html", title: "壊さずに読み出す", sub: "共振器と増幅の鎖" },
-    { n: 7, file: "stage7.html", title: "つなぐ・他の作り方", sub: "2量子ビットゲートと方式くらべ" },
+    { n: 7, file: "stage7.html", title: "2量子ビットゲートと方式くらべ", sub: "つなぐ・他の作り方" },
     { n: 8, file: "stage8.html", title: "100万量子ビットへの壁", sub: "スケールアップと現在地" }
   ];
 
