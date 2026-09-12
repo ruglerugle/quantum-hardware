@@ -14,14 +14,14 @@
 </script>
 <title>STAGE1 量子ビットの設計図 ― 量子コンピュータはどう作るのか</title>
 <meta name="description" content="量子ビットを「物」で作るには何が必要か。区別できる2つの状態・重ね合わせの維持・外からの操作・読み出しという4つの条件を、コインの裏表がなぜ量子ビットになれないのかから出発して、論理の飛躍なく導く。ディヴィンチェンゾの基準への入口。">
-<link rel="canonical" href="https://ruglerugle.github.io/quantum-hardware/stage1.html">
+<link rel="canonical" href="https://quantum-mechanics.habatakijuku.com/quantum-hardware/stage1.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="量子コンピュータはどう作るのか">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="STAGE1 量子ビットの設計図 ― 量子コンピュータはどう作るのか">
 <meta property="og:description" content="量子ビットを「物」で作るための4つの条件を、コインの裏表がなぜダメなのかから導く。">
-<meta property="og:url" content="https://ruglerugle.github.io/quantum-hardware/stage1.html">
-<meta property="og:image" content="https://ruglerugle.github.io/quantum-hardware/images/ogp.png">
+<meta property="og:url" content="https://quantum-mechanics.habatakijuku.com/quantum-hardware/stage1.html">
+<meta property="og:image" content="https://quantum-mechanics.habatakijuku.com/quantum-hardware/images/ogp.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="design-system.css">
@@ -76,7 +76,7 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">前の旅（<a href="https://ruglerugle.github.io/quantum-computer/" target="_blank" rel="noopener" style="color:#2f8a8f;text-decoration:underline">量子コンピュータはなぜ速いのか</a>）では、量子計算の中身――矢印の一覧表と、それを書き換える干渉の設計――を見届けたね。途中で一度だけ、チップの上に量子ビットを組み立てる回り道もした。<br>今回の旅は、あのとき駆け足で通った<strong>ハードウェアの世界</strong>を、工場見学のようにじっくり歩く。部品ひとつひとつに「なぜそれが要るのか」を問いながらね。<br>最初の仕事は<strong>設計図</strong>だ。何かを作るとき、職人はまず「作る物が満たすべき条件」を書き出す。とはいえ、条件はいきなり全部は見えてこない。ひとつずつ攻めよう。まずは復習から――<strong>量子ビットとは、何だった？</strong></div>
+          <div class="dialog-bubble">前の旅（<a href="https://quantum-mechanics.habatakijuku.com/quantum-computer/" target="_blank" rel="noopener" style="color:#2f8a8f;text-decoration:underline">量子コンピュータはなぜ速いのか</a>）では、量子計算の中身――矢印の一覧表と、それを書き換える干渉の設計――を見届けたね。途中で一度だけ、チップの上に量子ビットを組み立てる回り道もした。<br>今回の旅は、あのとき駆け足で通った<strong>ハードウェアの世界</strong>を、工場見学のようにじっくり歩く。部品ひとつひとつに「なぜそれが要るのか」を問いながらね。<br>最初の仕事は<strong>設計図</strong>だ。何かを作るとき、職人はまず「作る物が満たすべき条件」を書き出す。とはいえ、条件はいきなり全部は見えてこない。ひとつずつ攻めよう。まずは復習から――<strong>量子ビットとは、何だった？</strong></div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -90,7 +90,7 @@
             <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">それで十分だよ。いまの「区別できる2つの状態を持つこと」を<strong>条件①</strong>として書き留めよう。<br>そして実は、条件①だけなら世界は候補であふれている。コインには裏と表がある。スイッチにはONとOFFがある。電気を「ためた・ためてない」で区別するふつうのコンピュータのメモリも、立派な2状態だ。でも、コインを積んだ机が量子コンピュータになったという話は聞かない。何かが足りない。<br>きみが<a href="https://ruglerugle.github.io/decoherence-quest/" target="_blank" rel="noopener" style="color:#2f8a8f;text-decoration:underline">デコヒーレンスの旅</a>でさんざん戦った、あの敵のことを思い出しながら考えてごらん。コインの「裏でも表でもある状態」を、なぜ誰も見たことがないのかな？</div>
+          <div class="dialog-bubble">それで十分だよ。いまの「区別できる2つの状態を持つこと」を<strong>条件①</strong>として書き留めよう。<br>そして実は、条件①だけなら世界は候補であふれている。コインには裏と表がある。スイッチにはONとOFFがある。電気を「ためた・ためてない」で区別するふつうのコンピュータのメモリも、立派な2状態だ。でも、コインを積んだ机が量子コンピュータになったという話は聞かない。何かが足りない。<br>きみが<a href="https://quantum-mechanics.habatakijuku.com/decoherence-quest/" target="_blank" rel="noopener" style="color:#2f8a8f;text-decoration:underline">デコヒーレンスの旅</a>でさんざん戦った、あの敵のことを思い出しながら考えてごらん。コインの「裏でも表でもある状態」を、なぜ誰も見たことがないのかな？</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
