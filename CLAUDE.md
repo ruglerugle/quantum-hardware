@@ -57,11 +57,16 @@ quantum-computer（ https://ruglerugle.github.io/quantum-computer/ ソフトウ�
   - complex-quest: 複素数（矢印としての掛け算・回転）
   - bell-inequality: もつれ・完全相関・ベルの不等式と局所実在論の否定
   - decoherence-quest: 足し算ルール・手がかり・直交・デコヒーレンス
-  - quantum-computer（ https://ruglerugle.github.io/quantum-computer/ ）: 矢印の一覧表・ゲート＝ユニタリな書き換え・H/X/CNOT・もつれの作成・干渉の設計が速さの源・
-    超伝導量子ビットの骨組み（振り子回路・冷却の理由・ジョセフソン接合・共鳴パルス・笛の音程の読み出し）・誤り訂正の考え方（シンドローム測定・閾値定理）
+  - quantum-computer（ https://quantum-mechanics.habatakijuku.com/quantum-computer/ ）: 矢印の一覧表・ゲート＝ユニタリな書き換え・H/X/CNOT・もつれの作成・干渉の設計が速さの源・
+    ドイチュ／グローバー／ショア・誤り訂正の考え方（シンドローム測定・閾値定理・1論理＝物理約1000個）
+    - **⚠️ 2026-09-12に quantum-computer から実機ステージ（旧STAGE4「量子ビットを組み立てる」）を削除し、実機の解説は本サイトに全面委譲した。**
+      したがって**振り子回路（LC回路）・超伝導で電子がペアを組む話・ジョセフソン接合・トランズモン・共鳴パルスでのゲート実装・笛（共振器）の音程による読み出し・希釈冷凍機は、すべて本サイトが初出**。
+      「前の旅で見たね」と既習扱いしてはいけない（2026-09-14に11箇所修正済み）
+  - **トンネル効果・波のしみ出し・井戸型のエネルギー量子化の出典は ② schrodinger-equation**（ https://quantum-mechanics.habatakijuku.com/schrodinger-equation/ ）。①quantum-quest ではない
   - cpu_game（ https://informatics.habatakijuku.com/cpu-logic-game/ ）: 論理回路（AND/OR/NOT）、ゲートを組み合わせて計算を作ること
   - algo-quest（アルゴリズムの旅 https://informatics.habatakijuku.com/algo-quest/ ）: 線形探索・二分探索・バブルソート・クイックソート・ダイクストラ法・動的計画法・計算量
-- 本サイトは quantum-computer STAGE3 の内容を「骨組みの復習」として引き継ぎ、各部品を工学の中身まで掘り下げる。同じ説明の繰り返しにしない
+- 本サイトは quantum-computer の抽象論（矢印の表・ゲート・干渉の設計）を引き継ぎ、それを**現実の物質でどう作るか**を初出として立ち上げる。実機の部品は既習前提にせず、博士が定義から供給する
+- **既習内容をうさ美が初めて気づいたように語らせない**（既習なら「思い出す」口調にする）。逆に未習内容を「〜でしたね」と言わせない。詳細は親ディレクトリのメモリ [[quest-usami-prior-learning]] 参照
 
 **ねこ博士**
 - **oop-game（オブジェクト指向クエスト）のねこ先生と同一人物として口調を合わせる**。落ち着いた短い相づち（「うん」「そう」「そうだね」「その通り」）＋淡々とした説明が基本
