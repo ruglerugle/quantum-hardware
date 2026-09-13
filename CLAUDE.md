@@ -62,7 +62,8 @@ quantum-computer（ https://ruglerugle.github.io/quantum-computer/ ソフトウ�
     - **⚠️ 2026-09-12に quantum-computer から実機ステージ（旧STAGE4「量子ビットを組み立てる」）を削除し、実機の解説は本サイトに全面委譲した。**
       したがって**振り子回路（LC回路）・超伝導で電子がペアを組む話・ジョセフソン接合・トランズモン・共鳴パルスでのゲート実装・笛（共振器）の音程による読み出し・希釈冷凍機は、すべて本サイトが初出**。
       「前の旅で見たね」と既習扱いしてはいけない（2026-09-14に11箇所修正済み）
-  - **トンネル効果・波のしみ出し・井戸型のエネルギー量子化の出典は ② schrodinger-equation**（ https://quantum-mechanics.habatakijuku.com/schrodinger-equation/ ）。①quantum-quest ではない
+  - **井戸型のエネルギー量子化の出典は ② schrodinger-equation**（ https://quantum-mechanics.habatakijuku.com/schrodinger-equation/ ）。①quantum-quest ではない
+  - **トンネル効果・しみ出しは要注意**: ②は壁を無限に高い崖（V＝∞）として解いており「波は壁の外に一切はみ出せない」と教えている。**有限の壁なら染み込む／トンネル効果**は②STAGE6の最後にひと言添えられているだけで、**中身の説明は本サイトSTAGE3が初出**。「②で見たね」と既習扱いせず、「名前だけ渡されたあれ」として中身を供給すること
   - cpu_game（ https://informatics.habatakijuku.com/cpu-logic-game/ ）: 論理回路（AND/OR/NOT）、ゲートを組み合わせて計算を作ること
   - algo-quest（アルゴリズムの旅 https://informatics.habatakijuku.com/algo-quest/ ）: 線形探索・二分探索・バブルソート・クイックソート・ダイクストラ法・動的計画法・計算量
 - 本サイトは quantum-computer の抽象論（矢印の表・ゲート・干渉の設計）を引き継ぎ、それを**現実の物質でどう作るか**を初出として立ち上げる。実機の部品は既習前提にせず、博士が定義から供給する
